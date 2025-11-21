@@ -41,18 +41,101 @@ include CMakeFiles\rules.ninja
 
 cmake_ninja_workdir = C$:\Users\Josh\repos\P4_Scene_Streaming\out\build\x64-release\
 # =============================================================================
+# Object build statements for STATIC_LIBRARY target imgui
+
+
+#############################################
+# Order-only phony target for imgui
+
+build cmake_object_order_depends_target_imgui: phony || .
+
+build CMakeFiles\imgui.dir\thirdparty\DearImGUI\imgui.cpp.obj: CXX_COMPILER__imgui_unscanned_Release C$:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI\imgui.cpp || cmake_object_order_depends_target_imgui
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD
+  INCLUDES = -IC:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI -IC:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI\backends -I"C:\Program Files\vcpkg\installed\x64-windows\include"
+  OBJECT_DIR = CMakeFiles\imgui.dir
+  OBJECT_FILE_DIR = CMakeFiles\imgui.dir\thirdparty\DearImGUI
+  TARGET_COMPILE_PDB = CMakeFiles\imgui.dir\imgui.pdb
+  TARGET_PDB = imgui.pdb
+
+build CMakeFiles\imgui.dir\thirdparty\DearImGUI\imgui_draw.cpp.obj: CXX_COMPILER__imgui_unscanned_Release C$:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI\imgui_draw.cpp || cmake_object_order_depends_target_imgui
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD
+  INCLUDES = -IC:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI -IC:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI\backends -I"C:\Program Files\vcpkg\installed\x64-windows\include"
+  OBJECT_DIR = CMakeFiles\imgui.dir
+  OBJECT_FILE_DIR = CMakeFiles\imgui.dir\thirdparty\DearImGUI
+  TARGET_COMPILE_PDB = CMakeFiles\imgui.dir\imgui.pdb
+  TARGET_PDB = imgui.pdb
+
+build CMakeFiles\imgui.dir\thirdparty\DearImGUI\imgui_widgets.cpp.obj: CXX_COMPILER__imgui_unscanned_Release C$:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI\imgui_widgets.cpp || cmake_object_order_depends_target_imgui
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD
+  INCLUDES = -IC:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI -IC:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI\backends -I"C:\Program Files\vcpkg\installed\x64-windows\include"
+  OBJECT_DIR = CMakeFiles\imgui.dir
+  OBJECT_FILE_DIR = CMakeFiles\imgui.dir\thirdparty\DearImGUI
+  TARGET_COMPILE_PDB = CMakeFiles\imgui.dir\imgui.pdb
+  TARGET_PDB = imgui.pdb
+
+build CMakeFiles\imgui.dir\thirdparty\DearImGUI\imgui_tables.cpp.obj: CXX_COMPILER__imgui_unscanned_Release C$:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI\imgui_tables.cpp || cmake_object_order_depends_target_imgui
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD
+  INCLUDES = -IC:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI -IC:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI\backends -I"C:\Program Files\vcpkg\installed\x64-windows\include"
+  OBJECT_DIR = CMakeFiles\imgui.dir
+  OBJECT_FILE_DIR = CMakeFiles\imgui.dir\thirdparty\DearImGUI
+  TARGET_COMPILE_PDB = CMakeFiles\imgui.dir\imgui.pdb
+  TARGET_PDB = imgui.pdb
+
+build CMakeFiles\imgui.dir\thirdparty\DearImGUI\imgui_demo.cpp.obj: CXX_COMPILER__imgui_unscanned_Release C$:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI\imgui_demo.cpp || cmake_object_order_depends_target_imgui
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD
+  INCLUDES = -IC:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI -IC:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI\backends -I"C:\Program Files\vcpkg\installed\x64-windows\include"
+  OBJECT_DIR = CMakeFiles\imgui.dir
+  OBJECT_FILE_DIR = CMakeFiles\imgui.dir\thirdparty\DearImGUI
+  TARGET_COMPILE_PDB = CMakeFiles\imgui.dir\imgui.pdb
+  TARGET_PDB = imgui.pdb
+
+build CMakeFiles\imgui.dir\thirdparty\DearImGUI\backends\imgui_impl_glfw.cpp.obj: CXX_COMPILER__imgui_unscanned_Release C$:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI\backends\imgui_impl_glfw.cpp || cmake_object_order_depends_target_imgui
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD
+  INCLUDES = -IC:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI -IC:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI\backends -I"C:\Program Files\vcpkg\installed\x64-windows\include"
+  OBJECT_DIR = CMakeFiles\imgui.dir
+  OBJECT_FILE_DIR = CMakeFiles\imgui.dir\thirdparty\DearImGUI\backends
+  TARGET_COMPILE_PDB = CMakeFiles\imgui.dir\imgui.pdb
+  TARGET_PDB = imgui.pdb
+
+build CMakeFiles\imgui.dir\thirdparty\DearImGUI\backends\imgui_impl_opengl3.cpp.obj: CXX_COMPILER__imgui_unscanned_Release C$:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI\backends\imgui_impl_opengl3.cpp || cmake_object_order_depends_target_imgui
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD
+  INCLUDES = -IC:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI -IC:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI\backends -I"C:\Program Files\vcpkg\installed\x64-windows\include"
+  OBJECT_DIR = CMakeFiles\imgui.dir
+  OBJECT_FILE_DIR = CMakeFiles\imgui.dir\thirdparty\DearImGUI\backends
+  TARGET_COMPILE_PDB = CMakeFiles\imgui.dir\imgui.pdb
+  TARGET_PDB = imgui.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target imgui
+
+
+#############################################
+# Link the static library imgui.lib
+
+build imgui.lib: CXX_STATIC_LIBRARY_LINKER__imgui_Release CMakeFiles\imgui.dir\thirdparty\DearImGUI\imgui.cpp.obj CMakeFiles\imgui.dir\thirdparty\DearImGUI\imgui_draw.cpp.obj CMakeFiles\imgui.dir\thirdparty\DearImGUI\imgui_widgets.cpp.obj CMakeFiles\imgui.dir\thirdparty\DearImGUI\imgui_tables.cpp.obj CMakeFiles\imgui.dir\thirdparty\DearImGUI\imgui_demo.cpp.obj CMakeFiles\imgui.dir\thirdparty\DearImGUI\backends\imgui_impl_glfw.cpp.obj CMakeFiles\imgui.dir\thirdparty\DearImGUI\backends\imgui_impl_opengl3.cpp.obj
+  LANGUAGE_COMPILE_FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -MD
+  LINK_FLAGS = /machine:x64
+  OBJECT_DIR = CMakeFiles\imgui.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\imgui.dir\imgui.pdb
+  TARGET_FILE = imgui.lib
+  TARGET_PDB = imgui.pdb
+
+# =============================================================================
 # Object build statements for EXECUTABLE target SceneStreaming_Server
 
 
 #############################################
 # Order-only phony target for SceneStreaming_Server
 
-build cmake_object_order_depends_target_SceneStreaming_Server: phony || .
+build cmake_object_order_depends_target_SceneStreaming_Server: phony || cmake_object_order_depends_target_imgui
 
 build CMakeFiles\SceneStreaming_Server.dir\SceneStreaming_Server.cpp.obj: CXX_COMPILER__SceneStreaming_Server_unscanned_Release C$:\Users\Josh\repos\P4_Scene_Streaming\SceneStreaming_Server.cpp || cmake_object_order_depends_target_SceneStreaming_Server
   DEFINES = -DABSL_CONSUME_DLL -DGLFW_DLL -DPROTOBUF_USE_DLLS
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD
-  INCLUDES = -external:I"C:\Program Files\vcpkg\installed\x64-windows\include" -external:W0
+  INCLUDES = -IC:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI -IC:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI\backends -external:I"C:\Program Files\vcpkg\installed\x64-windows\include" -external:W0
   OBJECT_DIR = CMakeFiles\SceneStreaming_Server.dir
   OBJECT_FILE_DIR = CMakeFiles\SceneStreaming_Server.dir
   TARGET_COMPILE_PDB = CMakeFiles\SceneStreaming_Server.dir\
@@ -61,7 +144,7 @@ build CMakeFiles\SceneStreaming_Server.dir\SceneStreaming_Server.cpp.obj: CXX_CO
 build CMakeFiles\SceneStreaming_Server.dir\proto\generated\SceneStreaming.grpc.pb.cc.obj: CXX_COMPILER__SceneStreaming_Server_unscanned_Release C$:\Users\Josh\repos\P4_Scene_Streaming\proto\generated\SceneStreaming.grpc.pb.cc || cmake_object_order_depends_target_SceneStreaming_Server
   DEFINES = -DABSL_CONSUME_DLL -DGLFW_DLL -DPROTOBUF_USE_DLLS
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD
-  INCLUDES = -external:I"C:\Program Files\vcpkg\installed\x64-windows\include" -external:W0
+  INCLUDES = -IC:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI -IC:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI\backends -external:I"C:\Program Files\vcpkg\installed\x64-windows\include" -external:W0
   OBJECT_DIR = CMakeFiles\SceneStreaming_Server.dir
   OBJECT_FILE_DIR = CMakeFiles\SceneStreaming_Server.dir\proto\generated
   TARGET_COMPILE_PDB = CMakeFiles\SceneStreaming_Server.dir\
@@ -70,7 +153,7 @@ build CMakeFiles\SceneStreaming_Server.dir\proto\generated\SceneStreaming.grpc.p
 build CMakeFiles\SceneStreaming_Server.dir\proto\generated\SceneStreaming.pb.cc.obj: CXX_COMPILER__SceneStreaming_Server_unscanned_Release C$:\Users\Josh\repos\P4_Scene_Streaming\proto\generated\SceneStreaming.pb.cc || cmake_object_order_depends_target_SceneStreaming_Server
   DEFINES = -DABSL_CONSUME_DLL -DGLFW_DLL -DPROTOBUF_USE_DLLS
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD
-  INCLUDES = -external:I"C:\Program Files\vcpkg\installed\x64-windows\include" -external:W0
+  INCLUDES = -IC:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI -IC:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI\backends -external:I"C:\Program Files\vcpkg\installed\x64-windows\include" -external:W0
   OBJECT_DIR = CMakeFiles\SceneStreaming_Server.dir
   OBJECT_FILE_DIR = CMakeFiles\SceneStreaming_Server.dir\proto\generated
   TARGET_COMPILE_PDB = CMakeFiles\SceneStreaming_Server.dir\
@@ -79,7 +162,7 @@ build CMakeFiles\SceneStreaming_Server.dir\proto\generated\SceneStreaming.pb.cc.
 build CMakeFiles\SceneStreaming_Server.dir\src_server\Private\SceneStreamServer.cpp.obj: CXX_COMPILER__SceneStreaming_Server_unscanned_Release C$:\Users\Josh\repos\P4_Scene_Streaming\src_server\Private\SceneStreamServer.cpp || cmake_object_order_depends_target_SceneStreaming_Server
   DEFINES = -DABSL_CONSUME_DLL -DGLFW_DLL -DPROTOBUF_USE_DLLS
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD
-  INCLUDES = -external:I"C:\Program Files\vcpkg\installed\x64-windows\include" -external:W0
+  INCLUDES = -IC:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI -IC:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI\backends -external:I"C:\Program Files\vcpkg\installed\x64-windows\include" -external:W0
   OBJECT_DIR = CMakeFiles\SceneStreaming_Server.dir
   OBJECT_FILE_DIR = CMakeFiles\SceneStreaming_Server.dir\src_server\Private
   TARGET_COMPILE_PDB = CMakeFiles\SceneStreaming_Server.dir\
@@ -93,10 +176,10 @@ build CMakeFiles\SceneStreaming_Server.dir\src_server\Private\SceneStreamServer.
 #############################################
 # Link the executable SceneStreaming_Server.exe
 
-build SceneStreaming_Server.exe: CXX_EXECUTABLE_LINKER__SceneStreaming_Server_Release CMakeFiles\SceneStreaming_Server.dir\SceneStreaming_Server.cpp.obj CMakeFiles\SceneStreaming_Server.dir\proto\generated\SceneStreaming.grpc.pb.cc.obj CMakeFiles\SceneStreaming_Server.dir\proto\generated\SceneStreaming.pb.cc.obj CMakeFiles\SceneStreaming_Server.dir\src_server\Private\SceneStreamServer.cpp.obj | C$:\Program$ Files\vcpkg\installed\x64-windows\lib\grpc.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\grpc++.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\grpc++_reflection.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\glfw3dll.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\glad.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\grpc++.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\libprotobuf.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\grpc.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\upb_json_lib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\upb_textformat_lib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\upb_mini_descriptor_lib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\upb_wire_lib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\utf8_range.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\upb_message_lib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\upb_base_lib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\upb_mem_lib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\re2.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\zlib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\cares.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\gpr.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_internal.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_reflection.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_config.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_program_name.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_private_handle_accessor.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_commandlineflag.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_commandlineflag_internal.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_marshalling.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\libssl.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\libcrypto.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\address_sorting.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\abseil_dll.lib
+build SceneStreaming_Server.exe: CXX_EXECUTABLE_LINKER__SceneStreaming_Server_Release CMakeFiles\SceneStreaming_Server.dir\SceneStreaming_Server.cpp.obj CMakeFiles\SceneStreaming_Server.dir\proto\generated\SceneStreaming.grpc.pb.cc.obj CMakeFiles\SceneStreaming_Server.dir\proto\generated\SceneStreaming.pb.cc.obj CMakeFiles\SceneStreaming_Server.dir\src_server\Private\SceneStreamServer.cpp.obj | C$:\Program$ Files\vcpkg\installed\x64-windows\lib\grpc.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\grpc++.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\grpc++_reflection.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\glfw3dll.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\glad.lib imgui.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\grpc++.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\libprotobuf.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\grpc.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\upb_json_lib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\upb_textformat_lib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\upb_mini_descriptor_lib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\upb_wire_lib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\utf8_range.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\upb_message_lib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\upb_base_lib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\upb_mem_lib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\re2.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\zlib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\cares.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\gpr.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_internal.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_reflection.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_config.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_program_name.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_private_handle_accessor.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_commandlineflag.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_commandlineflag_internal.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_marshalling.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\libssl.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\libcrypto.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\address_sorting.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\abseil_dll.lib || imgui.lib
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -MD
   LINK_FLAGS = /machine:x64 /INCREMENTAL:NO /subsystem:console
-  LINK_LIBRARIES = "C:\Program Files\vcpkg\installed\x64-windows\lib\grpc.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\grpc++.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\grpc++_reflection.lib"  opengl32.lib  "C:\Program Files\vcpkg\installed\x64-windows\lib\glfw3dll.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\glad.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\grpc++.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\libprotobuf.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\grpc.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\upb_json_lib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\upb_textformat_lib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\upb_mini_descriptor_lib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\upb_wire_lib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\utf8_range.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\upb_message_lib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\upb_base_lib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\upb_mem_lib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\re2.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\zlib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\cares.lib"  advapi32.lib  iphlpapi.lib  "C:\Program Files\vcpkg\installed\x64-windows\lib\gpr.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_internal.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_reflection.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_config.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_program_name.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_private_handle_accessor.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_commandlineflag.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_commandlineflag_internal.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_marshalling.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\libssl.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\libcrypto.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\address_sorting.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\abseil_dll.lib"  -ignore:4221  wsock32.lib  ws2_32.lib  crypt32.lib  gdi32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  LINK_LIBRARIES = "C:\Program Files\vcpkg\installed\x64-windows\lib\grpc.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\grpc++.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\grpc++_reflection.lib"  opengl32.lib  "C:\Program Files\vcpkg\installed\x64-windows\lib\glfw3dll.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\glad.lib"  imgui.lib  "C:\Program Files\vcpkg\installed\x64-windows\lib\grpc++.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\libprotobuf.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\grpc.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\upb_json_lib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\upb_textformat_lib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\upb_mini_descriptor_lib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\upb_wire_lib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\utf8_range.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\upb_message_lib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\upb_base_lib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\upb_mem_lib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\re2.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\zlib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\cares.lib"  advapi32.lib  iphlpapi.lib  "C:\Program Files\vcpkg\installed\x64-windows\lib\gpr.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_internal.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_reflection.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_config.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_program_name.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_private_handle_accessor.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_commandlineflag.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_commandlineflag_internal.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_marshalling.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\libssl.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\libcrypto.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\address_sorting.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\abseil_dll.lib"  -ignore:4221  wsock32.lib  ws2_32.lib  crypt32.lib  gdi32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = CMakeFiles\SceneStreaming_Server.dir
   POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Josh\repos\P4_Scene_Streaming\out\build\x64-release && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file "C:/Program Files/vcpkg/scripts/buildsystems/msbuild/applocal.ps1" -targetBinary C:/Users/Josh/repos/P4_Scene_Streaming/out/build/x64-release/SceneStreaming_Server.exe -installedDir "C:/Program Files/vcpkg/installed/x64-windows/bin" -OutVariable out && cd /D C:\Users\Josh\repos\P4_Scene_Streaming\out\build\x64-release && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_directory C:/Users/Josh/repos/P4_Scene_Streaming/Assets C:/Users/Josh/repos/P4_Scene_Streaming/out/build/x64-release/Assets"
   PRE_LINK = cd .
@@ -112,12 +195,12 @@ build SceneStreaming_Server.exe: CXX_EXECUTABLE_LINKER__SceneStreaming_Server_Re
 #############################################
 # Order-only phony target for SceneStreaming_Client
 
-build cmake_object_order_depends_target_SceneStreaming_Client: phony || .
+build cmake_object_order_depends_target_SceneStreaming_Client: phony || cmake_object_order_depends_target_imgui
 
 build CMakeFiles\SceneStreaming_Client.dir\SceneStreaming_Client.cpp.obj: CXX_COMPILER__SceneStreaming_Client_unscanned_Release C$:\Users\Josh\repos\P4_Scene_Streaming\SceneStreaming_Client.cpp || cmake_object_order_depends_target_SceneStreaming_Client
   DEFINES = -DABSL_CONSUME_DLL -DGLFW_DLL -DPROTOBUF_USE_DLLS
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD
-  INCLUDES = -external:I"C:\Program Files\vcpkg\installed\x64-windows\include" -external:W0
+  INCLUDES = -IC:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI -IC:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI\backends -external:I"C:\Program Files\vcpkg\installed\x64-windows\include" -external:W0
   OBJECT_DIR = CMakeFiles\SceneStreaming_Client.dir
   OBJECT_FILE_DIR = CMakeFiles\SceneStreaming_Client.dir
   TARGET_COMPILE_PDB = CMakeFiles\SceneStreaming_Client.dir\
@@ -126,7 +209,7 @@ build CMakeFiles\SceneStreaming_Client.dir\SceneStreaming_Client.cpp.obj: CXX_CO
 build CMakeFiles\SceneStreaming_Client.dir\proto\generated\SceneStreaming.grpc.pb.cc.obj: CXX_COMPILER__SceneStreaming_Client_unscanned_Release C$:\Users\Josh\repos\P4_Scene_Streaming\proto\generated\SceneStreaming.grpc.pb.cc || cmake_object_order_depends_target_SceneStreaming_Client
   DEFINES = -DABSL_CONSUME_DLL -DGLFW_DLL -DPROTOBUF_USE_DLLS
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD
-  INCLUDES = -external:I"C:\Program Files\vcpkg\installed\x64-windows\include" -external:W0
+  INCLUDES = -IC:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI -IC:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI\backends -external:I"C:\Program Files\vcpkg\installed\x64-windows\include" -external:W0
   OBJECT_DIR = CMakeFiles\SceneStreaming_Client.dir
   OBJECT_FILE_DIR = CMakeFiles\SceneStreaming_Client.dir\proto\generated
   TARGET_COMPILE_PDB = CMakeFiles\SceneStreaming_Client.dir\
@@ -135,7 +218,7 @@ build CMakeFiles\SceneStreaming_Client.dir\proto\generated\SceneStreaming.grpc.p
 build CMakeFiles\SceneStreaming_Client.dir\proto\generated\SceneStreaming.pb.cc.obj: CXX_COMPILER__SceneStreaming_Client_unscanned_Release C$:\Users\Josh\repos\P4_Scene_Streaming\proto\generated\SceneStreaming.pb.cc || cmake_object_order_depends_target_SceneStreaming_Client
   DEFINES = -DABSL_CONSUME_DLL -DGLFW_DLL -DPROTOBUF_USE_DLLS
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD
-  INCLUDES = -external:I"C:\Program Files\vcpkg\installed\x64-windows\include" -external:W0
+  INCLUDES = -IC:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI -IC:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI\backends -external:I"C:\Program Files\vcpkg\installed\x64-windows\include" -external:W0
   OBJECT_DIR = CMakeFiles\SceneStreaming_Client.dir
   OBJECT_FILE_DIR = CMakeFiles\SceneStreaming_Client.dir\proto\generated
   TARGET_COMPILE_PDB = CMakeFiles\SceneStreaming_Client.dir\
@@ -144,7 +227,7 @@ build CMakeFiles\SceneStreaming_Client.dir\proto\generated\SceneStreaming.pb.cc.
 build CMakeFiles\SceneStreaming_Client.dir\src_client\Private\SceneStreamClient.cpp.obj: CXX_COMPILER__SceneStreaming_Client_unscanned_Release C$:\Users\Josh\repos\P4_Scene_Streaming\src_client\Private\SceneStreamClient.cpp || cmake_object_order_depends_target_SceneStreaming_Client
   DEFINES = -DABSL_CONSUME_DLL -DGLFW_DLL -DPROTOBUF_USE_DLLS
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD
-  INCLUDES = -external:I"C:\Program Files\vcpkg\installed\x64-windows\include" -external:W0
+  INCLUDES = -IC:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI -IC:\Users\Josh\repos\P4_Scene_Streaming\thirdparty\DearImGUI\backends -external:I"C:\Program Files\vcpkg\installed\x64-windows\include" -external:W0
   OBJECT_DIR = CMakeFiles\SceneStreaming_Client.dir
   OBJECT_FILE_DIR = CMakeFiles\SceneStreaming_Client.dir\src_client\Private
   TARGET_COMPILE_PDB = CMakeFiles\SceneStreaming_Client.dir\
@@ -158,10 +241,10 @@ build CMakeFiles\SceneStreaming_Client.dir\src_client\Private\SceneStreamClient.
 #############################################
 # Link the executable SceneStreaming_Client.exe
 
-build SceneStreaming_Client.exe: CXX_EXECUTABLE_LINKER__SceneStreaming_Client_Release CMakeFiles\SceneStreaming_Client.dir\SceneStreaming_Client.cpp.obj CMakeFiles\SceneStreaming_Client.dir\proto\generated\SceneStreaming.grpc.pb.cc.obj CMakeFiles\SceneStreaming_Client.dir\proto\generated\SceneStreaming.pb.cc.obj CMakeFiles\SceneStreaming_Client.dir\src_client\Private\SceneStreamClient.cpp.obj | C$:\Program$ Files\vcpkg\installed\x64-windows\lib\grpc.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\grpc++.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\grpc++_reflection.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\glfw3dll.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\glad.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\grpc++.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\libprotobuf.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\grpc.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\upb_json_lib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\upb_textformat_lib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\upb_mini_descriptor_lib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\upb_wire_lib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\utf8_range.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\upb_message_lib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\upb_base_lib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\upb_mem_lib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\re2.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\zlib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\cares.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\gpr.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_internal.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_reflection.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_config.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_program_name.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_private_handle_accessor.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_commandlineflag.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_commandlineflag_internal.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_marshalling.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\libssl.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\libcrypto.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\address_sorting.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\abseil_dll.lib
+build SceneStreaming_Client.exe: CXX_EXECUTABLE_LINKER__SceneStreaming_Client_Release CMakeFiles\SceneStreaming_Client.dir\SceneStreaming_Client.cpp.obj CMakeFiles\SceneStreaming_Client.dir\proto\generated\SceneStreaming.grpc.pb.cc.obj CMakeFiles\SceneStreaming_Client.dir\proto\generated\SceneStreaming.pb.cc.obj CMakeFiles\SceneStreaming_Client.dir\src_client\Private\SceneStreamClient.cpp.obj | C$:\Program$ Files\vcpkg\installed\x64-windows\lib\grpc.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\grpc++.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\grpc++_reflection.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\glfw3dll.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\glad.lib imgui.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\grpc++.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\libprotobuf.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\grpc.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\upb_json_lib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\upb_textformat_lib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\upb_mini_descriptor_lib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\upb_wire_lib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\utf8_range.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\upb_message_lib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\upb_base_lib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\upb_mem_lib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\re2.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\zlib.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\cares.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\gpr.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_internal.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_reflection.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_config.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_program_name.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_private_handle_accessor.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_commandlineflag.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_commandlineflag_internal.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\absl_flags_marshalling.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\libssl.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\libcrypto.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\address_sorting.lib C$:\Program$ Files\vcpkg\installed\x64-windows\lib\abseil_dll.lib || imgui.lib
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -MD
   LINK_FLAGS = /machine:x64 /INCREMENTAL:NO /subsystem:console
-  LINK_LIBRARIES = "C:\Program Files\vcpkg\installed\x64-windows\lib\grpc.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\grpc++.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\grpc++_reflection.lib"  opengl32.lib  "C:\Program Files\vcpkg\installed\x64-windows\lib\glfw3dll.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\glad.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\grpc++.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\libprotobuf.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\grpc.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\upb_json_lib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\upb_textformat_lib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\upb_mini_descriptor_lib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\upb_wire_lib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\utf8_range.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\upb_message_lib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\upb_base_lib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\upb_mem_lib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\re2.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\zlib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\cares.lib"  advapi32.lib  iphlpapi.lib  "C:\Program Files\vcpkg\installed\x64-windows\lib\gpr.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_internal.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_reflection.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_config.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_program_name.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_private_handle_accessor.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_commandlineflag.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_commandlineflag_internal.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_marshalling.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\libssl.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\libcrypto.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\address_sorting.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\abseil_dll.lib"  -ignore:4221  wsock32.lib  ws2_32.lib  crypt32.lib  gdi32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  LINK_LIBRARIES = "C:\Program Files\vcpkg\installed\x64-windows\lib\grpc.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\grpc++.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\grpc++_reflection.lib"  opengl32.lib  "C:\Program Files\vcpkg\installed\x64-windows\lib\glfw3dll.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\glad.lib"  imgui.lib  "C:\Program Files\vcpkg\installed\x64-windows\lib\grpc++.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\libprotobuf.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\grpc.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\upb_json_lib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\upb_textformat_lib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\upb_mini_descriptor_lib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\upb_wire_lib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\utf8_range.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\upb_message_lib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\upb_base_lib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\upb_mem_lib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\re2.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\zlib.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\cares.lib"  advapi32.lib  iphlpapi.lib  "C:\Program Files\vcpkg\installed\x64-windows\lib\gpr.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_internal.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_reflection.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_config.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_program_name.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_private_handle_accessor.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_commandlineflag.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_commandlineflag_internal.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\absl_flags_marshalling.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\libssl.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\libcrypto.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\address_sorting.lib"  "C:\Program Files\vcpkg\installed\x64-windows\lib\abseil_dll.lib"  -ignore:4221  wsock32.lib  ws2_32.lib  crypt32.lib  gdi32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = CMakeFiles\SceneStreaming_Client.dir
   POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Josh\repos\P4_Scene_Streaming\out\build\x64-release && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file "C:/Program Files/vcpkg/scripts/buildsystems/msbuild/applocal.ps1" -targetBinary C:/Users/Josh/repos/P4_Scene_Streaming/out/build/x64-release/SceneStreaming_Client.exe -installedDir "C:/Program Files/vcpkg/installed/x64-windows/bin" -OutVariable out"
   PRE_LINK = cd .
@@ -200,6 +283,8 @@ build SceneStreaming_Client: phony SceneStreaming_Client.exe
 
 build SceneStreaming_Server: phony SceneStreaming_Server.exe
 
+build imgui: phony imgui.lib
+
 # =============================================================================
 # Folder targets.
 
@@ -208,7 +293,7 @@ build SceneStreaming_Server: phony SceneStreaming_Server.exe
 #############################################
 # Folder: C:/Users/Josh/repos/P4_Scene_Streaming/out/build/x64-release
 
-build all: phony SceneStreaming_Server.exe SceneStreaming_Client.exe
+build all: phony imgui.lib SceneStreaming_Server.exe SceneStreaming_Client.exe
 
 # =============================================================================
 # Built-in targets

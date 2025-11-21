@@ -40,6 +40,25 @@ file(GLOB_RECURSE PROTO_HEADERS "${PROTO_SRC_PATH}/*.h")
 # Common 
 file(GLOB_RECURSE COMMON_SRC "${COMMON_SRC_PATH}/*.cpp" "${COMMON_SRC_PATH}/*.h")
 
+# ImGui Setup
+set(IMGUI_PATH "${FETCHCONTENT_BASE_DIR}/DearImGUI")
+set(IMGUI_SOURCES 
+	"${IMGUI_PATH}/imgui.cpp"
+	"${IMGUI_PATH}/imgui_draw.cpp"
+	"${IMGUI_PATH}/imgui_widgets.cpp"
+	"${IMGUI_PATH}/imgui_tables.cpp"
+	"${IMGUI_PATH}/imgui_demo.cpp"
+	"${IMGUI_PATH}/backends/imgui_impl_glfw.cpp"
+	"${IMGUI_PATH}/backends/imgui_impl_opengl3.cpp"
+)
+add_library(imgui STATIC ${IMGUI_SOURCES})
+target_include_directories(
+	imgui PUBLIC 
+	${IMGUI_PATH} 
+	"${IMGUI_PATH}/backends"
+	$<TARGET_PROPERTY:glfw,INTERFACE_INCLUDE_DIRECTORIES>
+)
+
 # Server Exe Setup
 set(SERVER_SRC_PATH ${CMAKE_CURRENT_SOURCE_DIR}/src_server CACHE PATH "Project Server SRC" FORCE)
 file(GLOB_RECURSE SERVER_SRC CONFIGURE_DEPENDS "${SERVER_SRC_PATH}/*.cpp" "${SERVER_SRC_PATH}/*.h")
@@ -57,6 +76,7 @@ target_link_libraries(
 	SceneStreaming_Server PRIVATE
 	glfw
 	glad::glad
+	imgui
 )
 
 # Client Exe Setup
@@ -76,6 +96,7 @@ target_link_libraries(
 	SceneStreaming_Client PRIVATE
 	glfw
 	glad::glad
+	imgui
 )
 
 set(VCPKG_BIN_DIR "${VCPKG_ROOT}/installed/${VCPKG_TARGET_TRIPLET}/bin")
