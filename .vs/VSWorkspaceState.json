@@ -12,8 +12,12 @@
     ]
   },
   "ExpandedNodes": [
-    ""
+    "",
+    "\\out",
+    "\\proto",
+    "\\src_client",
+    "\\thirdparty"
   ],
-  "SelectedNode": "\\CMakeLists.txt",
+  "SelectedNode": "\\thirdparty",
   "PreviewInSolutionExplorer": false
 }

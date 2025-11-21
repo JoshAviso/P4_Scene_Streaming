@@ -1,0 +1,603 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "SceneStreaming_Server.exe"
+		},
+		{
+			"path" : "SceneStreaming_Server.pdb"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"_add_executable",
+			"add_executable",
+			"target_link_libraries",
+			"set_target_properties",
+			"include",
+			"_find_package",
+			"find_package",
+			"target_compile_definitions"
+		],
+		"files" : 
+		[
+			"C:/Program Files/vcpkg/scripts/buildsystems/vcpkg.cmake",
+			"CMakeLists.txt",
+			"C:/Program Files/vcpkg/installed/x64-windows/share/grpc/gRPCTargets.cmake",
+			"C:/Program Files/vcpkg/installed/x64-windows/share/grpc/gRPCConfig.cmake",
+			"C:/Program Files/vcpkg/installed/x64-windows/share/c-ares/c-ares-targets.cmake",
+			"C:/Program Files/vcpkg/installed/x64-windows/share/c-ares/c-ares-config.cmake",
+			"C:/Program Files/vcpkg/installed/x64-windows/share/grpc/modules/Findc-ares.cmake",
+			"C:/Program Files/vcpkg/installed/x64-windows/share/absl/abslTargets.cmake",
+			"C:/Program Files/vcpkg/installed/x64-windows/share/absl/abslConfig.cmake",
+			"C:/Program Files/vcpkg/installed/x64-windows/share/protobuf/protobuf-config.cmake",
+			"C:/Program Files/vcpkg/installed/x64-windows/share/protobuf/vcpkg-cmake-wrapper.cmake",
+			"C:/Program Files/vcpkg/installed/x64-windows/share/protobuf/protobuf-targets.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 43,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 608,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 45,
+				"parent" : 0
+			},
+			{
+				"command" : 6,
+				"file" : 1,
+				"line" : 20,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 902,
+				"parent" : 4
+			},
+			{
+				"file" : 3,
+				"parent" : 5
+			},
+			{
+				"command" : 4,
+				"file" : 3,
+				"line" : 26,
+				"parent" : 6
+			},
+			{
+				"file" : 2,
+				"parent" : 7
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 78,
+				"parent" : 8
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 105,
+				"parent" : 8
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 150,
+				"parent" : 8
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 132,
+				"parent" : 8
+			},
+			{
+				"command" : 6,
+				"file" : 3,
+				"line" : 14,
+				"parent" : 6
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 904,
+				"parent" : 13
+			},
+			{
+				"file" : 6,
+				"parent" : 14
+			},
+			{
+				"command" : 6,
+				"file" : 6,
+				"line" : 18,
+				"parent" : 15
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 904,
+				"parent" : 16
+			},
+			{
+				"file" : 5,
+				"parent" : 17
+			},
+			{
+				"command" : 4,
+				"file" : 5,
+				"line" : 23,
+				"parent" : 18
+			},
+			{
+				"file" : 4,
+				"parent" : 19
+			},
+			{
+				"command" : 3,
+				"file" : 4,
+				"line" : 60,
+				"parent" : 20
+			},
+			{
+				"command" : 6,
+				"file" : 1,
+				"line" : 19,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 858,
+				"parent" : 22
+			},
+			{
+				"file" : 10,
+				"parent" : 23
+			},
+			{
+				"command" : 5,
+				"file" : 10,
+				"line" : 3,
+				"parent" : 24
+			},
+			{
+				"file" : 9,
+				"parent" : 25
+			},
+			{
+				"command" : 6,
+				"file" : 9,
+				"line" : 7,
+				"parent" : 26
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 904,
+				"parent" : 27
+			},
+			{
+				"file" : 8,
+				"parent" : 28
+			},
+			{
+				"command" : 4,
+				"file" : 8,
+				"line" : 32,
+				"parent" : 29
+			},
+			{
+				"file" : 7,
+				"parent" : 30
+			},
+			{
+				"command" : 3,
+				"file" : 7,
+				"line" : 784,
+				"parent" : 31
+			},
+			{
+				"command" : 3,
+				"file" : 7,
+				"line" : 714,
+				"parent" : 31
+			},
+			{
+				"command" : 3,
+				"file" : 7,
+				"line" : 764,
+				"parent" : 31
+			},
+			{
+				"command" : 3,
+				"file" : 7,
+				"line" : 744,
+				"parent" : 31
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 69,
+				"parent" : 8
+			},
+			{
+				"command" : 4,
+				"file" : 9,
+				"line" : 14,
+				"parent" : 26
+			},
+			{
+				"file" : 11,
+				"parent" : 37
+			},
+			{
+				"command" : 3,
+				"file" : 11,
+				"line" : 70,
+				"parent" : 38
+			},
+			{
+				"command" : 3,
+				"file" : 7,
+				"line" : 287,
+				"parent" : 31
+			},
+			{
+				"command" : 7,
+				"file" : 1,
+				"line" : 44,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 3,
+					"define" : "ABSL_CONSUME_DLL"
+				},
+				{
+					"backtrace" : 41,
+					"define" : "PROTOBUF_USE_DLLS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "C:/Program Files/vcpkg/installed/x64-windows/include"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					3,
+					3
+				],
+				"standard" : "20"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				2,
+				3,
+				6
+			]
+		}
+	],
+	"id" : "SceneStreaming_Server::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "/DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -MD",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "/machine:x64 /INCREMENTAL:NO /subsystem:console",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "\"C:\\Program Files\\vcpkg\\installed\\x64-windows\\lib\\grpc.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "\"C:\\Program Files\\vcpkg\\installed\\x64-windows\\lib\\grpc++.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "\"C:\\Program Files\\vcpkg\\installed\\x64-windows\\lib\\grpc++_reflection.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "\"C:\\Program Files\\vcpkg\\installed\\x64-windows\\lib\\grpc++.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "\"C:\\Program Files\\vcpkg\\installed\\x64-windows\\lib\\libprotobuf.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "\"C:\\Program Files\\vcpkg\\installed\\x64-windows\\lib\\grpc.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "\"C:\\Program Files\\vcpkg\\installed\\x64-windows\\lib\\upb_json_lib.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "\"C:\\Program Files\\vcpkg\\installed\\x64-windows\\lib\\upb_textformat_lib.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 10,
+				"fragment" : "\"C:\\Program Files\\vcpkg\\installed\\x64-windows\\lib\\upb_mini_descriptor_lib.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 10,
+				"fragment" : "\"C:\\Program Files\\vcpkg\\installed\\x64-windows\\lib\\upb_wire_lib.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "\"C:\\Program Files\\vcpkg\\installed\\x64-windows\\lib\\utf8_range.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "\"C:\\Program Files\\vcpkg\\installed\\x64-windows\\lib\\upb_message_lib.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "\"C:\\Program Files\\vcpkg\\installed\\x64-windows\\lib\\upb_base_lib.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "\"C:\\Program Files\\vcpkg\\installed\\x64-windows\\lib\\upb_mem_lib.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "\"C:\\Program Files\\vcpkg\\installed\\x64-windows\\lib\\re2.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "\"C:\\Program Files\\vcpkg\\installed\\x64-windows\\lib\\zlib.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "\"C:\\Program Files\\vcpkg\\installed\\x64-windows\\lib\\cares.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 21,
+				"fragment" : "advapi32.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 21,
+				"fragment" : "iphlpapi.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "\"C:\\Program Files\\vcpkg\\installed\\x64-windows\\lib\\gpr.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 32,
+				"fragment" : "\"C:\\Program Files\\vcpkg\\installed\\x64-windows\\lib\\absl_flags_internal.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 32,
+				"fragment" : "\"C:\\Program Files\\vcpkg\\installed\\x64-windows\\lib\\absl_flags_reflection.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 32,
+				"fragment" : "\"C:\\Program Files\\vcpkg\\installed\\x64-windows\\lib\\absl_flags_config.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 33,
+				"fragment" : "\"C:\\Program Files\\vcpkg\\installed\\x64-windows\\lib\\absl_flags_program_name.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 34,
+				"fragment" : "\"C:\\Program Files\\vcpkg\\installed\\x64-windows\\lib\\absl_flags_private_handle_accessor.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 32,
+				"fragment" : "\"C:\\Program Files\\vcpkg\\installed\\x64-windows\\lib\\absl_flags_commandlineflag.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 35,
+				"fragment" : "\"C:\\Program Files\\vcpkg\\installed\\x64-windows\\lib\\absl_flags_commandlineflag_internal.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 36,
+				"fragment" : "\"C:\\Program Files\\vcpkg\\installed\\x64-windows\\lib\\absl_flags_marshalling.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "\"C:\\Program Files\\vcpkg\\installed\\x64-windows\\lib\\libssl.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "\"C:\\Program Files\\vcpkg\\installed\\x64-windows\\lib\\libcrypto.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "\"C:\\Program Files\\vcpkg\\installed\\x64-windows\\lib\\address_sorting.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 39,
+				"fragment" : "\"C:\\Program Files\\vcpkg\\installed\\x64-windows\\lib\\abseil_dll.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 40,
+				"fragment" : "-ignore:4221",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "wsock32.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "ws2_32.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "crypt32.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "gdi32.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "SceneStreaming_Server",
+	"nameOnDisk" : "SceneStreaming_Server.exe",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				2,
+				3,
+				6
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				1,
+				4,
+				5,
+				7
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "SceneStreaming_Server.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "SceneStreaming_Server.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "proto/generated/SceneStreaming.grpc.pb.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "proto/generated/SceneStreaming.pb.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "proto/generated/SceneStreaming.grpc.pb.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "proto/generated/SceneStreaming.pb.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src_server/Private/SceneStreamServer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src_server/SceneStreamServer.h",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "EXECUTABLE"
+}

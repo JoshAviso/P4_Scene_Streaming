@@ -1,0 +1,15 @@
+
+syntax = "proto3";
+
+service SceneStreamService {
+	rpc PingHello(HelloReq) returns (HelloReply){}
+}
+
+message HelloReq {
+	string name = 1;
+}
+
+message HelloReply {
+	bool status = 1;
+	string msg = 2;
+}
