@@ -19,6 +19,7 @@ set(ENV{VCPKG_ROOT} "C:/Program Files/vcpkg")
 find_package(OpenGL REQUIRED)
 find_package(glfw3 CONFIG REQUIRED)
 find_package(glad CONFIG REQUIRED)
+find_package(tinyobjloader CONFIG REQUIRED)
 find_package(Protobuf CONFIG REQUIRED)
 find_package(gRPC CONFIG REQUIRED)
 find_package(re2 REQUIRED)
@@ -77,6 +78,7 @@ target_link_libraries(
 	glfw
 	glad::glad
 	imgui
+	tinyobjloader::tinyobjloader
 )
 
 # Client Exe Setup
@@ -97,6 +99,7 @@ target_link_libraries(
 	glfw
 	glad::glad
 	imgui
+	tinyobjloader::tinyobjloader
 )
 
 set(VCPKG_BIN_DIR "${VCPKG_ROOT}/installed/${VCPKG_TARGET_TRIPLET}/bin")
@@ -120,6 +123,14 @@ set(VCPKG_BIN_DIR "${VCPKG_ROOT}/installed/${VCPKG_TARGET_TRIPLET}/bin")
 # Post Build Assets copy for server
 add_custom_command(
 	TARGET SceneStreaming_Server POST_BUILD
+	COMMAND ${CMAKE_COMMAND} -E copy_directory
+			${CMAKE_SOURCE_DIR}/Assets 
+			$<TARGET_FILE_DIR:SceneStreaming_Server>/Assets
+)
+
+# Post Build Assets copy for client (testing only)
+add_custom_command(
+	TARGET SceneStreaming_Client POST_BUILD
 	COMMAND ${CMAKE_COMMAND} -E copy_directory
 			${CMAKE_SOURCE_DIR}/Assets 
 			$<TARGET_FILE_DIR:SceneStreaming_Server>/Assets
