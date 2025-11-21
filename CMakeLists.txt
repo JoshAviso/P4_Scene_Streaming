@@ -16,6 +16,9 @@ project("P4_Scene_Streaming")
 # If having issues with copying dlls, replace the $VCPKG_ROOT with your full path to vcpkg install
 set(ENV{VCPKG_ROOT} "C:/Program Files/vcpkg")
 
+find_package(OpenGL REQUIRED)
+find_package(glfw3 CONFIG REQUIRED)
+find_package(glad CONFIG REQUIRED)
 find_package(Protobuf CONFIG REQUIRED)
 find_package(gRPC CONFIG REQUIRED)
 find_package(re2 REQUIRED)
@@ -48,6 +51,12 @@ target_link_libraries(
 	gRPC::grpc
 	gRPC::grpc++
 	gRPC::grpc++_reflection
+	OpenGL::GL
+)
+target_link_libraries(
+	SceneStreaming_Server PRIVATE
+	glfw
+	glad::glad
 )
 
 # Client Exe Setup
@@ -61,6 +70,12 @@ target_link_libraries(
 	gRPC::grpc
 	gRPC::grpc++
 	gRPC::grpc++_reflection
+	OpenGL::GL
+)
+target_link_libraries(
+	SceneStreaming_Client PRIVATE
+	glfw
+	glad::glad
 )
 
 set(VCPKG_BIN_DIR "${VCPKG_ROOT}/installed/${VCPKG_TARGET_TRIPLET}/bin")
