@@ -65,6 +65,15 @@ set(SERVER_SRC_PATH ${CMAKE_CURRENT_SOURCE_DIR}/src_server CACHE PATH "Project S
 file(GLOB_RECURSE SERVER_SRC CONFIGURE_DEPENDS "${SERVER_SRC_PATH}/*.cpp" "${SERVER_SRC_PATH}/*.h")
 add_executable(SceneStreaming_Server "SceneStreaming_Server.cpp" "SceneStreaming_Server.h" ${PROTO_SRC} ${PROTO_HEADERS} ${COMMON_SRC} ${SERVER_SRC})
 target_compile_definitions(SceneStreaming_Server PUBLIC "PROTOBUF_USE_DLLS")
+target_include_directories(
+	SceneStreaming_Server PRIVATE
+	"${COMMON_SRC_PATH}/Public"
+	"${SERVER_SRC_PATH}/Public"
+	"${COMMON_SRC_PATH}/Private"
+	"${SERVER_SRC_PATH}/Private"
+	"${CMAKE_CURRENT_SOURCE_DIR}/proto/generated"
+	"${FETCHCONTENT_BASE_DIR}"
+)
 target_link_libraries(
 	SceneStreaming_Server PUBLIC
 	protobuf::libprotobuf
@@ -100,6 +109,15 @@ target_link_libraries(
 	glad::glad
 	imgui
 	tinyobjloader::tinyobjloader
+)
+target_include_directories(
+	SceneStreaming_Client PRIVATE
+	"${COMMON_SRC_PATH}/Public"
+	"${CLIENT_SRC_PATH}/Public"
+	"${COMMON_SRC_PATH}/Private"
+	"${CLIENT_SRC_PATH}/Private"
+	"${CMAKE_CURRENT_SOURCE_DIR}/proto/generated"
+	"${FETCHCONTENT_BASE_DIR}"
 )
 
 set(VCPKG_BIN_DIR "${VCPKG_ROOT}/installed/${VCPKG_TARGET_TRIPLET}/bin")

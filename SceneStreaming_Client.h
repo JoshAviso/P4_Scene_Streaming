@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-#include "src_client/SceneStreamClient.h"
+#include <SceneStreamClient.h>
 
 #include <iostream>
 

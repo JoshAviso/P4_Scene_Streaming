@@ -1,6 +1,6 @@
-#include "../SceneStreamServer.h"
+#include <SceneStreamServer.h>
 
-#include "../../src_common/Logger.h"
+#include <Logger.h>
 
 grpc::Status SceneStreamServer::PingHello(grpc::ServerContext* context, const HelloReq* request, HelloReply* reply)
 {

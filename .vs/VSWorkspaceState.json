@@ -13,11 +13,17 @@
   },
   "ExpandedNodes": [
     "",
-    "\\out",
     "\\proto",
+    "\\proto\\generated",
     "\\src_client",
-    "\\thirdparty"
+    "\\src_client\\Public",
+    "\\src_common",
+    "\\src_common\\Private",
+    "\\src_common\\Private\\Resources",
+    "\\src_common\\Public",
+    "\\src_common\\Public\\Math",
+    "\\src_common\\Public\\Resources"
   ],
-  "SelectedNode": "\\thirdparty",
+  "SelectedNode": "\\src_common\\Private\\Resources\\Mesh.cpp",
   "PreviewInSolutionExplorer": false
 }

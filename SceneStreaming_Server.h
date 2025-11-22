@@ -3,11 +3,11 @@
 
 #include <grpcpp/grpcpp.h>
 
-#include "src_common/String.h"
-#include "src_common/Common.h"
-#include "src_common/Logger.h"
+#include <Common.h>
+#include <String.h>
+#include <Logger.h>
 
-#include "src_server/SceneStreamServer.h"
+#include <SceneStreamServer.h>
 
 void RunServer(String socket_address) {
 	SceneStreamServer service;

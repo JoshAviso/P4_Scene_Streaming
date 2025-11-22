@@ -1,6 +1,6 @@
-#include "../SceneStreamClient.h"
+#include <SceneStreamClient.h>
 
-#include "../../src_common/Logger.h"
+#include <Logger.hpp>
 
 void SceneStreamClient::PingHello(const String& name)
 {
