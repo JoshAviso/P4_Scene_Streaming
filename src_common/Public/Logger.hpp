@@ -2,7 +2,7 @@
 #pragma once
 
 #include <iostream>
-#include "String.h"
+#include "String.hpp"
 
 class Logger {
 public:

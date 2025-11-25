@@ -1,7 +1,7 @@
 #pragma once
 
-#include <Common.h>
-#include <String.h>
+#include <Common.hpp>
+#include <String.hpp>
 #include <Math/Transform.h>
 
 #include <Components/IComponent.h>
@@ -13,7 +13,7 @@ class Object
 public:
 	String Name;
 	bool Enabled = true;
-	Transform transform;
+	Transform transform = Transform();
 
 private:
 	List<Unique<IComponent>> _components;

@@ -3,9 +3,9 @@
 
 #include <grpcpp/grpcpp.h>
 
-#include <Common.h>
-#include <String.h>
-#include <Logger.h>
+#include <Common.hpp>
+#include <String.hpp>
+#include <Logger.hpp>
 
 #include <SceneStreamServer.h>
 

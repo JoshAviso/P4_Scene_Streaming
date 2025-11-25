@@ -9,12 +9,16 @@ protected:
 };
 
 class VertexShader : public IShaderResource {
+public:
+	~VertexShader();
 private:
 	bool LoadFromFile(String filepath);
 	friend class ResourceManager;
 };
 
 class FragShader : public IShaderResource {
+public:
+	~FragShader();
 private:
 	bool LoadFromFile(String filepath);
 	friend class ResourceManager;

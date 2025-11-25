@@ -11,5 +11,5 @@ union Vec4 {
 
 #include "Vec3.h"
 inline Vec4::operator Vec3() const {
-	return Vec3({ x, y, z });
+	return Vec3( x, y, z );
 }

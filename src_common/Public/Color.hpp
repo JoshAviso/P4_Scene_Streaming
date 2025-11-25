@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Common.h"
+#include "Common.hpp"
 #include <Math/Vec3.h>
 
 class Color {

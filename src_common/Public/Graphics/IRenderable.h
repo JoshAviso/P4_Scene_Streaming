@@ -3,7 +3,7 @@
 
 class IRenderable {
 protected:
-	GLuint
+	//GLuint
 protected:
 	virtual void Render();
 };

@@ -8,6 +8,19 @@ Shader::Shader() {
 	_shader_program = glCreateProgram();
 }
 
+void Shader::PassData(String name, const Mat4 mat4)
+{
+	if (!_linked) {
+		Logger::LogWarning("Trying to pass data to unlinked shader!");
+		return;
+	}
+
+	glm::mat4 tf = mat4;
+	glUseProgram(_shader_program);
+	glUniformMatrix4fv(GetUniformLocation(name), 1, GL_FALSE, glm::value_ptr(tf));
+	glUseProgram(0);
+}
+
 void Shader::PassData(String name, const Transform transform)
 {
 	if (!_linked) {
@@ -38,7 +51,8 @@ void Shader::PassData(String name, const Vec3 vector)
 uint Shader::GetUniformLocation(String name)
 {
 	if (!_linked) return uint();
-	return glGetUniformLocation(_shader_program, name.c_str());
+	uint res = glGetUniformLocation(_shader_program, name.c_str());
+	return res;
 }
 
 void Shader::Bind(Shared<VertexShader> vert_shader)

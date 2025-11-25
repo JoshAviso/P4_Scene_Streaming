@@ -1,13 +1,16 @@
 #pragma once
 
-#include <Core/Common.h>
+#include <Common.hpp>
 #include <Objects/Object.h>
-#include <Core/Logger.h>
+#include <Logger.hpp>
+#include <String.hpp>
 
 #include <Components/Update/IUpdateComponent.h>
 #include <Components/Renderers/IRenderer.h>
 
 class ICollider;
+class Window;
+class Camera;
 
 class ObjectManager
 {
@@ -32,8 +35,9 @@ private:
 	List<Object*> _objectsToRemove;
 
 	void Update(float deltaTime);
-	void CheckCollisions();
-	void RenderObjectsTo(sf::RenderWindow& window);
+	//void CheckCollisions();
+	void RenderObjectsTo(Camera* camera);
+	void RenderObjects(Camera* camera);
 	void RemoveObjConcrete(Object* obj);
 
 // SINGLETON
@@ -47,6 +51,7 @@ private:
 	ObjectManager& operator=(const ObjectManager&) = delete;
 
 public:
+	friend class GraphicsSystem;
 	friend class Application;
 };
 

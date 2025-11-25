@@ -35,12 +35,12 @@ bool Mesh::LoadFromFile(String filepath)
 		float y = attribs.vertices[(vData.vertex_index * 3) + 1];
 		float z = attribs.vertices[(vData.vertex_index * 3) + 2];
 
-		float Nx = attribs.normals[(vData.normal_index * 3) + 0];
-		float Ny = attribs.normals[(vData.normal_index * 3) + 1];
-		float Nz = attribs.normals[(vData.normal_index * 3) + 2];
+		float Nx = 0;//attribs.normals[(vData.normal_index * 3) + 0];
+		float Ny = 1.f;//attribs.normals[(vData.normal_index * 3) + 1];
+		float Nz = 0;//attribs.normals[(vData.normal_index * 3) + 2];
 
-		float u = attribs.texcoords[(vData.texcoord_index * 2) + 0];
-		float v = attribs.texcoords[(vData.texcoord_index * 2) + 1];
+		float u = 0;//attribs.texcoords[(vData.texcoord_index * 2) + 0];
+		float v = 0;//attribs.texcoords[(vData.texcoord_index * 2) + 1];
 
 		vert_data.push_back(x);
 		vert_data.push_back(y);
@@ -86,4 +86,6 @@ bool Mesh::LoadFromFile(String filepath)
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 
 	_loaded = true;
+
+	return true;
 }

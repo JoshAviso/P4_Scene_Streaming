@@ -50,7 +50,7 @@ void ObjectManager::Update(float deltaTime)
 		}
 	}
 
-	CheckCollisions();
+	//CheckCollisions();
 
 	for (int i = 0; i < _objectsToRemove.size(); i++) {
 		RemoveObjConcrete(_objectsToRemove[i]);
@@ -58,6 +58,7 @@ void ObjectManager::Update(float deltaTime)
 	_objectsToRemove.clear();
 }
 
+/*
 void ObjectManager::CheckCollisions()
 {
 	for (int i = 0; i < _colliders.size(); i++) {
@@ -91,8 +92,9 @@ void ObjectManager::CheckCollisions()
 		}
 	}
 }
+*/
 
-void ObjectManager::RenderObjectsTo(sf::RenderWindow& window)
+void ObjectManager::RenderObjectsTo(Camera* camera)
 {
 	List<IRenderer*> renderers{};
 	for (int i = 0; i < _objects.size(); i++)
@@ -105,13 +107,37 @@ void ObjectManager::RenderObjectsTo(sf::RenderWindow& window)
 		}
 	}
 
-	std::stable_sort(renderers.begin(), renderers.end(), 
+	std::stable_sort(renderers.begin(), renderers.end(),
 		[](IRenderer* a, IRenderer* b) {
 			return a->RenderLayer < b->RenderLayer;
 		});
 
 	for (int i = 0; i < renderers.size(); i++) {
-		renderers[i]->Render(window);
+		renderers[i]->Render(camera);
+	}
+}
+
+#include <Camera/Camera.h>
+void ObjectManager::RenderObjects(Camera* camera)
+{
+	List<IRenderer*> renderers{};
+	for (int i = 0; i < _objects.size(); i++)
+	{
+		if (!_objects[i]->Enabled) continue;
+		List<IRenderer*> renderComponents = _objects[i]->GetComponents<IRenderer>();
+		for (int j = 0; j < renderComponents.size(); j++)
+		{
+			renderers.push_back(renderComponents[j]);
+		}
+	}
+
+	std::stable_sort(renderers.begin(), renderers.end(),
+		[](IRenderer* a, IRenderer* b) {
+			return a->RenderLayer < b->RenderLayer;
+		});
+
+	for (int i = 0; i < renderers.size(); i++) {
+		renderers[i]->Render(camera);
 	}
 }
 

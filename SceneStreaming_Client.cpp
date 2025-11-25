@@ -11,15 +11,52 @@
 #include <iostream>
 #include <vector>
 
-// Simple vertex structure
-struct Vertex {
-    float x, y, z;
-};
+#include <Application.h>
+#include <Window/Window.h>
+
+#include <Resources/ResourceManager.h>
+#include <Resources/Mesh.h>
+#include <Resources/IShaderResource.h>
+#include <Objects/ObjectManager.h>
+#include <Objects/Object.h>
+#include <Graphics/ShaderList.h>
+#include <Components/Renderers/MeshRenderer.h>
+#include <Components/Update/CameraComponent.h>
+#include <Components/Update/CameraController.h>
 
 int main()
 {
+    Application* app = Application::Initialize({
+        new Window({
+                "P4 Scene Streaming | Aviso & Taylan",
+                800, 600,
+                Color::Black()
+            })
+        });
+
+    // Bunny Setup
+    Shared<Mesh> bunnyMesh = ResourceManager::LoadFromFile<Mesh>("Bunny", "Assets/bunny.obj");
+    Shared<Shader> basicShader = ShaderList::GenerateShader("Basic Shader", 
+        ResourceManager::LoadFromFile<VertexShader>("Basic Vertex Shader", "Assets/Shaders/sample.vert"),
+        ResourceManager::LoadFromFile<FragShader>("Basic Frag Shader", "Assets/Shaders/sample.frag")
+    );
+    Object* bunny = ObjectManager::RegisterObject(new Object("Bunny"));
+    MeshRenderer* bunnyRenderer = bunny->AddComponent(new MeshRenderer());
+    bunnyRenderer->Mesh = bunnyMesh;
+    bunnyRenderer->Shader = basicShader;
+    bunnyRenderer->base_color = Color::Red();
+    bunny->transform.position.z = 0.f;
+
+    // Camera Setup
+    Object* cam = ObjectManager::RegisterObject(new Object("MainCamera"));
+    cam->AddComponent(new CameraComponent("MainCam",
+        new Camera::PerspectiveProjection(45.f, Application::GetWindow()->AspectRatio(), 0.01, 200.f)));
+    cam->AddComponent(new CameraController(1.f));
+
+    Application::Run();
 	//RunClient("Frankling", "localhost:50051", true);
 
+    /*
      // Initialize GLFW
     if (!glfwInit()) return -1;
     GLFWwindow* window = glfwCreateWindow(800, 600, "TinyObjLoader + OpenGL + ImGui", NULL, NULL);
@@ -117,6 +154,7 @@ int main()
 
     glfwDestroyWindow(window);
     glfwTerminate();
+    */
 
     return 0;
 }

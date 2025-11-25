@@ -4,9 +4,9 @@
 #include "Quaternion.h"
 
 struct Transform {
-	Vec3 position;
-	Quaternion rotation;
-	Vec3 scale;
+	Vec3 position = Vec3(0.f);
+	Quaternion rotation = Quaternion::Identity();
+	Vec3 scale = Vec3(1.f);
 
 	operator Mat4() const;
 };

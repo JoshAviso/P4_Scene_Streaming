@@ -2,7 +2,7 @@
 
 #include <Logger.hpp>
 
-ShaderList* ShaderList::_instance = nullptr
+ShaderList* ShaderList::_instance = nullptr;
 Shared<Shader> ShaderList::GenerateShader(String name, Shared<VertexShader> vertex_shader, Shared<FragShader> frag_shader)
 {
 	if (_instance == nullptr) _instance = new ShaderList();

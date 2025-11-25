@@ -3,6 +3,7 @@
 #include <Components/IComponent.h>
 #include <Color.hpp>
 
+class Camera;
 class IRenderer : virtual public IComponent
 {
 public:
@@ -11,7 +12,7 @@ public:
 	virtual ~IRenderer() = default;
 
 protected:
-	virtual void Render() = 0;
+	virtual void Render(Camera* camera) = 0;
 	friend class ObjectManager;
 };
 

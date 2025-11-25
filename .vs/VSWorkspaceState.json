@@ -13,17 +13,16 @@
   },
   "ExpandedNodes": [
     "",
-    "\\proto",
-    "\\proto\\generated",
-    "\\src_client",
-    "\\src_client\\Public",
     "\\src_common",
     "\\src_common\\Private",
+    "\\src_common\\Private\\Components",
+    "\\src_common\\Private\\Components\\Renderers",
     "\\src_common\\Private\\Resources",
     "\\src_common\\Public",
-    "\\src_common\\Public\\Math",
-    "\\src_common\\Public\\Resources"
+    "\\src_common\\Public\\Input",
+    "\\src_common\\Public\\Resources",
+    "\\src_common\\Public\\Window"
   ],
-  "SelectedNode": "\\src_common\\Private\\Resources\\Mesh.cpp",
+  "SelectedNode": "\\src_common\\Public\\Input\\Input.h",
   "PreviewInSolutionExplorer": false
 }

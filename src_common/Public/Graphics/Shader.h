@@ -17,6 +17,7 @@ private:
 public:
 	Shader();
 
+	void PassData(String name, const Mat4 mat4);
 	void PassData(String name, const Transform transform);
 	void PassData(String name, const Vec3 vector);
 

@@ -11,6 +11,6 @@ public:
 	Shared<Shader> Shader;
 
 private:
-	void Render() override;
+	void Render(Camera* camera) override;
 	friend class ObjectManager;
 };
