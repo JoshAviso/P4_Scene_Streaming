@@ -51,7 +51,7 @@ int main()
     Object* cam = ObjectManager::RegisterObject(new Object("MainCamera"));
     cam->AddComponent(new CameraComponent("MainCam",
         new Camera::PerspectiveProjection(45.f, Application::GetWindow()->AspectRatio(), 0.01, 200.f)));
-    cam->AddComponent(new CameraController(1.f));
+    cam->AddComponent(new CameraController(1.f, 360.f));
 
     Application::Run();
 	//RunClient("Frankling", "localhost:50051", true);

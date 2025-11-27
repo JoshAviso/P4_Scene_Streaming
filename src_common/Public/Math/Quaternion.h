@@ -12,13 +12,12 @@ union Quaternion {
 	Quaternion() : w(1.f), x(0.f), y(0.f), z(0.f) {};
 	Quaternion(float degrees, Vec3 axis) {
 		float rad = degrees * PI / 180.f;
-		float halfAngle = rad / 2.f;
+		float halfAngle = rad * 0.5f;
 		float s = sinf(halfAngle);
-		Quaternion q;
-		q.w = cosf(halfAngle);
-		q.x = axis.x * s;
-		q.y = axis.y * s;
-		q.z = axis.z * s;
+		w = cosf(halfAngle);
+		x = axis.x * s;
+		y = axis.y * s;
+		z = axis.z * s;
 	}
 	operator Mat4() const;
 	Quaternion operator* (const Quaternion& q) const {

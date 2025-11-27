@@ -23,6 +23,7 @@ bool Window::Initialize()
 		glfwSetInputMode(_window, GLFW_RAW_MOUSE_MOTION, GLFW_TRUE);
 	glfwSetCursorPosCallback(_window, Input::CursorCallback);
 	glfwSetMouseButtonCallback(_window, Input::MouseButtonCallback);
+	glfwSetScrollCallback(_window, Input::ScrollCallback);
 
 	return true;
 }

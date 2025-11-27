@@ -4,34 +4,46 @@
 #include <Input/Input.h>
 
 #include <Logger.hpp>
+#include <GLFW/glfw3.h>
 
 class CameraController : public IUpdateComponent {
 public:
-	CameraController(float speed) : _moveSpeed(speed) {} ;
+	CameraController(float moveSpeed, float rotSpeed) : _moveSpeed(moveSpeed), _rotSpeed(rotSpeed) {} ;
 
 private:
 	float _moveSpeed;
-	float _rotSpeed = 10.f;
+	float _rotSpeed;
 	float _pitch = 0.f;
 	float _yaw = 0.f;
+	float _speedScroll = 0.05f;
 	void Update(float deltaTime) {
-		if(Input::Mouse.RightDown)
+		if (Input::Mouse.RightDown) {
+			UpdateSpeed();
 			UpdateRotation(deltaTime);
+			Input::Mouse.Mode = Input::Locked;
+		}
+		else {
+			Input::Mouse.Mode = Input::Normal;
+		}
 		UpdatePosition(deltaTime);
 	}
-
+	void UpdateSpeed() {
+		_moveSpeed += Input::Mouse.ScrollDelta * _speedScroll;
+		if (_moveSpeed < 0.f) _moveSpeed = 0.f;
+		Logger::Log(std::to_string(_moveSpeed));
+	}
 	void UpdateRotation(float deltaTime) {
-		Logger::Log(Input::Mouse.Delta);
-			
-		_yaw += Input::Mouse.Delta.x * deltaTime * _rotSpeed;
-		_pitch += Input::Mouse.Delta.y * deltaTime * _rotSpeed;
-		if (_yaw < -180.f) _yaw = -180.f;
-		if (_yaw > 180.f) _yaw = 180.f;
+		_yaw -= Input::Mouse.Delta.x * deltaTime * _rotSpeed;
+		_pitch -= Input::Mouse.Delta.y * deltaTime * _rotSpeed;
+		if (_pitch < -180.f) _pitch = -180.f;
+		if (_pitch > 180.f) _pitch = 180.f;
+		if (_yaw > 180.f) _yaw = _yaw - 360.f;
+		if (_yaw < -180.f) _yaw = _yaw + 360.f;
 
 		Quaternion qYaw(_yaw, Vec3(0.f, 1.f, 0.f));
-		Quaternion qPitch(_pitch, _owner->transform.rotation * Vec3(0.f, 0.f, 1.f));
+		Quaternion qPitch(_pitch, _owner->transform.rotation * Vec3(1.f, 0.f, 0.f));
 
-		_owner->transform.rotation = qYaw;
+		_owner->transform.rotation = qPitch * qYaw;
 	}
 
 	void UpdatePosition(float deltaTime) {
@@ -47,6 +59,8 @@ private:
 		Vec3 move = Vec3(moveDir.x, 0.f, moveDir.y);
 		move = _owner->transform.rotation * move;
 		move *= _moveSpeed;
+		if (Input::KeyDown[Input::LShift]) move *= 2.f;
+		if (Input::KeyDown[Input::RCtrl]) move *= 0.5f;
 
 		float yMove = 0.f;
 		if (Input::KeyDown[Input::Q]) yMove -= 1.f;

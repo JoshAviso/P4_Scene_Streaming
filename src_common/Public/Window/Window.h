@@ -29,4 +29,5 @@ public:
 	float AspectRatio() const;
 
 	friend class GraphicsSystem;
+	friend class Input;
 };

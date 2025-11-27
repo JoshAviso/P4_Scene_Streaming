@@ -8,7 +8,9 @@
 class Input
 {
 public:
+	enum MouseMode { Normal, Locked, Hidden, Bounded };
 	struct MouseData {
+		MouseMode Mode = Normal;
 		bool LeftDown = false;
 		bool LeftPressed = false;
 		bool LeftReleased = false;
@@ -45,6 +47,7 @@ public:
 	static void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
 	static void CursorCallback(GLFWwindow* window, double xpos, double ypos);
 	static void MouseButtonCallback(GLFWwindow* window, int button, int action, int mods);
+	static void ScrollCallback(GLFWwindow* window, double xOffset, double yOffset);
 
 // SINGLETON
 public:
