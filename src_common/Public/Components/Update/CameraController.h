@@ -20,17 +20,16 @@ private:
 		if (Input::Mouse.RightDown) {
 			UpdateSpeed();
 			UpdateRotation(deltaTime);
+			UpdatePosition(deltaTime);
 			Input::Mouse.Mode = Input::Locked;
 		}
 		else {
 			Input::Mouse.Mode = Input::Normal;
 		}
-		UpdatePosition(deltaTime);
 	}
 	void UpdateSpeed() {
 		_moveSpeed += Input::Mouse.ScrollDelta * _speedScroll;
 		if (_moveSpeed < 0.f) _moveSpeed = 0.f;
-		Logger::Log(std::to_string(_moveSpeed));
 	}
 	void UpdateRotation(float deltaTime) {
 		_yaw -= Input::Mouse.Delta.x * deltaTime * _rotSpeed;
