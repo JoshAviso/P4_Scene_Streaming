@@ -41,11 +41,38 @@ class SceneStreamService final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::HelloReply>> PrepareAsyncPingHello(::grpc::ClientContext* context, const ::HelloReq& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::HelloReply>>(PrepareAsyncPingHelloRaw(context, request, cq));
     }
+    virtual ::grpc::Status SendObject(::grpc::ClientContext* context, const ::ObjectReq& request, ::ObjectReply* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ObjectReply>> AsyncSendObject(::grpc::ClientContext* context, const ::ObjectReq& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ObjectReply>>(AsyncSendObjectRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ObjectReply>> PrepareAsyncSendObject(::grpc::ClientContext* context, const ::ObjectReq& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ObjectReply>>(PrepareAsyncSendObjectRaw(context, request, cq));
+    }
+    virtual ::grpc::Status SendScene(::grpc::ClientContext* context, const ::SceneReq& request, ::SceneReply* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::SceneReply>> AsyncSendScene(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::SceneReply>>(AsyncSendSceneRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::SceneReply>> PrepareAsyncSendScene(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::SceneReply>>(PrepareAsyncSendSceneRaw(context, request, cq));
+    }
+    virtual ::grpc::Status SendSceneList(::grpc::ClientContext* context, const ::SceneListReq& request, ::SceneListReply* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::SceneListReply>> AsyncSendSceneList(::grpc::ClientContext* context, const ::SceneListReq& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::SceneListReply>>(AsyncSendSceneListRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::SceneListReply>> PrepareAsyncSendSceneList(::grpc::ClientContext* context, const ::SceneListReq& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::SceneListReply>>(PrepareAsyncSendSceneListRaw(context, request, cq));
+    }
     class async_interface {
      public:
       virtual ~async_interface() {}
       virtual void PingHello(::grpc::ClientContext* context, const ::HelloReq* request, ::HelloReply* response, std::function<void(::grpc::Status)>) = 0;
       virtual void PingHello(::grpc::ClientContext* context, const ::HelloReq* request, ::HelloReply* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void SendObject(::grpc::ClientContext* context, const ::ObjectReq* request, ::ObjectReply* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void SendObject(::grpc::ClientContext* context, const ::ObjectReq* request, ::ObjectReply* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void SendScene(::grpc::ClientContext* context, const ::SceneReq* request, ::SceneReply* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void SendScene(::grpc::ClientContext* context, const ::SceneReq* request, ::SceneReply* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void SendSceneList(::grpc::ClientContext* context, const ::SceneListReq* request, ::SceneListReply* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void SendSceneList(::grpc::ClientContext* context, const ::SceneListReq* request, ::SceneListReply* response, ::grpc::ClientUnaryReactor* reactor) = 0;
     };
     typedef class async_interface experimental_async_interface;
     virtual class async_interface* async() { return nullptr; }
@@ -53,6 +80,12 @@ class SceneStreamService final {
    private:
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::HelloReply>* AsyncPingHelloRaw(::grpc::ClientContext* context, const ::HelloReq& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::HelloReply>* PrepareAsyncPingHelloRaw(::grpc::ClientContext* context, const ::HelloReq& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::ObjectReply>* AsyncSendObjectRaw(::grpc::ClientContext* context, const ::ObjectReq& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::ObjectReply>* PrepareAsyncSendObjectRaw(::grpc::ClientContext* context, const ::ObjectReq& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::SceneReply>* AsyncSendSceneRaw(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::SceneReply>* PrepareAsyncSendSceneRaw(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::SceneListReply>* AsyncSendSceneListRaw(::grpc::ClientContext* context, const ::SceneListReq& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::SceneListReply>* PrepareAsyncSendSceneListRaw(::grpc::ClientContext* context, const ::SceneListReq& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
@@ -64,11 +97,38 @@ class SceneStreamService final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::HelloReply>> PrepareAsyncPingHello(::grpc::ClientContext* context, const ::HelloReq& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::HelloReply>>(PrepareAsyncPingHelloRaw(context, request, cq));
     }
+    ::grpc::Status SendObject(::grpc::ClientContext* context, const ::ObjectReq& request, ::ObjectReply* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ObjectReply>> AsyncSendObject(::grpc::ClientContext* context, const ::ObjectReq& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ObjectReply>>(AsyncSendObjectRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ObjectReply>> PrepareAsyncSendObject(::grpc::ClientContext* context, const ::ObjectReq& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ObjectReply>>(PrepareAsyncSendObjectRaw(context, request, cq));
+    }
+    ::grpc::Status SendScene(::grpc::ClientContext* context, const ::SceneReq& request, ::SceneReply* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::SceneReply>> AsyncSendScene(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::SceneReply>>(AsyncSendSceneRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::SceneReply>> PrepareAsyncSendScene(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::SceneReply>>(PrepareAsyncSendSceneRaw(context, request, cq));
+    }
+    ::grpc::Status SendSceneList(::grpc::ClientContext* context, const ::SceneListReq& request, ::SceneListReply* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::SceneListReply>> AsyncSendSceneList(::grpc::ClientContext* context, const ::SceneListReq& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::SceneListReply>>(AsyncSendSceneListRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::SceneListReply>> PrepareAsyncSendSceneList(::grpc::ClientContext* context, const ::SceneListReq& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::SceneListReply>>(PrepareAsyncSendSceneListRaw(context, request, cq));
+    }
     class async final :
       public StubInterface::async_interface {
      public:
       void PingHello(::grpc::ClientContext* context, const ::HelloReq* request, ::HelloReply* response, std::function<void(::grpc::Status)>) override;
       void PingHello(::grpc::ClientContext* context, const ::HelloReq* request, ::HelloReply* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void SendObject(::grpc::ClientContext* context, const ::ObjectReq* request, ::ObjectReply* response, std::function<void(::grpc::Status)>) override;
+      void SendObject(::grpc::ClientContext* context, const ::ObjectReq* request, ::ObjectReply* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void SendScene(::grpc::ClientContext* context, const ::SceneReq* request, ::SceneReply* response, std::function<void(::grpc::Status)>) override;
+      void SendScene(::grpc::ClientContext* context, const ::SceneReq* request, ::SceneReply* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void SendSceneList(::grpc::ClientContext* context, const ::SceneListReq* request, ::SceneListReply* response, std::function<void(::grpc::Status)>) override;
+      void SendSceneList(::grpc::ClientContext* context, const ::SceneListReq* request, ::SceneListReply* response, ::grpc::ClientUnaryReactor* reactor) override;
      private:
       friend class Stub;
       explicit async(Stub* stub): stub_(stub) { }
@@ -82,7 +142,16 @@ class SceneStreamService final {
     class async async_stub_{this};
     ::grpc::ClientAsyncResponseReader< ::HelloReply>* AsyncPingHelloRaw(::grpc::ClientContext* context, const ::HelloReq& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::HelloReply>* PrepareAsyncPingHelloRaw(::grpc::ClientContext* context, const ::HelloReq& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::ObjectReply>* AsyncSendObjectRaw(::grpc::ClientContext* context, const ::ObjectReq& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::ObjectReply>* PrepareAsyncSendObjectRaw(::grpc::ClientContext* context, const ::ObjectReq& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::SceneReply>* AsyncSendSceneRaw(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::SceneReply>* PrepareAsyncSendSceneRaw(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::SceneListReply>* AsyncSendSceneListRaw(::grpc::ClientContext* context, const ::SceneListReq& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::SceneListReply>* PrepareAsyncSendSceneListRaw(::grpc::ClientContext* context, const ::SceneListReq& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_PingHello_;
+    const ::grpc::internal::RpcMethod rpcmethod_SendObject_;
+    const ::grpc::internal::RpcMethod rpcmethod_SendScene_;
+    const ::grpc::internal::RpcMethod rpcmethod_SendSceneList_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
 
@@ -91,6 +160,9 @@ class SceneStreamService final {
     Service();
     virtual ~Service();
     virtual ::grpc::Status PingHello(::grpc::ServerContext* context, const ::HelloReq* request, ::HelloReply* response);
+    virtual ::grpc::Status SendObject(::grpc::ServerContext* context, const ::ObjectReq* request, ::ObjectReply* response);
+    virtual ::grpc::Status SendScene(::grpc::ServerContext* context, const ::SceneReq* request, ::SceneReply* response);
+    virtual ::grpc::Status SendSceneList(::grpc::ServerContext* context, const ::SceneListReq* request, ::SceneListReply* response);
   };
   template <class BaseClass>
   class WithAsyncMethod_PingHello : public BaseClass {
@@ -112,7 +184,67 @@ class SceneStreamService final {
       ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_PingHello<Service > AsyncService;
+  template <class BaseClass>
+  class WithAsyncMethod_SendObject : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_SendObject() {
+      ::grpc::Service::MarkMethodAsync(1);
+    }
+    ~WithAsyncMethod_SendObject() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SendObject(::grpc::ServerContext* /*context*/, const ::ObjectReq* /*request*/, ::ObjectReply* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestSendObject(::grpc::ServerContext* context, ::ObjectReq* request, ::grpc::ServerAsyncResponseWriter< ::ObjectReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_SendScene : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_SendScene() {
+      ::grpc::Service::MarkMethodAsync(2);
+    }
+    ~WithAsyncMethod_SendScene() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SendScene(::grpc::ServerContext* /*context*/, const ::SceneReq* /*request*/, ::SceneReply* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestSendScene(::grpc::ServerContext* context, ::SceneReq* request, ::grpc::ServerAsyncResponseWriter< ::SceneReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_SendSceneList : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_SendSceneList() {
+      ::grpc::Service::MarkMethodAsync(3);
+    }
+    ~WithAsyncMethod_SendSceneList() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SendSceneList(::grpc::ServerContext* /*context*/, const ::SceneListReq* /*request*/, ::SceneListReply* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestSendSceneList(::grpc::ServerContext* context, ::SceneListReq* request, ::grpc::ServerAsyncResponseWriter< ::SceneListReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  typedef WithAsyncMethod_PingHello<WithAsyncMethod_SendObject<WithAsyncMethod_SendScene<WithAsyncMethod_SendSceneList<Service > > > > AsyncService;
   template <class BaseClass>
   class WithCallbackMethod_PingHello : public BaseClass {
    private:
@@ -140,7 +272,88 @@ class SceneStreamService final {
     virtual ::grpc::ServerUnaryReactor* PingHello(
       ::grpc::CallbackServerContext* /*context*/, const ::HelloReq* /*request*/, ::HelloReply* /*response*/)  { return nullptr; }
   };
-  typedef WithCallbackMethod_PingHello<Service > CallbackService;
+  template <class BaseClass>
+  class WithCallbackMethod_SendObject : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_SendObject() {
+      ::grpc::Service::MarkMethodCallback(1,
+          new ::grpc::internal::CallbackUnaryHandler< ::ObjectReq, ::ObjectReply>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::ObjectReq* request, ::ObjectReply* response) { return this->SendObject(context, request, response); }));}
+    void SetMessageAllocatorFor_SendObject(
+        ::grpc::MessageAllocator< ::ObjectReq, ::ObjectReply>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(1);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::ObjectReq, ::ObjectReply>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_SendObject() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SendObject(::grpc::ServerContext* /*context*/, const ::ObjectReq* /*request*/, ::ObjectReply* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* SendObject(
+      ::grpc::CallbackServerContext* /*context*/, const ::ObjectReq* /*request*/, ::ObjectReply* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_SendScene : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_SendScene() {
+      ::grpc::Service::MarkMethodCallback(2,
+          new ::grpc::internal::CallbackUnaryHandler< ::SceneReq, ::SceneReply>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::SceneReq* request, ::SceneReply* response) { return this->SendScene(context, request, response); }));}
+    void SetMessageAllocatorFor_SendScene(
+        ::grpc::MessageAllocator< ::SceneReq, ::SceneReply>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(2);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::SceneReq, ::SceneReply>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_SendScene() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SendScene(::grpc::ServerContext* /*context*/, const ::SceneReq* /*request*/, ::SceneReply* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* SendScene(
+      ::grpc::CallbackServerContext* /*context*/, const ::SceneReq* /*request*/, ::SceneReply* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_SendSceneList : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_SendSceneList() {
+      ::grpc::Service::MarkMethodCallback(3,
+          new ::grpc::internal::CallbackUnaryHandler< ::SceneListReq, ::SceneListReply>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::SceneListReq* request, ::SceneListReply* response) { return this->SendSceneList(context, request, response); }));}
+    void SetMessageAllocatorFor_SendSceneList(
+        ::grpc::MessageAllocator< ::SceneListReq, ::SceneListReply>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(3);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::SceneListReq, ::SceneListReply>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_SendSceneList() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SendSceneList(::grpc::ServerContext* /*context*/, const ::SceneListReq* /*request*/, ::SceneListReply* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* SendSceneList(
+      ::grpc::CallbackServerContext* /*context*/, const ::SceneListReq* /*request*/, ::SceneListReply* /*response*/)  { return nullptr; }
+  };
+  typedef WithCallbackMethod_PingHello<WithCallbackMethod_SendObject<WithCallbackMethod_SendScene<WithCallbackMethod_SendSceneList<Service > > > > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_PingHello : public BaseClass {
@@ -155,6 +368,57 @@ class SceneStreamService final {
     }
     // disable synchronous version of this method
     ::grpc::Status PingHello(::grpc::ServerContext* /*context*/, const ::HelloReq* /*request*/, ::HelloReply* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_SendObject : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_SendObject() {
+      ::grpc::Service::MarkMethodGeneric(1);
+    }
+    ~WithGenericMethod_SendObject() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SendObject(::grpc::ServerContext* /*context*/, const ::ObjectReq* /*request*/, ::ObjectReply* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_SendScene : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_SendScene() {
+      ::grpc::Service::MarkMethodGeneric(2);
+    }
+    ~WithGenericMethod_SendScene() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SendScene(::grpc::ServerContext* /*context*/, const ::SceneReq* /*request*/, ::SceneReply* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_SendSceneList : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_SendSceneList() {
+      ::grpc::Service::MarkMethodGeneric(3);
+    }
+    ~WithGenericMethod_SendSceneList() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SendSceneList(::grpc::ServerContext* /*context*/, const ::SceneListReq* /*request*/, ::SceneListReply* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -180,6 +444,66 @@ class SceneStreamService final {
     }
   };
   template <class BaseClass>
+  class WithRawMethod_SendObject : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_SendObject() {
+      ::grpc::Service::MarkMethodRaw(1);
+    }
+    ~WithRawMethod_SendObject() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SendObject(::grpc::ServerContext* /*context*/, const ::ObjectReq* /*request*/, ::ObjectReply* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestSendObject(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_SendScene : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_SendScene() {
+      ::grpc::Service::MarkMethodRaw(2);
+    }
+    ~WithRawMethod_SendScene() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SendScene(::grpc::ServerContext* /*context*/, const ::SceneReq* /*request*/, ::SceneReply* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestSendScene(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_SendSceneList : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_SendSceneList() {
+      ::grpc::Service::MarkMethodRaw(3);
+    }
+    ~WithRawMethod_SendSceneList() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SendSceneList(::grpc::ServerContext* /*context*/, const ::SceneListReq* /*request*/, ::SceneListReply* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestSendSceneList(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
   class WithRawCallbackMethod_PingHello : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
@@ -199,6 +523,72 @@ class SceneStreamService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     virtual ::grpc::ServerUnaryReactor* PingHello(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_SendObject : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_SendObject() {
+      ::grpc::Service::MarkMethodRawCallback(1,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->SendObject(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_SendObject() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SendObject(::grpc::ServerContext* /*context*/, const ::ObjectReq* /*request*/, ::ObjectReply* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* SendObject(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_SendScene : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_SendScene() {
+      ::grpc::Service::MarkMethodRawCallback(2,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->SendScene(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_SendScene() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SendScene(::grpc::ServerContext* /*context*/, const ::SceneReq* /*request*/, ::SceneReply* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* SendScene(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_SendSceneList : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_SendSceneList() {
+      ::grpc::Service::MarkMethodRawCallback(3,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->SendSceneList(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_SendSceneList() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SendSceneList(::grpc::ServerContext* /*context*/, const ::SceneListReq* /*request*/, ::SceneListReply* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* SendSceneList(
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
@@ -228,9 +618,90 @@ class SceneStreamService final {
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedPingHello(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::HelloReq,::HelloReply>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_PingHello<Service > StreamedUnaryService;
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_SendObject : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_SendObject() {
+      ::grpc::Service::MarkMethodStreamed(1,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::ObjectReq, ::ObjectReply>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::ObjectReq, ::ObjectReply>* streamer) {
+                       return this->StreamedSendObject(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_SendObject() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status SendObject(::grpc::ServerContext* /*context*/, const ::ObjectReq* /*request*/, ::ObjectReply* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedSendObject(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::ObjectReq,::ObjectReply>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_SendScene : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_SendScene() {
+      ::grpc::Service::MarkMethodStreamed(2,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::SceneReq, ::SceneReply>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::SceneReq, ::SceneReply>* streamer) {
+                       return this->StreamedSendScene(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_SendScene() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status SendScene(::grpc::ServerContext* /*context*/, const ::SceneReq* /*request*/, ::SceneReply* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedSendScene(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::SceneReq,::SceneReply>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_SendSceneList : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_SendSceneList() {
+      ::grpc::Service::MarkMethodStreamed(3,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::SceneListReq, ::SceneListReply>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::SceneListReq, ::SceneListReply>* streamer) {
+                       return this->StreamedSendSceneList(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_SendSceneList() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status SendSceneList(::grpc::ServerContext* /*context*/, const ::SceneListReq* /*request*/, ::SceneListReply* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedSendSceneList(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::SceneListReq,::SceneListReply>* server_unary_streamer) = 0;
+  };
+  typedef WithStreamedUnaryMethod_PingHello<WithStreamedUnaryMethod_SendObject<WithStreamedUnaryMethod_SendScene<WithStreamedUnaryMethod_SendSceneList<Service > > > > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_PingHello<Service > StreamedService;
+  typedef WithStreamedUnaryMethod_PingHello<WithStreamedUnaryMethod_SendObject<WithStreamedUnaryMethod_SendScene<WithStreamedUnaryMethod_SendSceneList<Service > > > > StreamedService;
 };
 
 
