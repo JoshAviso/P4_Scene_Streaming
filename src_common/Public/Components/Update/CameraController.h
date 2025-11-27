@@ -34,15 +34,15 @@ private:
 	void UpdateRotation(float deltaTime) {
 		_yaw -= Input::Mouse.Delta.x * deltaTime * _rotSpeed;
 		_pitch -= Input::Mouse.Delta.y * deltaTime * _rotSpeed;
-		if (_pitch < -180.f) _pitch = -180.f;
-		if (_pitch > 180.f) _pitch = 180.f;
+		if (_pitch < -90.f) _pitch = -90.f;
+		if (_pitch > 90.f) _pitch = 90.f;
 		if (_yaw > 180.f) _yaw = _yaw - 360.f;
 		if (_yaw < -180.f) _yaw = _yaw + 360.f;
 
 		Quaternion qYaw(_yaw, Vec3(0.f, 1.f, 0.f));
-		Quaternion qPitch(_pitch, _owner->transform.rotation * Vec3(1.f, 0.f, 0.f));
+		Quaternion qPitch(_pitch, Vec3(1.f, 0.f, 0.f));
 
-		_owner->transform.rotation = qPitch * qYaw;
+		_owner->transform.rotation = qYaw * qPitch;
 	}
 
 	void UpdatePosition(float deltaTime) {

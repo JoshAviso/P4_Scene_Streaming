@@ -28,7 +28,8 @@ void Shader::PassData(String name, const Transform transform)
 		return;
 	}
 	
-	glm::mat4 tf = Mat4(transform);
+	glm::mat4 tf = (Mat4)transform;
+	tf = transpose(tf);
 	glUseProgram(_shader_program);
 	glUniformMatrix4fv(GetUniformLocation(name), 1, GL_FALSE, glm::value_ptr(tf));
 	glUseProgram(0);

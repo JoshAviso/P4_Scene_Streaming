@@ -17,5 +17,5 @@ inline Transform::operator Mat4() const {
 	Mat4 rotMat = rotation;
 	Mat4 translationMat = position.asTranslateMat();
 
-	return translationMat * rotMat * scaleMat;
+	return translationMat * (rotMat * scaleMat);
 }

@@ -40,16 +40,22 @@ int main()
         ResourceManager::LoadFromFile<VertexShader>("Basic Vertex Shader", "Assets/Shaders/sample.vert"),
         ResourceManager::LoadFromFile<FragShader>("Basic Frag Shader", "Assets/Shaders/sample.frag")
     );
-    Object* bunny = ObjectManager::RegisterObject(new Object("Bunny"));
-    MeshRenderer* bunnyRenderer = bunny->AddComponent(new MeshRenderer());
-    bunnyRenderer->Mesh = bunnyMesh;
-    bunnyRenderer->Shader = basicShader;
-    bunnyRenderer->base_color = Color::Red();
-    bunny->transform.position.z = 0.f;
+
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
+            Object* bunny = ObjectManager::RegisterObject(new Object("Bunny" + std::to_string(i * j)));
+            MeshRenderer* bunnyRenderer = bunny->AddComponent(new MeshRenderer());
+            bunnyRenderer->Mesh = bunnyMesh;
+            bunnyRenderer->Shader = basicShader;
+            bunnyRenderer->base_color = Color((float)i / 5.f, (float)j / 5.f, 0.2f, 1.f);
+            bunny->transform.position = Vec3((i - 2) * 0.5f, 0.f, (j - 2) * 0.5f);
+        }
+    }
 
     // Camera Setup
     Object* cam = ObjectManager::RegisterObject(new Object("MainCamera"));
     cam->AddComponent(new CameraComponent("MainCam",
+        //new Camera::OrthoProjection(-5, 5, -5, 5, 0.01, 100.f)));
         new Camera::PerspectiveProjection(45.f, Application::GetWindow()->AspectRatio(), 0.01, 200.f)));
     cam->AddComponent(new CameraController(1.f, 360.f));
 
