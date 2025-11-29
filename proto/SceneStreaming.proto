@@ -3,6 +3,9 @@ syntax = "proto3";
 
 service SceneStreamService {
 	rpc PingHello(HelloReq) returns (HelloReply){}
+	rpc SendObject(ObjectReq) returns (ObjectReply){}
+	rpc SendScene(SceneReq) returns (SceneReply){}
+	rpc SendSceneList(SceneListReq) returns (SceneListReply) {}
 }
 
 message HelloReq {
@@ -12,4 +15,36 @@ message HelloReq {
 message HelloReply {
 	bool status = 1;
 	string msg = 2;
+}
+
+message ObjectReq {
+	string name = 1;						//obj to be rendered
+}
+
+message ObjectReply {
+	repeated float vertexPos = 1;
+	
+	repeated float objectPos = 2;					//vector x y z
+	repeated float objectScale = 3;
+	repeated float objectRot = 4;
+}
+
+message SceneReq {
+	string name = 1;						//scene to be loaded
+}
+
+message SceneReply {
+	bool status = 1;						//if scene exists?
+	repeated ObjectReply objects = 2;		//objects within scene
+	float loadProgress = 3;					//load progress of scene
+}
+
+message SceneListReq {
+	bool yes = 1;							//test
+}
+
+message SceneListReply {
+	repeated string sceneNames = 1;			//names of the scenes
+	repeated SceneReply scenes = 2;			//list of scenes
+	repeated float sceneLoadProgress = 3;	//progress of each scene
 }
