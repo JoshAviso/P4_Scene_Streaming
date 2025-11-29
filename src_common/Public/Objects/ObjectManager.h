@@ -18,20 +18,26 @@ public:
 	template <typename TObject>
 	static TObject* RegisterObject(TObject* obj){
 		static_assert(std::is_base_of<Object, TObject>::value, "Pointer must be an object.");
-		_instance->_objects.push_back(Unique<Object>(obj));
+		_instance->_objects.push_back(Shared<Object>(obj));
 
+		return obj;
+	}
+	static Shared<Object> RegisterObject(Shared<Object> obj) {
+		_instance->_objects.push_back(obj);
 		return obj;
 	}
 
 	static void RemoveObject(Object* obj);
-	static Object* FindObjectByName(const String& name);
+	static Shared<Object> FindObjectByName(const String& name);
 
 	static void RegisterCollider(ICollider* collider);
 	static void UnregisterCollider(ICollider* collider);
 
+	static void ClearObjects(String CameraName = "");
+
 private:
 	List<ICollider*> _colliders;
-	List<Unique<Object>> _objects;
+	List<Shared<Object>> _objects;
 	List<Object*> _objectsToRemove;
 
 	void Update(float deltaTime);

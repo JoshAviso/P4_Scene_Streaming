@@ -20,7 +20,7 @@ private:
 		if (Input::Mouse.RightDown) {
 			UpdateSpeed();
 			UpdateRotation(deltaTime);
-			UpdatePosition(deltaTime);
+			//UpdatePosition(deltaTime);
 			Input::Mouse.Mode = Input::Locked;
 		}
 		else {

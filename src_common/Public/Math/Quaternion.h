@@ -10,6 +10,7 @@ union Quaternion {
 	float data[4];
 	
 	Quaternion() : w(1.f), x(0.f), y(0.f), z(0.f) {};
+	Quaternion(float _w, float _x, float _y, float _z) : w(_w), x(_x), y(_y), z(_z) {};
 	Quaternion(float degrees, Vec3 axis) {
 		float rad = degrees * PI / 180.f;
 		float halfAngle = rad * 0.5f;
@@ -28,10 +29,15 @@ union Quaternion {
 		r.z = w * q.z + x * q.y - y * q.x + z * q.w;
 		return r;
 	}
-	Vec3& operator* (const Vec3& vec) const {
-		Vec3 out = Vec3(Mat4(*this) * Vec4(vec));
-		return out;
+	Vec3 operator* (const Vec3& vec) const {
+		Vec3 qv(x, y, z);
+		qv.normalize();
+		Vec3 t = qv.cross(vec) * 2.f;
+		return vec + (t * w) + qv.cross(t);
 	};
+	Quaternion conjugate() const {
+		return Quaternion(w, -x, -y, -z);
+	}
 	static const Quaternion& Identity() { static const Quaternion q; return q; }
 };
 

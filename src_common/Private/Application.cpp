@@ -11,6 +11,7 @@
 #include <Input/Input.h>
 #include <Objects/ObjectManager.h>
 #include <Camera/CameraManager.h>
+#include <Scenes/SceneManager.h>
 
 Application* Application::_instance = nullptr;
 Application* Application::Initialize(const Desc desc)
@@ -28,6 +29,7 @@ Application* Application::Initialize(const Desc desc)
     ResourceManager::Initialize();
     Input::Initialize();
     ObjectManager::Initialize();
+    SceneManager::Initialize(desc.sceneManagerDesc);
 
 	return _instance;
 }

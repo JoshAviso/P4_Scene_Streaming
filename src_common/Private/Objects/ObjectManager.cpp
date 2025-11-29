@@ -9,11 +9,11 @@ void ObjectManager::RemoveObject(Object* obj)
 	obj->Enabled = false;
 	_instance->_objectsToRemove.push_back(obj);
 }
-Object* ObjectManager::FindObjectByName(const String& name)
+Shared<Object> ObjectManager::FindObjectByName(const String& name)
 {
 	for (int i = 0; i < _instance->_objects.size(); i++) {
 		if (_instance->_objects[i]->Name == name) {
-			return _instance->_objects[i].get();
+			return _instance->_objects[i];
 		}
 	}
     return nullptr;
@@ -32,6 +32,12 @@ void ObjectManager::UnregisterCollider(ICollider* collider)
    if (it != _instance->_colliders.end()) {  
        _instance->_colliders.erase(it);  
    }  
+}
+
+void ObjectManager::ClearObjects(String CameraName)
+{
+	Shared<Object> camera = FindObjectByName(CameraName);
+	_instance->_objects.clear();
 }
 
 void ObjectManager::Update(float deltaTime)
@@ -144,7 +150,7 @@ void ObjectManager::RenderObjects(Camera* camera)
 void ObjectManager::RemoveObjConcrete(Object* obj)
 {
 	auto it = std::find_if(_instance->_objects.begin(), _instance->_objects.end(),
-		[obj](const Unique<Object>& ptr) {
+		[obj](const Shared<Object>& ptr) {
 			return ptr.get() == obj;
 		});
 	if (it != _instance->_objects.end()) {

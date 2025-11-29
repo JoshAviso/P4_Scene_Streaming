@@ -13,16 +13,7 @@
   },
   "ExpandedNodes": [
     "",
-    "\\src_common",
-    "\\src_common\\Private",
-    "\\src_common\\Private\\Components",
-    "\\src_common\\Private\\Components\\Renderers",
-    "\\src_common\\Private\\Resources",
-    "\\src_common\\Public",
-    "\\src_common\\Public\\Input",
-    "\\src_common\\Public\\Resources",
-    "\\src_common\\Public\\Window"
+    "\\thirdparty"
   ],
-  "SelectedNode": "\\src_common\\Public\\Input\\Input.h",
   "PreviewInSolutionExplorer": false
 }

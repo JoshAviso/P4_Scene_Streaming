@@ -2,6 +2,7 @@
 
 #include <glm/glm.hpp>
 #include <String.hpp>
+#include <cmath>
 
 union Vec4;
 struct Mat4;
@@ -14,7 +15,7 @@ union Vec3 {
 	Vec3(float _x) : Vec3(_x, _x, _x) {};
 	operator Vec4() const;
 	operator String() const;
-	Vec3 operator+ (const Vec3& vec) {
+	Vec3 operator+ (const Vec3& vec) const {
 		return Vec3(x + vec.x, y + vec.y, z + vec.z);
 	}
 	Vec3& operator+= (const Vec3& vec) {
@@ -29,12 +30,34 @@ union Vec3 {
 	Vec3& operator*= (const float scalar) {
 		x *= scalar; y *= scalar; z *= scalar; return *this;
 	}
+	Vec3 cross(const Vec3& b) const {
+		return Vec3(
+			y * b.z - z * b.y,
+			z * b.x - x * b.z,
+			x * b.y - y * b.x
+		);
+	}
 	
 	Mat4 asScaleMat() const;
 	Mat4 asTranslateMat() const;
 
 	operator glm::vec3() const {
 		return glm::vec3(x, y, z);
+	}
+	Vec3 normalized() const {
+		float mag = magnitude();
+		return Vec3(x / mag, y / mag, z / mag);
+	}
+	Vec3& normalize() {
+		float mag = magnitude();
+		x /= mag; y /= mag; z /= mag;
+		return *this;
+	}
+	float sqrMagnitude() const{
+		return x * x + y * y + z * z;
+	}
+	float magnitude() const {
+		return sqrt(sqrMagnitude());
 	}
 };
 

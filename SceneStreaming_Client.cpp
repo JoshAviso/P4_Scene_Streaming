@@ -31,7 +31,10 @@ int main()
                 "P4 Scene Streaming | Aviso & Taylan",
                 800, 600,
                 Color::Black()
-            })
+            }),
+        SceneManager::Desc{
+            true, "MainCamera"
+        }
         });
 
     Shared<Mesh> bunnyMesh = ResourceManager::LoadFromFile<Mesh>("Bunny", "Assets/Models/bunny.obj");

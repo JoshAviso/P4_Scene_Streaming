@@ -1,6 +1,7 @@
 #pragma once
 
 #include <Common.hpp>
+#include <Scenes/SceneManager.h>
 
 class Window;
 
@@ -8,6 +9,7 @@ class Application {
 public:
 	struct Desc {
 		Window* window;
+		SceneManager::Desc sceneManagerDesc;
 	};
 
 	static void Quit();
