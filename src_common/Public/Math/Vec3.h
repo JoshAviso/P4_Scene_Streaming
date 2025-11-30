@@ -46,10 +46,12 @@ union Vec3 {
 	}
 	Vec3 normalized() const {
 		float mag = magnitude();
+		if (mag == 0.f) return Vec3(x, y, z);
 		return Vec3(x / mag, y / mag, z / mag);
 	}
 	Vec3& normalize() {
 		float mag = magnitude();
+		if (mag == 0.f) return *this;
 		x /= mag; y /= mag; z /= mag;
 		return *this;
 	}
@@ -57,7 +59,9 @@ union Vec3 {
 		return x * x + y * y + z * z;
 	}
 	float magnitude() const {
-		return sqrt(sqrMagnitude());
+		float sq = sqrMagnitude();
+		if (sq == 0.f) return 0.f;
+		return sqrt(sq);
 	}
 };
 

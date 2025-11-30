@@ -8,7 +8,7 @@ struct Mat4;
 union Quaternion {
 	struct { float w, x, y, z; };
 	float data[4];
-	
+
 	Quaternion() : w(1.f), x(0.f), y(0.f), z(0.f) {};
 	Quaternion(float _w, float _x, float _y, float _z) : w(_w), x(_x), y(_y), z(_z) {};
 	Quaternion(float degrees, Vec3 axis) {
@@ -22,21 +22,43 @@ union Quaternion {
 	}
 	operator Mat4() const;
 	Quaternion operator* (const Quaternion& q) const {
-		Quaternion r;
-		r.w = w * q.w - x * q.x - y * q.y - z * q.z;
-		r.x = w * q.x + x * q.w + y * q.z - z * q.y;
-		r.y = w * q.y - x * q.z + y * q.w + z * q.x;
-		r.z = w * q.z + x * q.y - y * q.x + z * q.w;
+		Quaternion r(
+			w * q.w - x * q.x - y * q.y - z * q.z,
+			w * q.x + x * q.w + y * q.z - z * q.y,
+			w * q.y - x * q.z + y * q.w + z * q.x,
+			w * q.z + x * q.y - y * q.x + z * q.w
+		);
 		return r;
 	}
 	Vec3 operator* (const Vec3& vec) const {
-		Vec3 qv(x, y, z);
-		qv.normalize();
-		Vec3 t = qv.cross(vec) * 2.f;
-		return vec + (t * w) + qv.cross(t);
+		Quaternion p(0.f, vec.x, vec.y, vec.z);
+		Quaternion inv = conjugate();
+		Quaternion n = normalized();
+
+		Quaternion res = (n * p) * inv;
+		return Vec3(res.x, res.y, res.z);
 	};
 	Quaternion conjugate() const {
 		return Quaternion(w, -x, -y, -z);
+	}
+	float sqMagnitude() const {
+		return w * w + x * x + y * y + z * z;
+	}
+	float magnitude() const {
+		float sq = sqMagnitude();
+		if (sq == 0.f) return 0.f;
+		return sqrt(sq);
+	}
+	Quaternion& normalize() {
+		float mag = magnitude();
+		if (mag == 0.f) return *this;
+		w /= mag; x /= mag; y /= mag; z /= mag;
+		return *this;
+	}
+	Quaternion normalized() const {
+		float mag = magnitude();
+		if (mag == 0.f) return Quaternion(w, x, y, z);
+		return Quaternion(w / mag, x / mag, y / mag, z / mag);
 	}
 	static const Quaternion& Identity() { static const Quaternion q; return q; }
 };

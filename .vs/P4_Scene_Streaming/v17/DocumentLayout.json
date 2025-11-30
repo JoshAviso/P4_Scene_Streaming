@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Math\\Vec3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Public\\Math\\Vec3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Math\\Quaternion.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Public\\Math\\Quaternion.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Math\\Vec3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Public\\Math\\Vec3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Components\\Update\\CameraController.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -96,7 +96,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 369,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -116,8 +116,7 @@
               "RelativeToolTip": "src_common\\Public\\Components\\Update\\CameraComponent.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-29T08:34:45.322Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T08:34:45.322Z"
             },
             {
               "$type": "Document",
@@ -129,8 +128,7 @@
               "RelativeToolTip": "src_common\\Private\\Graphics\\GraphicsSystem.cpp",
               "ViewState": "AgIAABsAAAAAAAAAAAAAACIAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-29T08:34:26.713Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T08:34:26.713Z"
             },
             {
               "$type": "Document",
@@ -140,7 +138,7 @@
               "RelativeDocumentMoniker": "src_common\\Public\\Components\\Update\\CameraController.h",
               "ToolTip": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Components\\Update\\CameraController.h",
               "RelativeToolTip": "src_common\\Public\\Components\\Update\\CameraController.h",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAADoAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAADwAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-11-29T08:31:29.677Z",
               "EditorCaption": ""
@@ -155,8 +153,7 @@
               "RelativeToolTip": "src_common\\Private\\Components\\Update\\CameraComponent.cpp",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-29T08:31:21.949Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T08:31:21.949Z"
             },
             {
               "$type": "Document",
@@ -168,8 +165,7 @@
               "RelativeToolTip": "src_common\\Public\\String.hpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-29T08:27:46.54Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T08:27:46.54Z"
             },
             {
               "$type": "Document",
@@ -181,31 +177,30 @@
               "RelativeToolTip": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xhash",
               "ViewState": "AgIAAMMEAAAAAAAAAAAqwM0EAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-11-29T08:20:59.201Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T08:20:59.201Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Vec3.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Math\\Vec3.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Math\\Vec3.h",
               "ToolTip": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Math\\Vec3.h",
               "RelativeToolTip": "src_common\\Public\\Math\\Vec3.h",
-              "ViewState": "AgIAAEAAAAAAAAAAAAASwEcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAiwDAAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-11-29T08:09:27.199Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Quaternion.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Math\\Quaternion.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Math\\Quaternion.h",
               "ToolTip": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Math\\Quaternion.h",
               "RelativeToolTip": "src_common\\Public\\Math\\Quaternion.h",
-              "ViewState": "AgIAABoAAAAAAAAAAAASwCIAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACEAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-11-29T08:07:31.649Z",
               "EditorCaption": ""
@@ -220,8 +215,7 @@
               "RelativeToolTip": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xutility",
               "ViewState": "AgIAAGEZAAAAAAAAAAASwGkZAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-11-29T07:55:41.76Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T07:55:41.76Z"
             },
             {
               "$type": "Document",
@@ -233,8 +227,7 @@
               "RelativeToolTip": "src_common\\Private\\Application.cpp",
               "ViewState": "AgIAABgAAAAAAAAAAAAAABkAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-29T07:50:06.637Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T07:50:06.637Z"
             },
             {
               "$type": "Document",
@@ -246,8 +239,7 @@
               "RelativeToolTip": "src_common\\Private\\Objects\\ObjectManager.cpp",
               "ViewState": "AgIAAJEAAAAAAAAAAAASwH4AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-29T07:45:25.281Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T07:45:25.281Z"
             },
             {
               "$type": "Document",
@@ -259,8 +251,7 @@
               "RelativeToolTip": "src_common\\Public\\Objects\\ObjectManager.h",
               "ViewState": "AgIAABIAAAAAAAAAAAAAAB4AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-29T07:44:19.508Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T07:44:19.508Z"
             },
             {
               "$type": "Document",
@@ -272,8 +263,7 @@
               "RelativeToolTip": "src_common\\Public\\Application.h",
               "ViewState": "AgIAAAYAAAAAAAAAAAASwAsAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-29T07:22:07.978Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T07:22:07.978Z"
             },
             {
               "$type": "Document",
@@ -285,8 +275,7 @@
               "RelativeToolTip": "src_common\\Private\\Scenes\\SceneManager.cpp",
               "ViewState": "AgIAACQAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-29T07:15:56.132Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T07:15:56.132Z"
             },
             {
               "$type": "Document",
@@ -298,8 +287,7 @@
               "RelativeToolTip": "src_common\\Private\\Scenes\\Scene.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-29T07:15:45.026Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T07:15:45.026Z"
             },
             {
               "$type": "Document",
@@ -311,8 +299,7 @@
               "RelativeToolTip": "src_common\\Public\\Scenes\\SceneManager.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-29T07:15:31.992Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T07:15:31.992Z"
             },
             {
               "$type": "Document",
@@ -324,8 +311,7 @@
               "RelativeToolTip": "src_common\\Public\\Scenes\\Scene.h",
               "ViewState": "AgIAAAQAAAAAAAAAAAASwA4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-29T07:15:06.469Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T07:15:06.469Z"
             },
             {
               "$type": "Document",
@@ -337,8 +323,7 @@
               "RelativeToolTip": "src_common\\Public\\Serialization\\ISerializable.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-27T07:55:35.905Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-27T07:55:35.905Z"
             },
             {
               "$type": "Document",
@@ -350,8 +335,7 @@
               "RelativeToolTip": "src_common\\Public\\Serialization\\Serializer.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-27T07:55:01.984Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-27T07:55:01.984Z"
             },
             {
               "$type": "Document",
@@ -363,8 +347,7 @@
               "RelativeToolTip": "CMakePresets.json",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-27T07:54:29.726Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-27T07:54:29.726Z"
             },
             {
               "$type": "Document",
@@ -376,8 +359,7 @@
               "RelativeToolTip": "CMakeLists.txt",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-11-27T07:49:46.747Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-27T07:49:46.747Z"
             },
             {
               "$type": "Document",
@@ -389,8 +371,7 @@
               "RelativeToolTip": "SceneStreaming_Client.cpp",
               "ViewState": "AgIAAEIAAAAAAAAAAAAAACMAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-27T07:49:43.054Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-27T07:49:43.054Z"
             }
           ]
         },

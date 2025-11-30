@@ -20,7 +20,7 @@ private:
 		if (Input::Mouse.RightDown) {
 			UpdateSpeed();
 			UpdateRotation(deltaTime);
-			//UpdatePosition(deltaTime);
+			UpdatePosition(deltaTime);
 			Input::Mouse.Mode = Input::Locked;
 		}
 		else {
@@ -46,7 +46,8 @@ private:
 	}
 
 	void UpdatePosition(float deltaTime) {
-		_owner->transform.position += CalculateMoveVector() * deltaTime;
+		Vec3 mv = CalculateMoveVector();
+		_owner->transform.position += mv * deltaTime;
 	}
 	Vec3 CalculateMoveVector() {
 		Vec2 moveDir = Vec2({ 0.f, 0.f });
@@ -56,6 +57,7 @@ private:
 		if (Input::KeyDown[Input::A]) moveDir.x -= 1.f;
 		moveDir.normalize();
 		Vec3 move = Vec3(moveDir.x, 0.f, moveDir.y);
+		Vec3 oM = move;
 		move = _owner->transform.rotation * move;
 		move *= _moveSpeed;
 		if (Input::KeyDown[Input::LShift]) move *= 2.f;
