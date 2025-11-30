@@ -6,6 +6,8 @@
 #include <Logger.hpp>
 #include <GLFW/glfw3.h>
 
+#include <Scenes/SceneManager.h>
+
 class CameraController : public IUpdateComponent {
 public:
 	CameraController(float moveSpeed, float rotSpeed) : _moveSpeed(moveSpeed), _rotSpeed(rotSpeed) {} ;
@@ -16,6 +18,9 @@ private:
 	float _pitch = 0.f;
 	float _yaw = 0.f;
 	float _speedScroll = 0.05f;
+
+	bool oneshotload = false;
+
 	void Update(float deltaTime) {
 		if (Input::Mouse.RightDown) {
 			UpdateSpeed();
@@ -25,6 +30,11 @@ private:
 		}
 		else {
 			Input::Mouse.Mode = Input::Normal;
+		}
+
+		if (!oneshotload && Input::KeyPressed[Input::Space]) {
+			oneshotload = true;
+			SceneManager::OpenScene("Scene 1");
 		}
 	}
 	void UpdateSpeed() {

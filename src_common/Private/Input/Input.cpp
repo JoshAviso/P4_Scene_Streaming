@@ -43,6 +43,7 @@ void Input::KeyCallback(GLFWwindow* window, int key, int scancode, int action, i
     case GLFW_KEY_D: keycode = D; break;
     case GLFW_KEY_LEFT_SHIFT: keycode = LShift; break;
     case GLFW_KEY_LEFT_CONTROL: keycode = LCtrl; break;
+    case GLFW_KEY_SPACE: keycode = Space; break;
     default: keycode = KEY_COUNT; break;
     }
 
