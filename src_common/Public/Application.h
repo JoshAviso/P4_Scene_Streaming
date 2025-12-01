@@ -10,6 +10,7 @@ public:
 	struct Desc {
 		Window* window;
 		SceneManager::Desc sceneManagerDesc;
+		uint threadCount;
 	};
 
 	static void Quit();

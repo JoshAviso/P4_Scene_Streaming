@@ -13,6 +13,7 @@
 #include <Camera/CameraManager.h>
 #include <Scenes/SceneManager.h>
 #include <UserInterface/UserInterfaceManager.h>
+#include <Threading/ThreadPoolManager.h>
 
 Application* Application::_instance = nullptr;
 Application* Application::Initialize(const Desc desc)
@@ -23,6 +24,9 @@ Application* Application::Initialize(const Desc desc)
 
     if (desc.window == nullptr) throw std::runtime_error("Trying to initialize Application with null window.");
     _instance->_window = Unique<Window>(desc.window);
+
+    ThreadPoolManager::Initialize();
+    ThreadPoolManager::NewThreadPool("Main", 5)->StartScheduling();
 
     GraphicsSystem::Initialize();
 

@@ -21,6 +21,7 @@ grpc::Status SceneStreamServer::SendObject(grpc::ServerContext* context, const O
 	{
 		std::cout << "Kill me, Emmanuel John 'EJ' R. Taylan." << std::endl;
 	}
+	return grpc::Status::OK;
 }
 
 bool SceneStreamServer::fileExists(std::string fileName)

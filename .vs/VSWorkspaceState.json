@@ -14,16 +14,15 @@
   "ExpandedNodes": [
     "",
     "\\src_common",
-    "\\src_common\\Private",
-    "\\src_common\\Private\\Components",
-    "\\src_common\\Private\\Components\\Update",
-    "\\src_common\\Private\\Scenes",
     "\\src_common\\Public",
     "\\src_common\\Public\\Components",
     "\\src_common\\Public\\Components\\Update",
+    "\\src_common\\Public\\Graphics",
     "\\src_common\\Public\\Math",
-    "\\src_common\\Public\\UserInterface"
+    "\\src_common\\Public\\Objects",
+    "\\src_common\\Public\\Scenes",
+    "\\src_common\\Public\\UserInterface",
+    "\\src_common\\Public\\UserInterface\\CustomUI"
   ],
-  "SelectedNode": "\\src_common\\Public\\UserInterface\\UserInterfaceManager.h",
   "PreviewInSolutionExplorer": false
 }
