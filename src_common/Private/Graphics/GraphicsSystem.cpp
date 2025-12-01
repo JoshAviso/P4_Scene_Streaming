@@ -13,6 +13,7 @@
 #include <Camera/CameraManager.h>
 #include <Camera/Camera.h>
 #include <Graphics/ShaderList.h>
+#include <UserInterface/UserInterfaceManager.h>
 
 void GraphicsSystem::Render(Window* window)
 {
@@ -30,12 +31,10 @@ void GraphicsSystem::Render(Window* window)
         cam->projection = new Camera::PerspectiveProjection(100.f, Application::GetWindow()->AspectRatio(), 0.01f, 200.f);
     }
 
-    //ImGui::NewFrame();
-    // TODO : Render UI Step
-    ObjectManager::_instance->RenderObjects(cam.get());
+    UserInterfaceManager::BeginFrame();
 
-    //ImGui::Render();
-    //ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+    ObjectManager::_instance->RenderObjects(cam.get());
+    UserInterfaceManager::Render();
 
     glfwSwapBuffers(window->_window);
 }

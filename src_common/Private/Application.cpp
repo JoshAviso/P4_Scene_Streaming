@@ -12,6 +12,7 @@
 #include <Objects/ObjectManager.h>
 #include <Camera/CameraManager.h>
 #include <Scenes/SceneManager.h>
+#include <UserInterface/UserInterfaceManager.h>
 
 Application* Application::_instance = nullptr;
 Application* Application::Initialize(const Desc desc)
@@ -30,6 +31,7 @@ Application* Application::Initialize(const Desc desc)
     Input::Initialize();
     ObjectManager::Initialize();
     SceneManager::Initialize(desc.sceneManagerDesc);
+    UserInterfaceManager::Initialize({desc.sceneManagerDesc.isServer});
 
 	return _instance;
 }

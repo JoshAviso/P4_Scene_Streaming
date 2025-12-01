@@ -21,8 +21,9 @@
     "\\src_common\\Public",
     "\\src_common\\Public\\Components",
     "\\src_common\\Public\\Components\\Update",
-    "\\src_common\\Public\\Math"
+    "\\src_common\\Public\\Math",
+    "\\src_common\\Public\\UserInterface"
   ],
-  "SelectedNode": "\\src_common\\Public\\Components\\Update\\CameraController.h",
+  "SelectedNode": "\\src_common\\Public\\UserInterface\\UserInterfaceManager.h",
   "PreviewInSolutionExplorer": false
 }

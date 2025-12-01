@@ -24,6 +24,9 @@
 #include <Components/Update/CameraComponent.h>
 #include <Components/Update/CameraController.h>
 
+#include <UserInterface/UserInterfaceManager.h>
+#include <UserInterface/CustomUI/DemoUI.h>
+
 int main()
 {
     Application* app = Application::Initialize({
@@ -43,6 +46,8 @@ int main()
     cam->AddComponent(new CameraComponent("MainCam",
         new Camera::PerspectiveProjection(45.f, Application::GetWindow()->AspectRatio(), 0.01, 200.f)));
     cam->AddComponent(new CameraController(1.f, 360.f));
+
+    UserInterfaceManager::AddUI(new DemoUI());
 
     Application::Run();
 	//RunClient("Frankling", "localhost:50051", true);
