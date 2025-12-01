@@ -9,6 +9,8 @@
 #include <Components/Renderers/MeshRenderer.h>
 #include <Graphics/ShaderList.h>
 
+#include <algorithm>
+
 void SceneManager::OpenScene(const String sceneName)
 {
 	if (_instance->_scenes.find(sceneName) == _instance->_scenes.end()) {
@@ -35,6 +37,17 @@ Shared<Scene> SceneManager::AddScene(Scene* scene)
 	Shared<Scene> sc = Shared<Scene>(scene);
 	_instance->_scenes[name] = sc;
 	return sc;
+}
+
+List<Shared<Scene>> SceneManager::GetScenes()
+{
+    List<Shared<Scene>> list;
+    list.reserve(_instance->_scenes.size());
+
+    std::transform(_instance->_scenes.begin(), _instance->_scenes.end(),
+        std::back_inserter(list),
+        [](const auto& pair) { return pair.second; });
+    return list;
 }
 
 void SceneManager::PopulateScenes()

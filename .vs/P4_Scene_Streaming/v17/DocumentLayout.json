@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\UserInterface\\CustomUI\\SceneSelectUI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Public\\UserInterface\\CustomUI\\SceneSelectUI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\SceneStreaming_Client.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SceneStreaming_Client.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\thirdparty\\DearImGUI\\imgui.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:thirdparty\\DearImGUI\\imgui.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Scenes\\Scene.h||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Public\\Scenes\\Scene.h||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Scenes\\SceneManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Private\\Scenes\\SceneManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Scenes\\SceneManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Public\\Scenes\\SceneManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\UserInterface\\CustomUI\\DemoUI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Public\\UserInterface\\CustomUI\\DemoUI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -34,10 +58,6 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\vector||{3B902123-F8A7-4915-9F01-361F908088D0}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\SceneStreaming_Client.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SceneStreaming_Client.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\UserInterface\\IUserInterface.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Public\\UserInterface\\IUserInterface.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -54,24 +74,12 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Private\\Camera\\CameraManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\thirdparty\\DearImGUI\\imgui.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:thirdparty\\DearImGUI\\imgui.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\String.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Public\\String.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Scenes\\SceneManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Private\\Scenes\\SceneManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Scenes\\SceneManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Public\\Scenes\\SceneManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Components\\Update\\CameraController.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -108,10 +116,6 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Private\\Scenes\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Scenes\\Scene.h||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Public\\Scenes\\Scene.h||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Serialization\\ISerializable.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Public\\Serialization\\ISerializable.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -131,7 +135,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 369,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -143,7 +147,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
+              "Title": "SceneSelectUI.h",
+              "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\UserInterface\\CustomUI\\SceneSelectUI.h",
+              "RelativeDocumentMoniker": "src_common\\Public\\UserInterface\\CustomUI\\SceneSelectUI.h",
+              "ToolTip": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\UserInterface\\CustomUI\\SceneSelectUI.h",
+              "RelativeToolTip": "src_common\\Public\\UserInterface\\CustomUI\\SceneSelectUI.h",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-01T00:14:38.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "vector",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\vector",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\vector",
@@ -156,20 +173,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "DemoUI.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\UserInterface\\CustomUI\\DemoUI.h",
               "RelativeDocumentMoniker": "src_common\\Public\\UserInterface\\CustomUI\\DemoUI.h",
               "ToolTip": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\UserInterface\\CustomUI\\DemoUI.h",
               "RelativeToolTip": "src_common\\Public\\UserInterface\\CustomUI\\DemoUI.h",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-12-01T00:00:18.988Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "ObjectManager.cpp",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Objects\\ObjectManager.cpp",
               "RelativeDocumentMoniker": "src_common\\Private\\Objects\\ObjectManager.cpp",
@@ -182,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "IUserInterface.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\UserInterface\\IUserInterface.h",
               "RelativeDocumentMoniker": "src_common\\Public\\UserInterface\\IUserInterface.h",
@@ -195,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "CameraManager.cpp",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Camera\\CameraManager.cpp",
               "RelativeDocumentMoniker": "src_common\\Private\\Camera\\CameraManager.cpp",
@@ -208,7 +225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "GraphicsSystem.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Graphics\\GraphicsSystem.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Graphics\\GraphicsSystem.h",
@@ -221,20 +238,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 2,
               "Title": "imgui.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\thirdparty\\DearImGUI\\imgui.h",
               "RelativeDocumentMoniker": "thirdparty\\DearImGUI\\imgui.h",
               "ToolTip": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\thirdparty\\DearImGUI\\imgui.h",
               "RelativeToolTip": "thirdparty\\DearImGUI\\imgui.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGACAAAAAAAAAAAiwGoCAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-11-30T23:34:01.959Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "UserInterfaceManager.cpp",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\UserInterface\\UserInterfaceManager.cpp",
               "RelativeDocumentMoniker": "src_common\\Private\\UserInterface\\UserInterfaceManager.cpp",
@@ -247,7 +264,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "UserInterfaceManager.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\UserInterface\\UserInterfaceManager.h",
               "RelativeDocumentMoniker": "src_common\\Public\\UserInterface\\UserInterfaceManager.h",
@@ -260,7 +277,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "Input.cpp",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Input\\Input.cpp",
               "RelativeDocumentMoniker": "src_common\\Private\\Input\\Input.cpp",
@@ -273,7 +290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "CameraComponent.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Components\\Update\\CameraComponent.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Components\\Update\\CameraComponent.h",
@@ -286,7 +303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "GraphicsSystem.cpp",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Graphics\\GraphicsSystem.cpp",
               "RelativeDocumentMoniker": "src_common\\Private\\Graphics\\GraphicsSystem.cpp",
@@ -299,7 +316,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "CameraController.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Components\\Update\\CameraController.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Components\\Update\\CameraController.h",
@@ -312,7 +329,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "CameraComponent.cpp",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Components\\Update\\CameraComponent.cpp",
               "RelativeDocumentMoniker": "src_common\\Private\\Components\\Update\\CameraComponent.cpp",
@@ -325,7 +342,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "String.hpp",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\String.hpp",
               "RelativeDocumentMoniker": "src_common\\Public\\String.hpp",
@@ -338,7 +355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "xhash",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xhash",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xhash",
@@ -351,7 +368,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "Vec3.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Math\\Vec3.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Math\\Vec3.h",
@@ -364,7 +381,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "Quaternion.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Math\\Quaternion.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Math\\Quaternion.h",
@@ -377,7 +394,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "xutility",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xutility",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xutility",
@@ -390,7 +407,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "Application.cpp",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Application.cpp",
               "RelativeDocumentMoniker": "src_common\\Private\\Application.cpp",
@@ -403,7 +420,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "ObjectManager.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Objects\\ObjectManager.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Objects\\ObjectManager.h",
@@ -416,7 +433,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "Application.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Application.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Application.h",
@@ -429,20 +446,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 4,
               "Title": "SceneManager.cpp",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Scenes\\SceneManager.cpp",
               "RelativeDocumentMoniker": "src_common\\Private\\Scenes\\SceneManager.cpp",
               "ToolTip": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Scenes\\SceneManager.cpp",
               "RelativeToolTip": "src_common\\Private\\Scenes\\SceneManager.cpp",
-              "ViewState": "AgIAAAwAAAAAAAAAAADwvxkAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAiwDEAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-11-29T07:15:56.132Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "Scene.cpp",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Scenes\\Scene.cpp",
               "RelativeDocumentMoniker": "src_common\\Private\\Scenes\\Scene.cpp",
@@ -455,33 +472,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 5,
               "Title": "SceneManager.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Scenes\\SceneManager.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Scenes\\SceneManager.h",
               "ToolTip": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Scenes\\SceneManager.h",
               "RelativeToolTip": "src_common\\Public\\Scenes\\SceneManager.h",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAiwBIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAiwBYAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-11-29T07:15:31.992Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 3,
               "Title": "Scene.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Scenes\\Scene.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Scenes\\Scene.h",
               "ToolTip": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Scenes\\Scene.h",
               "RelativeToolTip": "src_common\\Public\\Scenes\\Scene.h",
-              "ViewState": "AgIAAAQAAAAAAAAAAAASwA4AAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-11-29T07:15:06.469Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "ISerializable.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Serialization\\ISerializable.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Serialization\\ISerializable.h",
@@ -494,7 +511,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "Serializer.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Serialization\\Serializer.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Serialization\\Serializer.h",
@@ -507,7 +524,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "CMakePresets.json",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\CMakePresets.json",
               "RelativeDocumentMoniker": "CMakePresets.json",
@@ -520,7 +537,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "CMakeLists.txt",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\CMakeLists.txt",
               "RelativeDocumentMoniker": "CMakeLists.txt",
@@ -533,13 +550,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "SceneStreaming_Client.cpp",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\SceneStreaming_Client.cpp",
               "RelativeDocumentMoniker": "SceneStreaming_Client.cpp",
               "ToolTip": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\SceneStreaming_Client.cpp",
               "RelativeToolTip": "SceneStreaming_Client.cpp",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADEAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-11-27T07:49:43.054Z",
               "EditorCaption": ""

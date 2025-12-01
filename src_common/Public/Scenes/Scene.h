@@ -6,6 +6,7 @@
 class Scene {
 public:
 	Scene(String name);
+	String GetName() { return SceneName;  };
 
 private:
 	String SceneName = "";

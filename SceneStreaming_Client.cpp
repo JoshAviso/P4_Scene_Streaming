@@ -26,6 +26,7 @@
 
 #include <UserInterface/UserInterfaceManager.h>
 #include <UserInterface/CustomUI/DemoUI.h>
+#include <UserInterface/CustomUI/SceneSelectUI.h>
 
 int main()
 {
@@ -47,7 +48,8 @@ int main()
         new Camera::PerspectiveProjection(45.f, Application::GetWindow()->AspectRatio(), 0.01, 200.f)));
     cam->AddComponent(new CameraController(1.f, 360.f));
 
-    UserInterfaceManager::AddUI(new DemoUI());
+    //UserInterfaceManager::AddUI(new DemoUI());
+    UserInterfaceManager::AddUI(new SceneSelectUI());
 
     Application::Run();
 	//RunClient("Frankling", "localhost:50051", true);
