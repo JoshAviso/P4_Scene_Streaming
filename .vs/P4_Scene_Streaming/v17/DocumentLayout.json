@@ -3,20 +3,35 @@
   "WorkspaceRootPath": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Components\\Renderers\\MeshRenderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Private\\Components\\Renderers\\MeshRenderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Application.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Public\\Application.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Threading\\WorkerThread.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Private\\Threading\\WorkerThread.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Application.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Private\\Application.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Threading\\ThreadGLContext.h||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Public\\Threading\\ThreadGLContext.h||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Threading\\WorkerTasks\\LoadResourceTask.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Public\\Threading\\WorkerTasks\\LoadResourceTask.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Resources\\Mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Private\\Resources\\Mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Resources\\ResourceManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Public\\Resources\\ResourceManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Components\\Renderers\\MeshRenderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Private\\Components\\Renderers\\MeshRenderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\memory||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Scenes\\SceneManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -27,8 +42,20 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Public\\Scenes\\SceneManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Resources\\Mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Private\\Resources\\Mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Threading\\ThreadPoolManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Public\\Threading\\ThreadPoolManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Window\\Window.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Public\\Window\\Window.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Window\\Window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Private\\Window\\Window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Threading\\WorkerThread.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Private\\Threading\\WorkerThread.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xmemory||{3B902123-F8A7-4915-9F01-361F908088D0}|"
@@ -58,10 +85,6 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SceneStreaming_Client.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Application.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Private\\Application.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Threading\\ThreadPoolManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Private\\Threading\\ThreadPoolManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -70,10 +93,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\deque||{3B902123-F8A7-4915-9F01-361F908088D0}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Application.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Public\\Application.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_server\\Private\\SceneStreamServer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -90,10 +109,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Threading\\ThreadPool.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Public\\Threading\\ThreadPool.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Threading\\ThreadPoolManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src_common\\Public\\Threading\\ThreadPoolManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Threading\\WorkerTasks\\IWorkerTask.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -212,7 +227,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 369,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 48,
           "Children": [
             {
               "$type": "Bookmark",
@@ -224,7 +239,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 7,
+              "Title": "memory",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\memory",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\memory",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\memory",
+              "RelativeToolTip": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\memory",
+              "ViewState": "AgIAAP4NAAAAAAAAAAASwAwOAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-02T03:33:00.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Window.h",
+              "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Window\\Window.h",
+              "RelativeDocumentMoniker": "src_common\\Public\\Window\\Window.h",
+              "ToolTip": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Window\\Window.h",
+              "RelativeToolTip": "src_common\\Public\\Window\\Window.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-02T03:22:35.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ThreadGLContext.h",
+              "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Threading\\ThreadGLContext.h",
+              "RelativeDocumentMoniker": "src_common\\Public\\Threading\\ThreadGLContext.h",
+              "ToolTip": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Threading\\ThreadGLContext.h",
+              "RelativeToolTip": "src_common\\Public\\Threading\\ThreadGLContext.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-02T02:14:19.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Window.cpp",
+              "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Window\\Window.cpp",
+              "RelativeDocumentMoniker": "src_common\\Private\\Window\\Window.cpp",
+              "ToolTip": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Window\\Window.cpp",
+              "RelativeToolTip": "src_common\\Private\\Window\\Window.cpp",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-12-02T02:13:32.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "queue",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\queue",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\queue",
@@ -232,12 +299,11 @@
               "RelativeToolTip": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\queue",
               "ViewState": "AgIAAGkAAAAAAAAAAAAgwHYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-12-01T13:32:49.261Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-01T13:32:49.261Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 23,
               "Title": "deque",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\deque",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\deque",
@@ -245,12 +311,11 @@
               "RelativeToolTip": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\deque",
               "ViewState": "AgIAAMIEAAAAAAAAAAAgwM8EAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-12-01T13:32:46.043Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-01T13:32:46.043Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
               "Title": "xmemory",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xmemory",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xmemory",
@@ -258,12 +323,11 @@
               "RelativeToolTip": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xmemory",
               "ViewState": "AgIAANMFAAAAAAAAAAAvwNsFAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-12-01T13:30:56.165Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-01T13:30:56.165Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 24,
               "Title": "SceneStreamServer.cpp",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_server\\Private\\SceneStreamServer.cpp",
               "RelativeDocumentMoniker": "src_server\\Private\\SceneStreamServer.cpp",
@@ -271,12 +335,11 @@
               "RelativeToolTip": "src_server\\Private\\SceneStreamServer.cpp",
               "ViewState": "AgIAAAwAAAAAAAAAAAAiwBcAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-12-01T13:26:29.38Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-01T13:26:29.38Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "IThread.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Threading\\IThread.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Threading\\IThread.h",
@@ -284,12 +347,11 @@
               "RelativeToolTip": "src_common\\Public\\Threading\\IThread.h",
               "ViewState": "AgIAAAEAAAAAAAAAAAAiwAwAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-12-01T13:22:58.485Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-01T13:22:58.485Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 26,
               "Title": "Mesh.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Resources\\Mesh.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Resources\\Mesh.h",
@@ -297,25 +359,24 @@
               "RelativeToolTip": "src_common\\Public\\Resources\\Mesh.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-12-01T13:22:08.702Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-01T13:22:08.702Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "Mesh.cpp",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Resources\\Mesh.cpp",
               "RelativeDocumentMoniker": "src_common\\Private\\Resources\\Mesh.cpp",
               "ToolTip": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Resources\\Mesh.cpp",
               "RelativeToolTip": "src_common\\Private\\Resources\\Mesh.cpp",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAhwBAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAAvwEEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-12-01T13:22:06.76Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 27,
               "Title": "ThreadPool.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Threading\\ThreadPool.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Threading\\ThreadPool.h",
@@ -323,25 +384,24 @@
               "RelativeToolTip": "src_common\\Public\\Threading\\ThreadPool.h",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-12-01T13:18:48.711Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-01T13:18:48.711Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "MeshRenderer.cpp",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Components\\Renderers\\MeshRenderer.cpp",
               "RelativeDocumentMoniker": "src_common\\Private\\Components\\Renderers\\MeshRenderer.cpp",
               "ToolTip": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Components\\Renderers\\MeshRenderer.cpp",
               "RelativeToolTip": "src_common\\Private\\Components\\Renderers\\MeshRenderer.cpp",
-              "ViewState": "AgIAABgAAAAAAAAAAAAvwCAAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAASwCAAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-12-01T13:11:01.417Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
               "Title": "MeshRenderer.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Components\\Renderers\\MeshRenderer.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Components\\Renderers\\MeshRenderer.h",
@@ -349,12 +409,11 @@
               "RelativeToolTip": "src_common\\Public\\Components\\Renderers\\MeshRenderer.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-12-01T13:09:25.122Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-01T13:09:25.122Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "WorkerThread.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Threading\\WorkerThread.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Threading\\WorkerThread.h",
@@ -362,12 +421,11 @@
               "RelativeToolTip": "src_common\\Public\\Threading\\WorkerThread.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-12-01T12:58:35.73Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-01T12:58:35.73Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 21,
               "Title": "ThreadPoolManager.cpp",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Threading\\ThreadPoolManager.cpp",
               "RelativeDocumentMoniker": "src_common\\Private\\Threading\\ThreadPoolManager.cpp",
@@ -375,25 +433,24 @@
               "RelativeToolTip": "src_common\\Private\\Threading\\ThreadPoolManager.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-12-01T12:58:16.72Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-01T12:58:16.72Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 10,
               "Title": "ThreadPoolManager.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Threading\\ThreadPoolManager.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Threading\\ThreadPoolManager.h",
               "ToolTip": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Threading\\ThreadPoolManager.h",
               "RelativeToolTip": "src_common\\Public\\Threading\\ThreadPoolManager.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-12-01T12:57:34.577Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 13,
               "Title": "WorkerThread.cpp",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Threading\\WorkerThread.cpp",
               "RelativeDocumentMoniker": "src_common\\Private\\Threading\\WorkerThread.cpp",
@@ -401,12 +458,11 @@
               "RelativeToolTip": "src_common\\Private\\Threading\\WorkerThread.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAswA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-12-01T12:54:30.825Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-01T12:54:30.825Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "ThreadPool.cpp",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Threading\\ThreadPool.cpp",
               "RelativeDocumentMoniker": "src_common\\Private\\Threading\\ThreadPool.cpp",
@@ -414,25 +470,24 @@
               "RelativeToolTip": "src_common\\Private\\Threading\\ThreadPool.cpp",
               "ViewState": "AgIAAAUAAAAAAAAAAAAiwA0AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-12-01T12:54:23.368Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-01T12:54:23.368Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ResourceManager.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Resources\\ResourceManager.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Resources\\ResourceManager.h",
               "ToolTip": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Resources\\ResourceManager.h",
               "RelativeToolTip": "src_common\\Public\\Resources\\ResourceManager.h",
-              "ViewState": "AgIAADUAAAAAAAAAAAAvwD0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAvwBEAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-12-01T12:46:38.387Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 32,
               "Title": "ResourceManager.cpp",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Resources\\ResourceManager.cpp",
               "RelativeDocumentMoniker": "src_common\\Private\\Resources\\ResourceManager.cpp",
@@ -440,12 +495,11 @@
               "RelativeToolTip": "src_common\\Private\\Resources\\ResourceManager.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-12-01T12:46:34.755Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-01T12:46:34.755Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 31,
               "Title": "Object.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Objects\\Object.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Objects\\Object.h",
@@ -453,12 +507,11 @@
               "RelativeToolTip": "src_common\\Public\\Objects\\Object.h",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-12-01T12:43:34.994Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-01T12:43:34.994Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 28,
               "Title": "IWorkerTask.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Threading\\WorkerTasks\\IWorkerTask.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Threading\\WorkerTasks\\IWorkerTask.h",
@@ -466,25 +519,24 @@
               "RelativeToolTip": "src_common\\Public\\Threading\\WorkerTasks\\IWorkerTask.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-12-01T12:41:16.588Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-01T12:41:16.588Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "LoadResourceTask.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Threading\\WorkerTasks\\LoadResourceTask.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Threading\\WorkerTasks\\LoadResourceTask.h",
               "ToolTip": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Threading\\WorkerTasks\\LoadResourceTask.h",
               "RelativeToolTip": "src_common\\Public\\Threading\\WorkerTasks\\LoadResourceTask.h",
-              "ViewState": "AgIAABMAAAAAAAAAAAAvwBsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAswBoAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-12-01T12:40:12.659Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 33,
               "Title": "SceneSelectUI.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\UserInterface\\CustomUI\\SceneSelectUI.h",
               "RelativeDocumentMoniker": "src_common\\Public\\UserInterface\\CustomUI\\SceneSelectUI.h",
@@ -492,12 +544,11 @@
               "RelativeToolTip": "src_common\\Public\\UserInterface\\CustomUI\\SceneSelectUI.h",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-12-01T00:14:38.169Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-01T00:14:38.169Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 40,
               "Title": "vector",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\vector",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\vector",
@@ -505,12 +556,11 @@
               "RelativeToolTip": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\vector",
               "ViewState": "AgIAAEQHAAAAAAAAAAAowFAHAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-12-01T00:06:05.159Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-01T00:06:05.159Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 36,
               "Title": "DemoUI.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\UserInterface\\CustomUI\\DemoUI.h",
               "RelativeDocumentMoniker": "src_common\\Public\\UserInterface\\CustomUI\\DemoUI.h",
@@ -518,12 +568,11 @@
               "RelativeToolTip": "src_common\\Public\\UserInterface\\CustomUI\\DemoUI.h",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-12-01T00:00:18.988Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-01T00:00:18.988Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "ObjectManager.cpp",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Objects\\ObjectManager.cpp",
               "RelativeDocumentMoniker": "src_common\\Private\\Objects\\ObjectManager.cpp",
@@ -531,12 +580,11 @@
               "RelativeToolTip": "src_common\\Private\\Objects\\ObjectManager.cpp",
               "ViewState": "AgIAABMAAAAAAAAAAADgvx8AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-30T23:45:53.794Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T23:45:53.794Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 41,
               "Title": "IUserInterface.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\UserInterface\\IUserInterface.h",
               "RelativeDocumentMoniker": "src_common\\Public\\UserInterface\\IUserInterface.h",
@@ -544,12 +592,11 @@
               "RelativeToolTip": "src_common\\Public\\UserInterface\\IUserInterface.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-30T23:43:36.544Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T23:43:36.544Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 42,
               "Title": "CameraManager.cpp",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Camera\\CameraManager.cpp",
               "RelativeDocumentMoniker": "src_common\\Private\\Camera\\CameraManager.cpp",
@@ -557,12 +604,11 @@
               "RelativeToolTip": "src_common\\Private\\Camera\\CameraManager.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-30T23:42:52.445Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T23:42:52.445Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 37,
               "Title": "GraphicsSystem.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Graphics\\GraphicsSystem.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Graphics\\GraphicsSystem.h",
@@ -570,12 +616,11 @@
               "RelativeToolTip": "src_common\\Public\\Graphics\\GraphicsSystem.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-30T23:41:02.409Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T23:41:02.409Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 34,
               "Title": "imgui.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\thirdparty\\DearImGUI\\imgui.h",
               "RelativeDocumentMoniker": "thirdparty\\DearImGUI\\imgui.h",
@@ -583,12 +628,11 @@
               "RelativeToolTip": "thirdparty\\DearImGUI\\imgui.h",
               "ViewState": "AgIAAGACAAAAAAAAAAAiwGoCAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-30T23:34:01.959Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T23:34:01.959Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 39,
               "Title": "UserInterfaceManager.cpp",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\UserInterface\\UserInterfaceManager.cpp",
               "RelativeDocumentMoniker": "src_common\\Private\\UserInterface\\UserInterfaceManager.cpp",
@@ -596,12 +640,11 @@
               "RelativeToolTip": "src_common\\Private\\UserInterface\\UserInterfaceManager.cpp",
               "ViewState": "AgIAAAMAAAAAAAAAAADwvxYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-30T23:13:11.9Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T23:13:11.9Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 38,
               "Title": "UserInterfaceManager.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\UserInterface\\UserInterfaceManager.h",
               "RelativeDocumentMoniker": "src_common\\Public\\UserInterface\\UserInterfaceManager.h",
@@ -609,12 +652,11 @@
               "RelativeToolTip": "src_common\\Public\\UserInterface\\UserInterfaceManager.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-30T23:13:09.564Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T23:13:09.564Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 45,
               "Title": "Input.cpp",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Input\\Input.cpp",
               "RelativeDocumentMoniker": "src_common\\Private\\Input\\Input.cpp",
@@ -622,12 +664,11 @@
               "RelativeToolTip": "src_common\\Private\\Input\\Input.cpp",
               "ViewState": "AgIAACEAAAAAAAAAAAAAAC0AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-30T05:22:10.4Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T05:22:10.4Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 48,
               "Title": "CameraComponent.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Components\\Update\\CameraComponent.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Components\\Update\\CameraComponent.h",
@@ -635,12 +676,11 @@
               "RelativeToolTip": "src_common\\Public\\Components\\Update\\CameraComponent.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-29T08:34:45.322Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T08:34:45.322Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 15,
               "Title": "GraphicsSystem.cpp",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Graphics\\GraphicsSystem.cpp",
               "RelativeDocumentMoniker": "src_common\\Private\\Graphics\\GraphicsSystem.cpp",
@@ -648,12 +688,11 @@
               "RelativeToolTip": "src_common\\Private\\Graphics\\GraphicsSystem.cpp",
               "ViewState": "AgIAACEAAAAAAAAAAAAAACMAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-29T08:34:26.713Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T08:34:26.713Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 44,
               "Title": "CameraController.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Components\\Update\\CameraController.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Components\\Update\\CameraController.h",
@@ -661,12 +700,11 @@
               "RelativeToolTip": "src_common\\Public\\Components\\Update\\CameraController.h",
               "ViewState": "AgIAABsAAAAAAAAAAAAAACcAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-29T08:31:29.677Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T08:31:29.677Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 49,
               "Title": "CameraComponent.cpp",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Components\\Update\\CameraComponent.cpp",
               "RelativeDocumentMoniker": "src_common\\Private\\Components\\Update\\CameraComponent.cpp",
@@ -674,12 +712,11 @@
               "RelativeToolTip": "src_common\\Private\\Components\\Update\\CameraComponent.cpp",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-29T08:31:21.949Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T08:31:21.949Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 43,
               "Title": "String.hpp",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\String.hpp",
               "RelativeDocumentMoniker": "src_common\\Public\\String.hpp",
@@ -687,12 +724,11 @@
               "RelativeToolTip": "src_common\\Public\\String.hpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-29T08:27:46.54Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T08:27:46.54Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 50,
               "Title": "xhash",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xhash",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xhash",
@@ -700,12 +736,11 @@
               "RelativeToolTip": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xhash",
               "ViewState": "AgIAAMMEAAAAAAAAAAAqwM0EAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-11-29T08:20:59.201Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T08:20:59.201Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 47,
               "Title": "Vec3.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Math\\Vec3.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Math\\Vec3.h",
@@ -713,12 +748,11 @@
               "RelativeToolTip": "src_common\\Public\\Math\\Vec3.h",
               "ViewState": "AgIAACkAAAAAAAAAAAAiwDAAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-29T08:09:27.199Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T08:09:27.199Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 46,
               "Title": "Quaternion.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Math\\Quaternion.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Math\\Quaternion.h",
@@ -726,12 +760,11 @@
               "RelativeToolTip": "src_common\\Public\\Math\\Quaternion.h",
               "ViewState": "AgIAABgAAAAAAAAAAAAAABwAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-29T08:07:31.649Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T08:07:31.649Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 51,
               "Title": "xutility",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xutility",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xutility",
@@ -739,25 +772,24 @@
               "RelativeToolTip": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xutility",
               "ViewState": "AgIAAGEZAAAAAAAAAAASwGkZAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-11-29T07:55:41.76Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T07:55:41.76Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 1,
               "Title": "Application.cpp",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Application.cpp",
               "RelativeDocumentMoniker": "src_common\\Private\\Application.cpp",
               "ToolTip": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Application.cpp",
               "RelativeToolTip": "src_common\\Private\\Application.cpp",
-              "ViewState": "AgIAABgAAAAAAAAAAAAiwBwAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAASwEEAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-11-29T07:50:06.637Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 29,
               "Title": "ObjectManager.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Objects\\ObjectManager.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Objects\\ObjectManager.h",
@@ -765,38 +797,37 @@
               "RelativeToolTip": "src_common\\Public\\Objects\\ObjectManager.h",
               "ViewState": "AgIAABgAAAAAAAAAAAAAAB4AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-29T07:44:19.508Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T07:44:19.508Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 0,
               "Title": "Application.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Application.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Application.h",
               "ToolTip": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Application.h",
               "RelativeToolTip": "src_common\\Public\\Application.h",
-              "ViewState": "AgIAAA8AAAAAAAAAAAASwBoAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAASwBcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-11-29T07:22:07.978Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "SceneManager.cpp",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Scenes\\SceneManager.cpp",
               "RelativeDocumentMoniker": "src_common\\Private\\Scenes\\SceneManager.cpp",
               "ToolTip": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Scenes\\SceneManager.cpp",
               "RelativeToolTip": "src_common\\Private\\Scenes\\SceneManager.cpp",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAhwEUAAABOAAAAAAAAAA==",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAhwF4AAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-11-29T07:15:56.132Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 52,
               "Title": "Scene.cpp",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Private\\Scenes\\Scene.cpp",
               "RelativeDocumentMoniker": "src_common\\Private\\Scenes\\Scene.cpp",
@@ -804,25 +835,24 @@
               "RelativeToolTip": "src_common\\Private\\Scenes\\Scene.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-29T07:15:45.026Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T07:15:45.026Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "SceneManager.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Scenes\\SceneManager.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Scenes\\SceneManager.h",
               "ToolTip": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Scenes\\SceneManager.h",
               "RelativeToolTip": "src_common\\Public\\Scenes\\SceneManager.h",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-11-29T07:15:31.992Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 35,
               "Title": "Scene.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Scenes\\Scene.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Scenes\\Scene.h",
@@ -830,12 +860,11 @@
               "RelativeToolTip": "src_common\\Public\\Scenes\\Scene.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-29T07:15:06.469Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T07:15:06.469Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 53,
               "Title": "ISerializable.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Serialization\\ISerializable.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Serialization\\ISerializable.h",
@@ -843,12 +872,11 @@
               "RelativeToolTip": "src_common\\Public\\Serialization\\ISerializable.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-27T07:55:35.905Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-27T07:55:35.905Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 54,
               "Title": "Serializer.h",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\src_common\\Public\\Serialization\\Serializer.h",
               "RelativeDocumentMoniker": "src_common\\Public\\Serialization\\Serializer.h",
@@ -856,12 +884,11 @@
               "RelativeToolTip": "src_common\\Public\\Serialization\\Serializer.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-27T07:55:01.984Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-27T07:55:01.984Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 55,
               "Title": "CMakePresets.json",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\CMakePresets.json",
               "RelativeDocumentMoniker": "CMakePresets.json",
@@ -869,12 +896,11 @@
               "RelativeToolTip": "CMakePresets.json",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-27T07:54:29.726Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-27T07:54:29.726Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 25,
               "Title": "CMakeLists.txt",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\CMakeLists.txt",
               "RelativeDocumentMoniker": "CMakeLists.txt",
@@ -882,12 +908,11 @@
               "RelativeToolTip": "CMakeLists.txt",
               "ViewState": "AgIAAFUAAAAAAAAAAAAhwGUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-11-27T07:49:46.747Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-27T07:49:46.747Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 20,
               "Title": "SceneStreaming_Client.cpp",
               "DocumentMoniker": "C:\\Users\\Josh\\repos\\P4_Scene_Streaming\\SceneStreaming_Client.cpp",
               "RelativeDocumentMoniker": "SceneStreaming_Client.cpp",
@@ -895,8 +920,7 @@
               "RelativeToolTip": "SceneStreaming_Client.cpp",
               "ViewState": "AgIAACoAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-27T07:49:43.054Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-27T07:49:43.054Z"
             }
           ]
         },

@@ -28,9 +28,9 @@ void MeshRenderer::Render(Camera* camera)
 
 MeshRenderer::MeshRenderer(String asyncResourceName, String asyncResourcePath) : _asyncResourceName(asyncResourceName)
 {
-	ActiveMesh = ResourceManager::LoadFromFile<Mesh>(asyncResourceName, asyncResourcePath);
-	//Shared<ThreadPool> pool = ThreadPoolManager::GetThreadPool("Main");
-	//pool->ScheduleTask(new LoadResourceTask<Mesh>(_asyncResourceName, asyncResourcePath, 5000, this));
+	//ActiveMesh = ResourceManager::LoadFromFile<Mesh>(asyncResourceName, asyncResourcePath);
+	Shared<ThreadPool> pool = ThreadPoolManager::GetThreadPool("Main");
+	pool->ScheduleTask(new LoadResourceTask<Mesh>(_asyncResourceName, asyncResourcePath, 5000, this));
 }
 
 void MeshRenderer::OnThreadFinished(int id)

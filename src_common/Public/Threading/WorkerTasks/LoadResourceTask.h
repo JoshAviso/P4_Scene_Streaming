@@ -5,6 +5,8 @@
 #include <Resources/ResourceManager.h>
 #include <Threading/IThread.h>
 #include <Threading/IThreadFinishedCallback.h>
+#include <Threading/ThreadGLContext.h>
+#include <Application.h>
 
 template <typename TResource>
 class LoadResourceTask : public IWorkerTask {
@@ -22,7 +24,10 @@ public:
 
 	void DoWorkerTask(int id) override {
 		IThread::Sleep(_delay);
+		Shared<ThreadGLContext> ctx = Make_Shared<ThreadGLContext>(Application::GetWindow());
+		ctx->BeginUse();
 		ResourceManager::LoadFromFile<TResource>(_resourceName, _resourcePath);
+		ctx->FinishUse();
 		if (_callback != nullptr)
 			_callback->OnThreadFinished(id);
 	}
