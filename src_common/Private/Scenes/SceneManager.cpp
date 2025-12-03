@@ -86,6 +86,66 @@ void SceneManager::PopulateScenes()
             teapot->transform.rotation = Quaternion((i + j) / 10.f * -360.f, Vec3(0.f, 1.f, 0.f));
         }
     }
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
+            Shared<Object> obj = s1->AddObject(new Object("Armadillo" + std::to_string(i * j)));
+            MeshRenderer* renderer = obj->AddComponent(new MeshRenderer("Armadillo", "Assets/Models/armadillo.obj"));
+            //tpRenderer->ActiveMesh = teapotMesh;
+            renderer->Shader = basicShader;
+            renderer->base_color = Color((float)i / 5.f, (float)j / 5.f, 0.2f, 1.f);
+            obj->transform.position = Vec3((i - 2) * 0.5f, -1.f, (j - 2) * 0.5f);
+            obj->transform.scale = Vec3(0.07f, 0.07f, 0.07f);
+            obj->transform.rotation = Quaternion((i + j) / 10.f * -360.f, Vec3(0.f, 1.f, 0.f));
+        }
+    }
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
+            Shared<Object> obj = s1->AddObject(new Object("Cruiser" + std::to_string(i * j)));
+            MeshRenderer* renderer = obj->AddComponent(new MeshRenderer("Cruiser", "Assets/Models/cruiser.obj"));
+            //tpRenderer->ActiveMesh = teapotMesh;
+            renderer->Shader = basicShader;
+            renderer->base_color = Color((float)i / 5.f, (float)j / 5.f, 0.2f, 1.f);
+            obj->transform.position = Vec3((i - 2) * 0.5f, -1.5f, (j - 2) * 0.5f);
+            obj->transform.scale = Vec3(0.07f, 0.07f, 0.07f);
+            obj->transform.rotation = Quaternion((i + j) / 10.f * -360.f, Vec3(0.f, 1.f, 0.f));
+        }
+    }
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
+            Shared<Object> obj = s1->AddObject(new Object("F16" + std::to_string(i * j)));
+            MeshRenderer* renderer = obj->AddComponent(new MeshRenderer("F16", "Assets/Models/f-16.obj"));
+            //tpRenderer->ActiveMesh = teapotMesh;
+            renderer->Shader = basicShader;
+            renderer->base_color = Color((float)i / 5.f, (float)j / 5.f, 0.2f, 1.f);
+            obj->transform.position = Vec3((i - 2) * 0.5f, -2.f, (j - 2) * 0.5f);
+            obj->transform.scale = Vec3(0.07f, 0.07f, 0.07f);
+            obj->transform.rotation = Quaternion((i + j) / 10.f * -360.f, Vec3(0.f, 1.f, 0.f));
+        }
+    }
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
+            Shared<Object> obj = s1->AddObject(new Object("Suzanne" + std::to_string(i * j)));
+            MeshRenderer* renderer = obj->AddComponent(new MeshRenderer("Suzanne", "Assets/Models/suzanne.obj"));
+            //tpRenderer->ActiveMesh = teapotMesh;
+            renderer->Shader = basicShader;
+            renderer->base_color = Color((float)i / 5.f, (float)j / 5.f, 0.2f, 1.f);
+            obj->transform.position = Vec3((i - 2) * 0.5f, -2.5f, (j - 2) * 0.5f);
+            obj->transform.scale = Vec3(0.07f, 0.07f, 0.07f);
+            obj->transform.rotation = Quaternion((i + j) / 10.f * -360.f, Vec3(0.f, 1.f, 0.f));
+        }
+    }
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
+            Shared<Object> obj = s1->AddObject(new Object("Tyra" + std::to_string(i * j)));
+            MeshRenderer* renderer = obj->AddComponent(new MeshRenderer("Tyra", "Assets/Models/tyra.obj"));
+            //tpRenderer->ActiveMesh = teapotMesh;
+            renderer->Shader = basicShader;
+            renderer->base_color = Color((float)i / 5.f, (float)j / 5.f, 0.2f, 1.f);
+            obj->transform.position = Vec3((i - 2) * 0.5f, -3.f, (j - 2) * 0.5f);
+            obj->transform.scale = Vec3(0.07f, 0.07f, 0.07f);
+            obj->transform.rotation = Quaternion((i + j) / 10.f * -360.f, Vec3(0.f, 1.f, 0.f));
+        }
+    }
 
     // SCENE 2
     Shared<Scene> s2 = AddScene(new Scene("Scene 2"));

@@ -33,7 +33,7 @@ MeshRenderer::MeshRenderer(String asyncResourceName, String asyncResourcePath) :
 	// Load resources first then trigger delayed mesh assignment (side step)
 	ResourceManager::LoadFromFile<Mesh>(asyncResourceName, asyncResourcePath);
 	Shared<ThreadPool> pool = ThreadPoolManager::GetThreadPool("Main");
-	pool->ScheduleTask(new LoadResourceTask<Mesh>(_asyncResourceName, asyncResourcePath, 5000, this));
+	pool->ScheduleTask(new LoadResourceTask<Mesh>(_asyncResourceName, asyncResourcePath, 200, this));
 }
 
 void MeshRenderer::OnThreadFinished(int id)

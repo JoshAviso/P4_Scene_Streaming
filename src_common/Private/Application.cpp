@@ -26,7 +26,7 @@ Application* Application::Initialize(const Desc desc)
     _instance->_window = Unique<Window>(desc.window);
 
     ThreadPoolManager::Initialize();
-    ThreadPoolManager::NewThreadPool("Main", 5)->StartScheduling();
+    ThreadPoolManager::NewThreadPool("Main", 1)->StartScheduling();
 
     GraphicsSystem::Initialize();
 
