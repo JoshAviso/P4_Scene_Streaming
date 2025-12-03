@@ -47,6 +47,7 @@ int main()
     cam->AddComponent(new CameraComponent("MainCam",
         new Camera::PerspectiveProjection(45.f, Application::GetWindow()->AspectRatio(), 0.01, 200.f)));
     cam->AddComponent(new CameraController(1.f, 360.f));
+    cam->transform.position = Vec3(0.f, 0.f, 1.0f);
 
     //UserInterfaceManager::AddUI(new DemoUI());
     UserInterfaceManager::AddUI(new SceneSelectUI());

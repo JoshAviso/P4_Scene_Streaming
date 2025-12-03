@@ -18,8 +18,11 @@ private:
 	String _camName;
 
 public:
+	static void LoadScene(const String sceneName);
+	static void UnloadScene(const String sceneName);
 	static void OpenScene(const String sceneName);
 	static Shared<Scene> AddScene(Scene* scene);
+	static Shared<Scene> GetScene(const String sceneName);
 	static List<Shared<Scene>> GetScenes();
 	static void OpenAllScenes();
 

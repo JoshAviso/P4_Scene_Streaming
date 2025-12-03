@@ -13,11 +13,17 @@ public:
 	Shared<Shader> Shader;
 
 private:
-	String _asyncResourceName;
+	String _asyncResourceName = String();
+	String _asyncResourcePath = String();
+	String _assignedScene = String();
+	float _loadDelay = 0;
 
 public:
 	MeshRenderer() {};
-	MeshRenderer(String asyncResourceName, String asyncResourcePath);
+	MeshRenderer(String asyncResourceName, String asyncResourcePath, uint loadDelay = 0, String assignedScene = String());
+
+	void BeginLoad();
+	void Unload();
 
 	void OnThreadFinished(int id) override;
 

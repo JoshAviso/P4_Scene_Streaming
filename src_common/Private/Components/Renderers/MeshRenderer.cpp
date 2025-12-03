@@ -5,6 +5,7 @@
 #include <Resources/ResourceManager.h>
 #include <Threading/ThreadPoolManager.h>
 #include <Threading/WorkerTasks/LoadResourceTask.h>
+#include <Scenes/SceneManager.h>
 
 void MeshRenderer::Render(Camera* camera)
 {
@@ -28,16 +29,31 @@ void MeshRenderer::Render(Camera* camera)
 	Application::GetWindow()->glMtx.unlock();
 }
 
-MeshRenderer::MeshRenderer(String asyncResourceName, String asyncResourcePath) : _asyncResourceName(asyncResourceName)
+MeshRenderer::MeshRenderer(String asyncResourceName, String asyncResourcePath, uint loadDelay, String assignedScene) : 
+	_asyncResourceName(asyncResourceName), _asyncResourcePath(asyncResourcePath), _loadDelay(loadDelay), _assignedScene(assignedScene)
 {
 	// Load resources first then trigger delayed mesh assignment (side step)
 	ResourceManager::LoadFromFile<Mesh>(asyncResourceName, asyncResourcePath);
+	BeginLoad();
+}
+
+void MeshRenderer::BeginLoad()
+{
 	Shared<ThreadPool> pool = ThreadPoolManager::GetThreadPool("Main");
-	pool->ScheduleTask(new LoadResourceTask<Mesh>(_asyncResourceName, asyncResourcePath, 200, this));
+	pool->ScheduleTask(new LoadResourceTask<Mesh>(_asyncResourceName, _asyncResourcePath, _loadDelay, this));
+}
+
+void MeshRenderer::Unload()
+{
+	ActiveMesh = nullptr;
 }
 
 void MeshRenderer::OnThreadFinished(int id)
 {
 	Shared<Mesh> mesh = ResourceManager::GetResource<Mesh>(_asyncResourceName);
 	ActiveMesh = mesh;
+	Shared<Scene> scene = SceneManager::GetScene(_assignedScene);
+	scene->sceneMtx.lock();
+	scene->SceneCompletion++;
+	scene->sceneMtx.unlock();
 }
