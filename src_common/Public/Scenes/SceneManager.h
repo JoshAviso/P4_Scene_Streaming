@@ -24,6 +24,7 @@ public:
 
 private:
 	void PopulateScenes();
+	void PopulateRandomScene(String name);
 
 	// SINGLETON
 public:

@@ -9,6 +9,8 @@
 #include <Components/Renderers/MeshRenderer.h>
 #include <Graphics/ShaderList.h>
 
+#include <Math/Random.h>
+
 #include <algorithm>
 
 void SceneManager::OpenScene(const String sceneName)
@@ -62,6 +64,13 @@ void SceneManager::PopulateScenes()
         ResourceManager::LoadFromFile<FragShader>("Basic Frag Shader", "Assets/Shaders/sample.frag")
     );
 	
+    PopulateRandomScene("Scene1");
+    PopulateRandomScene("Scene2");
+    PopulateRandomScene("Scene3");
+    PopulateRandomScene("Scene4");
+    PopulateRandomScene("Scene5");
+
+    /*
 	// SCENE 1
 	Shared<Scene> s1 = AddScene(new Scene("Scene 1"));
     for (int i = 0; i < 5; i++) {
@@ -110,6 +119,7 @@ void SceneManager::PopulateScenes()
             obj->transform.rotation = Quaternion((i + j) / 10.f * -360.f, Vec3(0.f, 1.f, 0.f));
         }
     }
+    
     for (int i = 0; i < 5; i++) {
         for (int j = 0; j < 5; j++) {
             Shared<Object> obj = s1->AddObject(new Object("F16" + std::to_string(i * j)));
@@ -122,6 +132,7 @@ void SceneManager::PopulateScenes()
             obj->transform.rotation = Quaternion((i + j) / 10.f * -360.f, Vec3(0.f, 1.f, 0.f));
         }
     }
+    
     for (int i = 0; i < 5; i++) {
         for (int j = 0; j < 5; j++) {
             Shared<Object> obj = s1->AddObject(new Object("Suzanne" + std::to_string(i * j)));
@@ -171,6 +182,51 @@ void SceneManager::PopulateScenes()
             teapot->transform.scale = Vec3(0.05f, 0.05f, 0.05f);
             teapot->transform.rotation = Quaternion((i + j) / 10.f * -360.f, Vec3(0.f, 1.f, 0.f));
         }
+    }
+    */
+}
+
+void SceneManager::PopulateRandomScene(String name)
+{
+    // Main Shader 
+    Shared<Shader> basicShader = ShaderList::GetShader("Basic Shader");
+
+    // List of mesh names 
+    String mesh_names[] = { "Armadillo", "Bunny", "Cruiser", "Suzanne", "Teapot", "Tyra" };
+    String mesh_files[] = { "armadillo.obj", "bunny.obj", "cruiser.obj", "suzanne.obj", "teapot.obj", "tyra.obj" };
+
+    Shared<Scene> scene = AddScene(new Scene(name));
+    int objCnt = Random::RandInt(1, 7);
+    for (int i = 0; i < objCnt; i++) {
+        Shared<Object> obj = scene->AddObject(new Object("Object" + std::to_string(i)));
+
+        // Randomize mesh to use
+        int meshChoice = Random::RandInt(0, 5); // Pick one of 6 meshes
+        MeshRenderer* renderer = obj->AddComponent<MeshRenderer>(new MeshRenderer(mesh_names[meshChoice], "Assets/Models/" + mesh_files[meshChoice]));
+        renderer->Shader = basicShader;
+        
+        // Randomize colors
+        float r = Random::RandFloat(0.1f, 0.9f);
+        float g = Random::RandFloat(0.1f, 0.9f);
+        float b = Random::RandFloat(0.1f, 0.9f);
+        renderer->base_color = Color(r, g, b);
+
+        // Slight scale randomization, special scale factor for bunny, tyra, and cruiser
+        float scale = Random::RandFloat(0.07f, 0.1f);
+        if (mesh_names[meshChoice] == "Bunny" || mesh_names[meshChoice] == "Tyra" || mesh_names[meshChoice] == "Cruiser")
+            scale = Random::RandFloat(0.8f, 1.1f);
+        obj->transform.scale = Vec3(scale);
+        
+        // Randomize Rotation
+        float rot = Random::RandFloat(0.f, 360.f);
+        obj->transform.rotation = Quaternion(rot, Vec3(0.f, 1.f, 0.f));
+
+        // Randomize Position
+        float interval = 0.2f;
+        float x = Random::RandInt(-10, 10) * interval;
+        float y = Random::RandInt(-5, 5) * interval;
+        float z = Random::RandInt(-10, 10) * interval;
+        obj->transform.position = Vec3(x, y ,z);
     }
 }
 
