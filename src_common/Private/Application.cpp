@@ -75,7 +75,7 @@ void Application::Run()
         Update(deltaTime.count());
 
         if (elapsedTime >= _instance->_targetFrameTime) {
-            elapsedTime = 0.0;
+            elapsedTime -= 0.0;
             Render();  
         }
 
