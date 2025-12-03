@@ -52,6 +52,20 @@ List<Shared<Scene>> SceneManager::GetScenes()
     return list;
 }
 
+void SceneManager::OpenAllScenes()
+{
+    Shared<Object> camera = nullptr;
+    if (!IsEmptyOrWhitespace(_instance->_camName))
+        camera = ObjectManager::FindObjectByName(_instance->_camName);
+    ObjectManager::ClearObjects();
+    if (camera != nullptr)
+        ObjectManager::RegisterObject(camera);
+
+    for (const auto& [key, scene] : _instance->_scenes) {
+        scene->Open();
+    }
+}
+
 void SceneManager::PopulateScenes()
 {
 	// Manual definition of scenes for the server

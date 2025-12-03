@@ -8,6 +8,7 @@ public:
 	SceneSelectUI() : IUserInterface("Scene Select") {};
 private:
 	Shared<Scene> _selectedScene = nullptr;
+	bool loadAllSelected = false;
 	void Render() override {
 		if (ImGui::Begin("Select Scene")) {
 			List<Shared<Scene>> scenes = SceneManager::GetScenes();
@@ -22,12 +23,24 @@ private:
 
 				if (ImGui::Button(scene->GetName().c_str(), button_dim)) {
 					_selectedScene = scene;
+					loadAllSelected = false;
 					SceneManager::OpenScene(scene->GetName());
 				}
 
 				if (selected)
 					ImGui::PopStyleVar();
 			}
+
+			bool wasLoadAllSelected = loadAllSelected;
+			if (wasLoadAllSelected) ImGui::PushStyleVar(ImGuiStyleVar_Alpha, 0.5f);
+			if (ImGui::Button("Load All", button_dim)) {
+				if (!loadAllSelected) {
+					loadAllSelected = true;
+					_selectedScene = nullptr;
+					SceneManager::OpenAllScenes();
+				}
+			}
+			if (wasLoadAllSelected) ImGui::PopStyleVar();
 
 			ImGui::End();
 		}

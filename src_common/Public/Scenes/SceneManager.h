@@ -21,6 +21,7 @@ public:
 	static void OpenScene(const String sceneName);
 	static Shared<Scene> AddScene(Scene* scene);
 	static List<Shared<Scene>> GetScenes();
+	static void OpenAllScenes();
 
 private:
 	void PopulateScenes();
