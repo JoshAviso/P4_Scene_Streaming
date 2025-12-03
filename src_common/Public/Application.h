@@ -8,6 +8,7 @@ class Window;
 class Application {
 public:
 	struct Desc {
+		float targetFPS;
 		Window* window;
 		SceneManager::Desc sceneManagerDesc;
 		uint threadCount;
@@ -20,6 +21,7 @@ public:
 
 private:
 	static bool _shouldClose;
+	double _targetFrameTime;
 	Unique<Window> _window = nullptr;
 
 	static void ProcessInput();

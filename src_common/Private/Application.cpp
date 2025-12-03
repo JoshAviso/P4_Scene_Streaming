@@ -42,7 +42,7 @@ Application* Application::Initialize(const Desc desc)
 
 Application::Application(const Desc& desc)
 {
-
+    _targetFrameTime = double(1.0f / desc.targetFPS);
 }
 
 bool Application::_shouldClose = false;
@@ -61,6 +61,7 @@ void Application::Run()
         return;
     }
 
+    double elapsedTime = 0.0;
     auto lastTime = std::chrono::high_resolution_clock::now();  
     while (!_shouldClose) {  
         Input::ResetInput();
@@ -68,10 +69,16 @@ void Application::Run()
 
         auto currentTime = std::chrono::high_resolution_clock::now();  
         std::chrono::duration<float> deltaTime = currentTime - lastTime;  
+        elapsedTime += deltaTime.count();
         lastTime = currentTime;  
 
-        Update(deltaTime.count());  
-        Render();  
+        Update(deltaTime.count());
+
+        if (elapsedTime >= _instance->_targetFrameTime) {
+            elapsedTime = 0.0;
+            Render();  
+        }
+
     }  
 }
 

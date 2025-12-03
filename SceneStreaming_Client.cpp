@@ -31,6 +31,7 @@
 int main()
 {
     Application* app = Application::Initialize({
+        120.f,
         new Window({
                 "P4 Scene Streaming | Aviso & Taylan",
                 800, 600,
