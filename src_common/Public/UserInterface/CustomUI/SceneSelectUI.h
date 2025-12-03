@@ -12,6 +12,7 @@ private:
 	bool showPopup = false;
 	int hoveredButton = -1;
 	bool openedSelected = false;
+	bool hoverShowAll = false;
 	float RenderSceneButton(Shared<Scene> scene, int id, ImVec2 buttonDim) {
 		ImVec2 smallDim = ImVec2(buttonDim.x - 20, 20);
 
@@ -91,7 +92,11 @@ private:
 			ImGui::SetTooltip("Unload Scene");
 		else if (reloadHover);
 		else if (bigButtonHover)
-			isSelected ? ImGui::SetTooltip("Scene is Open") : ImGui::SetTooltip("Open Scene");
+			isSelected ?
+			(progress >= 1.f ? ImGui::SetTooltip("Scene is Open") :
+				(isLoading ? ImGui::SetTooltip("Scene Loading Ongoing...") :
+				ImGui::SetTooltip("Scene Unloaded"))) : 
+			ImGui::SetTooltip("Open Scene");
 
 		// Action Handling
 		if (clicked) {
@@ -113,13 +118,25 @@ private:
 		ImGui::PopID();
 		return progress;
 	}
-	void RenderShowAllScenes(float loadProgress, ImVec2 startPos, ImVec2 buttonDim) {
+	void RenderShowAllScenes(float loadProgress, ImVec2 startPos, ImVec2 buttonDim, ImVec2 barDim) {
 
 		bool wasLoadAllSelected = loadAllSelected;
-		if (wasLoadAllSelected) ImGui::PushStyleVar(ImGuiStyleVar_Alpha, 0.5f);
-		ImGui::ProgressBar(loadProgress, buttonDim, ("Show All (" + std::to_string((int)(loadProgress * 100.f)) + "% Loaded)").c_str());
-		ImGui::SetCursorPos(startPos);
-		if (ImGui::InvisibleButton("InvisButton", buttonDim)) {
+		float mult = 1.f;
+		if (hoverShowAll) mult *= 0.8f;
+		if (wasLoadAllSelected) mult *= 0.5f;
+		ImGui::PushStyleVar(ImGuiStyleVar_Alpha, mult);
+		ImGui::ProgressBar(loadProgress, barDim, "");
+		String text = ("Show All (" + std::to_string((int)(loadProgress * 100.f)) + "%% Loaded)");
+		ImVec2 textDim = ImGui::CalcTextSize(text.c_str());
+		ImVec2 textPos = { (buttonDim.x - textDim.x) * 0.5f, (buttonDim.y - textDim.y) * 0.5f};
+		ImGui::SetCursorPos(textPos);
+		ImGui::Text(text.c_str());
+
+		ImGui::SetCursorPos(ImVec2(0.f, 0.f));
+		bool buttonPress = ImGui::InvisibleButton("InvisButton", buttonDim);
+		hoverShowAll = ImGui::IsItemHovered();
+
+		if (buttonPress) {
 			if (!loadAllSelected) {
 				loadAllSelected = true;
 				_selectedScene = nullptr;
@@ -132,7 +149,10 @@ private:
 				}
 			}
 		}
-		if (wasLoadAllSelected) ImGui::PopStyleVar();
+		ImGui::PopStyleVar();
+	}
+	void UtilOverlay() {
+
 	}
 
 	void Render() override {
@@ -140,7 +160,7 @@ private:
 		List<Shared<Scene>> scenes = SceneManager::GetScenes();
 		
 		// Scene Select Window
-		static const ImVec2 sceneSelectButtonDim = ImVec2(150, 150);
+		static const ImVec2 sceneSelectButtonDim = ImVec2(150, 120);
 		ImGuiViewport* vp = ImGui::GetMainViewport();
 		ImGui::SetNextWindowPos(ImVec2(vp->Pos.x, vp->Pos.y));
 		ImGui::SetNextWindowSize(ImVec2(vp->Size.x, sceneSelectButtonDim.y + 40));
@@ -151,7 +171,8 @@ private:
 				ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoSavedSettings
 			)
 		) {
-			ImGui::Text("Select Scene:");
+			float fps = ImGui::GetIO().Framerate;
+			ImGui::Text("FPS: %.f", fps);
 
 			// Draw buttons
 			for (int i = 0; i < scenes.size(); i++) {
@@ -166,10 +187,10 @@ private:
 
 		// Load All Button
 		static const ImVec2 loadAllButtonDim = ImVec2(160, 40);
-		static const ImVec2 loadAllWindowDim = ImVec2(loadAllButtonDim.x + 15, loadAllButtonDim.y + 15);
+		static const ImVec2 loadAllWindowDim = ImVec2(loadAllButtonDim.x + 16, loadAllButtonDim.y + 16);
 		ImVec2 vpMax = ImVec2(vp->Pos.x + vp->Size.x, vp->Pos.y + vp->Size.y);
 		static const ImVec2 loadAllWindowStartPos = ImVec2(vpMax.x - loadAllWindowDim.x, vpMax.y - loadAllWindowDim.y);
-		static const ImVec2 loadAllStartPos = ImVec2(vpMax.x - loadAllButtonDim.x - 7, vpMax.y - loadAllButtonDim.y - 7);
+		static const ImVec2 loadAllStartPos = ImVec2(vpMax.x - loadAllButtonDim.x - 8, vpMax.y - loadAllButtonDim.y - 8);
 		ImGui::SetNextWindowPos(loadAllWindowStartPos);
 		ImGui::SetNextWindowSize(loadAllWindowDim);
 		if (
@@ -181,14 +202,14 @@ private:
 		) {
 			
 
-			RenderShowAllScenes(totalLoad, loadAllStartPos, loadAllButtonDim);
+			RenderShowAllScenes(totalLoad, loadAllStartPos, loadAllWindowDim, loadAllButtonDim);
 
 			ImGui::End();
 		}
 
 		// Popup 
 		static const ImVec2 popupDim = ImVec2(160, 40);
-		static const ImVec2 popupWindowDim = ImVec2(popupDim.x + 15, popupDim.y + 15);
+		static const ImVec2 popupWindowDim = ImVec2(popupDim.x + 16, popupDim.y + 16);
 		ImVec2 vpMid = ImVec2(vp->Pos.x + vp->Size.x * 0.5f, vp->Pos.y + vp->Size.y * 0.5f);
 		
 		// Decide if popup is appropriate
@@ -210,11 +231,20 @@ private:
 				openedSelected = false;
 
 				// Draw Popup
+				ImGui::ProgressBar(progress, popupDim, "");
+				
 				String popupText = _selectedScene != nullptr ? _selectedScene->GetName() : "All Scenes";
-				popupText = popupText + " " + std::to_string((int)(progress * 100.f)) + "% Loaded";
+				popupText = popupText + " " + std::to_string((int)(progress * 100.f)) + "%% Loaded";
 
-				ImGui::ProgressBar(progress, popupDim, popupText.c_str());
-
+				// Calculate Text Dims
+				ImVec2 textSize = ImGui::CalcTextSize(popupText.c_str());
+				ImVec2 textPos = ImVec2{
+					(popupWindowDim.x - textSize.x) * 0.5f,
+					(popupWindowDim.y - textSize.y) * 0.5f
+				};
+				ImGui::SetCursorPos(textPos);
+				ImGui::Text(popupText.c_str());
+				
 				ImGui::End();
 			}
 		}
