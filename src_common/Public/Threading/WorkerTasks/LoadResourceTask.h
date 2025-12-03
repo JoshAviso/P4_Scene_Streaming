@@ -24,10 +24,12 @@ public:
 
 	void DoWorkerTask(int id) override {
 		IThread::Sleep(_delay);
+		/* Actual Threaded resource loading
 		Shared<ThreadGLContext> ctx = Make_Shared<ThreadGLContext>(Application::GetWindow());
 		ctx->BeginUse();
 		ResourceManager::LoadFromFile<TResource>(_resourceName, _resourcePath);
 		ctx->FinishUse();
+		*/
 		if (_callback != nullptr)
 			_callback->OnThreadFinished(id);
 	}

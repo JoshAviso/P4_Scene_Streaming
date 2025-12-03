@@ -15,6 +15,7 @@ void MeshRenderer::Render(Camera* camera)
 	if (!Shader->_linked) return;
 
 	//Logger::Log(camera->GetProjection());
+	Application::GetWindow()->glMtx.lock();
 	Shader->PassData("view", camera->GetViewMat());
 	Shader->PassData("projection", camera->GetProjection());
 	Shader->PassData("transform", _owner->transform);
@@ -24,11 +25,13 @@ void MeshRenderer::Render(Camera* camera)
 	glBindVertexArray(ActiveMesh->_vao);
 	glDrawArrays(GL_TRIANGLES, 0, ActiveMesh->_vertex_data.size());
 	glBindVertexArray(0);
+	Application::GetWindow()->glMtx.unlock();
 }
 
 MeshRenderer::MeshRenderer(String asyncResourceName, String asyncResourcePath) : _asyncResourceName(asyncResourceName)
 {
-	//ActiveMesh = ResourceManager::LoadFromFile<Mesh>(asyncResourceName, asyncResourcePath);
+	// Load resources first then trigger delayed mesh assignment (side step)
+	ResourceManager::LoadFromFile<Mesh>(asyncResourceName, asyncResourcePath);
 	Shared<ThreadPool> pool = ThreadPoolManager::GetThreadPool("Main");
 	pool->ScheduleTask(new LoadResourceTask<Mesh>(_asyncResourceName, asyncResourcePath, 5000, this));
 }

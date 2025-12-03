@@ -16,6 +16,7 @@ public:
 
 private:
 	bool LoadFromFile(String filepath) override;
+	void LogGLErrorsIfExists(String prefix);
 	friend class MeshRenderer;
 	friend class ResourceManager;
 };

@@ -6,6 +6,7 @@
 #include <Input/Input.h>
 #include <Color.hpp>
 #include <String.hpp>
+#include <mutex>
 
 class Window {
 public:
@@ -16,8 +17,11 @@ public:
 		Color clearColor;
 	};
 
+public:
+	std::mutex glMtx;
 private:
 	GLFWwindow* _window = nullptr;
+	GLFWwindow* _resourceWindow = nullptr;
 	Desc _desc;
 
 public:

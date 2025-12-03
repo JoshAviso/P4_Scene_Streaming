@@ -14,15 +14,15 @@
   "ExpandedNodes": [
     "",
     "\\src_common",
-    "\\src_common\\Private",
-    "\\src_common\\Private\\Resources",
     "\\src_common\\Public",
-    "\\src_common\\Public\\Graphics",
+    "\\src_common\\Public\\Components",
+    "\\src_common\\Public\\Components\\Renderers",
     "\\src_common\\Public\\Scenes",
     "\\src_common\\Public\\Serialization",
     "\\src_common\\Public\\Threading",
-    "\\src_common\\Public\\Threading\\WorkerTasks"
+    "\\src_common\\Public\\Threading\\WorkerTasks",
+    "\\src_common\\Public\\Window"
   ],
-  "SelectedNode": "\\src_common\\Public\\Application.h",
+  "SelectedNode": "\\src_common\\Public\\Components\\Renderers\\MeshRenderer.h",
   "PreviewInSolutionExplorer": false
 }

@@ -1,6 +1,7 @@
 #include <Window/Window.h>
 
 #include <GLFW/glfw3.h>
+#include <Logger.hpp>
 
 Window::Window(const Desc desc) : _desc(desc){}
 
@@ -14,10 +15,17 @@ bool Window::Initialize()
 	_window = glfwCreateWindow(_desc.width, _desc.height, _desc.name.c_str(), NULL, NULL);
 	if (!_window) {
 		_window = nullptr;
+		Logger::LogError("Failed to create main window!");
 		return false;
 	}
-
 	glfwMakeContextCurrent(_window);
+
+	glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);
+	_resourceWindow = glfwCreateWindow(1, 1, "", nullptr, _window);
+	glfwWindowHint(GLFW_VISIBLE, GLFW_TRUE);
+	if (!_resourceWindow)
+		Logger::LogError("Failed to create resource window");
+
 	glfwSetKeyCallback(_window, Input::KeyCallback);
 	if (glfwRawMouseMotionSupported())
 		glfwSetInputMode(_window, GLFW_RAW_MOUSE_MOTION, GLFW_TRUE);
