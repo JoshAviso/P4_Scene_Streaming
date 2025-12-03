@@ -63,6 +63,17 @@ void SceneManager::OpenScene(const String sceneName)
 	_instance->_scenes[sceneName]->Open();
 }
 
+void SceneManager::CloseAllScenes()
+{
+    Shared<Object> camera = nullptr;
+    if (!IsEmptyOrWhitespace(_instance->_camName))
+        camera = ObjectManager::FindObjectByName(_instance->_camName);
+    ObjectManager::ClearObjects();
+    if (camera != nullptr)
+        ObjectManager::RegisterObject(camera);
+}
+
+
 Shared<Scene> SceneManager::AddScene(Scene* scene)
 {
 	if (scene == nullptr) return nullptr;
