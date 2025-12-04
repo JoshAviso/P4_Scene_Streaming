@@ -48,14 +48,15 @@ class SceneStreamService final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::SceneInfoReply>> PrepareAsyncAskSceneInfo(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::SceneInfoReply>>(PrepareAsyncAskSceneInfoRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientReaderInterface< ::ObjectReply>> GetSceneObjectData(::grpc::ClientContext* context, const ::SceneReq& request) {
-      return std::unique_ptr< ::grpc::ClientReaderInterface< ::ObjectReply>>(GetSceneObjectDataRaw(context, request));
+    // rpc GetSceneObjectData(SceneReq) returns (stream ObjectReply);
+    std::unique_ptr< ::grpc::ClientReaderInterface< ::ObjectBatchReply>> GetSceneObjectData(::grpc::ClientContext* context, const ::SceneReq& request) {
+      return std::unique_ptr< ::grpc::ClientReaderInterface< ::ObjectBatchReply>>(GetSceneObjectDataRaw(context, request));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::ObjectReply>> AsyncGetSceneObjectData(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq, void* tag) {
-      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::ObjectReply>>(AsyncGetSceneObjectDataRaw(context, request, cq, tag));
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::ObjectBatchReply>> AsyncGetSceneObjectData(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::ObjectBatchReply>>(AsyncGetSceneObjectDataRaw(context, request, cq, tag));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::ObjectReply>> PrepareAsyncGetSceneObjectData(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::ObjectReply>>(PrepareAsyncGetSceneObjectDataRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::ObjectBatchReply>> PrepareAsyncGetSceneObjectData(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::ObjectBatchReply>>(PrepareAsyncGetSceneObjectDataRaw(context, request, cq));
     }
     class async_interface {
      public:
@@ -64,7 +65,8 @@ class SceneStreamService final {
       virtual void GetSceneList(::grpc::ClientContext* context, const ::Empty* request, ::SceneListReply* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void AskSceneInfo(::grpc::ClientContext* context, const ::SceneReq* request, ::SceneInfoReply* response, std::function<void(::grpc::Status)>) = 0;
       virtual void AskSceneInfo(::grpc::ClientContext* context, const ::SceneReq* request, ::SceneInfoReply* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void GetSceneObjectData(::grpc::ClientContext* context, const ::SceneReq* request, ::grpc::ClientReadReactor< ::ObjectReply>* reactor) = 0;
+      // rpc GetSceneObjectData(SceneReq) returns (stream ObjectReply);
+      virtual void GetSceneObjectData(::grpc::ClientContext* context, const ::SceneReq* request, ::grpc::ClientReadReactor< ::ObjectBatchReply>* reactor) = 0;
     };
     typedef class async_interface experimental_async_interface;
     virtual class async_interface* async() { return nullptr; }
@@ -74,9 +76,9 @@ class SceneStreamService final {
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::SceneListReply>* PrepareAsyncGetSceneListRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::SceneInfoReply>* AsyncAskSceneInfoRaw(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::SceneInfoReply>* PrepareAsyncAskSceneInfoRaw(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientReaderInterface< ::ObjectReply>* GetSceneObjectDataRaw(::grpc::ClientContext* context, const ::SceneReq& request) = 0;
-    virtual ::grpc::ClientAsyncReaderInterface< ::ObjectReply>* AsyncGetSceneObjectDataRaw(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq, void* tag) = 0;
-    virtual ::grpc::ClientAsyncReaderInterface< ::ObjectReply>* PrepareAsyncGetSceneObjectDataRaw(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientReaderInterface< ::ObjectBatchReply>* GetSceneObjectDataRaw(::grpc::ClientContext* context, const ::SceneReq& request) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::ObjectBatchReply>* AsyncGetSceneObjectDataRaw(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq, void* tag) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::ObjectBatchReply>* PrepareAsyncGetSceneObjectDataRaw(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
@@ -95,14 +97,14 @@ class SceneStreamService final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::SceneInfoReply>> PrepareAsyncAskSceneInfo(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::SceneInfoReply>>(PrepareAsyncAskSceneInfoRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientReader< ::ObjectReply>> GetSceneObjectData(::grpc::ClientContext* context, const ::SceneReq& request) {
-      return std::unique_ptr< ::grpc::ClientReader< ::ObjectReply>>(GetSceneObjectDataRaw(context, request));
+    std::unique_ptr< ::grpc::ClientReader< ::ObjectBatchReply>> GetSceneObjectData(::grpc::ClientContext* context, const ::SceneReq& request) {
+      return std::unique_ptr< ::grpc::ClientReader< ::ObjectBatchReply>>(GetSceneObjectDataRaw(context, request));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReader< ::ObjectReply>> AsyncGetSceneObjectData(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq, void* tag) {
-      return std::unique_ptr< ::grpc::ClientAsyncReader< ::ObjectReply>>(AsyncGetSceneObjectDataRaw(context, request, cq, tag));
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::ObjectBatchReply>> AsyncGetSceneObjectData(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::ObjectBatchReply>>(AsyncGetSceneObjectDataRaw(context, request, cq, tag));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReader< ::ObjectReply>> PrepareAsyncGetSceneObjectData(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncReader< ::ObjectReply>>(PrepareAsyncGetSceneObjectDataRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::ObjectBatchReply>> PrepareAsyncGetSceneObjectData(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::ObjectBatchReply>>(PrepareAsyncGetSceneObjectDataRaw(context, request, cq));
     }
     class async final :
       public StubInterface::async_interface {
@@ -111,7 +113,7 @@ class SceneStreamService final {
       void GetSceneList(::grpc::ClientContext* context, const ::Empty* request, ::SceneListReply* response, ::grpc::ClientUnaryReactor* reactor) override;
       void AskSceneInfo(::grpc::ClientContext* context, const ::SceneReq* request, ::SceneInfoReply* response, std::function<void(::grpc::Status)>) override;
       void AskSceneInfo(::grpc::ClientContext* context, const ::SceneReq* request, ::SceneInfoReply* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void GetSceneObjectData(::grpc::ClientContext* context, const ::SceneReq* request, ::grpc::ClientReadReactor< ::ObjectReply>* reactor) override;
+      void GetSceneObjectData(::grpc::ClientContext* context, const ::SceneReq* request, ::grpc::ClientReadReactor< ::ObjectBatchReply>* reactor) override;
      private:
       friend class Stub;
       explicit async(Stub* stub): stub_(stub) { }
@@ -127,9 +129,9 @@ class SceneStreamService final {
     ::grpc::ClientAsyncResponseReader< ::SceneListReply>* PrepareAsyncGetSceneListRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::SceneInfoReply>* AsyncAskSceneInfoRaw(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::SceneInfoReply>* PrepareAsyncAskSceneInfoRaw(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientReader< ::ObjectReply>* GetSceneObjectDataRaw(::grpc::ClientContext* context, const ::SceneReq& request) override;
-    ::grpc::ClientAsyncReader< ::ObjectReply>* AsyncGetSceneObjectDataRaw(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq, void* tag) override;
-    ::grpc::ClientAsyncReader< ::ObjectReply>* PrepareAsyncGetSceneObjectDataRaw(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientReader< ::ObjectBatchReply>* GetSceneObjectDataRaw(::grpc::ClientContext* context, const ::SceneReq& request) override;
+    ::grpc::ClientAsyncReader< ::ObjectBatchReply>* AsyncGetSceneObjectDataRaw(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq, void* tag) override;
+    ::grpc::ClientAsyncReader< ::ObjectBatchReply>* PrepareAsyncGetSceneObjectDataRaw(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_GetSceneList_;
     const ::grpc::internal::RpcMethod rpcmethod_AskSceneInfo_;
     const ::grpc::internal::RpcMethod rpcmethod_GetSceneObjectData_;
@@ -142,7 +144,8 @@ class SceneStreamService final {
     virtual ~Service();
     virtual ::grpc::Status GetSceneList(::grpc::ServerContext* context, const ::Empty* request, ::SceneListReply* response);
     virtual ::grpc::Status AskSceneInfo(::grpc::ServerContext* context, const ::SceneReq* request, ::SceneInfoReply* response);
-    virtual ::grpc::Status GetSceneObjectData(::grpc::ServerContext* context, const ::SceneReq* request, ::grpc::ServerWriter< ::ObjectReply>* writer);
+    // rpc GetSceneObjectData(SceneReq) returns (stream ObjectReply);
+    virtual ::grpc::Status GetSceneObjectData(::grpc::ServerContext* context, const ::SceneReq* request, ::grpc::ServerWriter< ::ObjectBatchReply>* writer);
   };
   template <class BaseClass>
   class WithAsyncMethod_GetSceneList : public BaseClass {
@@ -196,11 +199,11 @@ class SceneStreamService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetSceneObjectData(::grpc::ServerContext* /*context*/, const ::SceneReq* /*request*/, ::grpc::ServerWriter< ::ObjectReply>* /*writer*/) override {
+    ::grpc::Status GetSceneObjectData(::grpc::ServerContext* /*context*/, const ::SceneReq* /*request*/, ::grpc::ServerWriter< ::ObjectBatchReply>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetSceneObjectData(::grpc::ServerContext* context, ::SceneReq* request, ::grpc::ServerAsyncWriter< ::ObjectReply>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetSceneObjectData(::grpc::ServerContext* context, ::SceneReq* request, ::grpc::ServerAsyncWriter< ::ObjectBatchReply>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncServerStreaming(2, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
@@ -266,7 +269,7 @@ class SceneStreamService final {
    public:
     WithCallbackMethod_GetSceneObjectData() {
       ::grpc::Service::MarkMethodCallback(2,
-          new ::grpc::internal::CallbackServerStreamingHandler< ::SceneReq, ::ObjectReply>(
+          new ::grpc::internal::CallbackServerStreamingHandler< ::SceneReq, ::ObjectBatchReply>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::SceneReq* request) { return this->GetSceneObjectData(context, request); }));
     }
@@ -274,11 +277,11 @@ class SceneStreamService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetSceneObjectData(::grpc::ServerContext* /*context*/, const ::SceneReq* /*request*/, ::grpc::ServerWriter< ::ObjectReply>* /*writer*/) override {
+    ::grpc::Status GetSceneObjectData(::grpc::ServerContext* /*context*/, const ::SceneReq* /*request*/, ::grpc::ServerWriter< ::ObjectBatchReply>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerWriteReactor< ::ObjectReply>* GetSceneObjectData(
+    virtual ::grpc::ServerWriteReactor< ::ObjectBatchReply>* GetSceneObjectData(
       ::grpc::CallbackServerContext* /*context*/, const ::SceneReq* /*request*/)  { return nullptr; }
   };
   typedef WithCallbackMethod_GetSceneList<WithCallbackMethod_AskSceneInfo<WithCallbackMethod_GetSceneObjectData<Service > > > CallbackService;
@@ -329,7 +332,7 @@ class SceneStreamService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetSceneObjectData(::grpc::ServerContext* /*context*/, const ::SceneReq* /*request*/, ::grpc::ServerWriter< ::ObjectReply>* /*writer*/) override {
+    ::grpc::Status GetSceneObjectData(::grpc::ServerContext* /*context*/, const ::SceneReq* /*request*/, ::grpc::ServerWriter< ::ObjectBatchReply>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -386,7 +389,7 @@ class SceneStreamService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetSceneObjectData(::grpc::ServerContext* /*context*/, const ::SceneReq* /*request*/, ::grpc::ServerWriter< ::ObjectReply>* /*writer*/) override {
+    ::grpc::Status GetSceneObjectData(::grpc::ServerContext* /*context*/, const ::SceneReq* /*request*/, ::grpc::ServerWriter< ::ObjectBatchReply>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -453,7 +456,7 @@ class SceneStreamService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetSceneObjectData(::grpc::ServerContext* /*context*/, const ::SceneReq* /*request*/, ::grpc::ServerWriter< ::ObjectReply>* /*writer*/) override {
+    ::grpc::Status GetSceneObjectData(::grpc::ServerContext* /*context*/, const ::SceneReq* /*request*/, ::grpc::ServerWriter< ::ObjectBatchReply>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -523,10 +526,10 @@ class SceneStreamService final {
     WithSplitStreamingMethod_GetSceneObjectData() {
       ::grpc::Service::MarkMethodStreamed(2,
         new ::grpc::internal::SplitServerStreamingHandler<
-          ::SceneReq, ::ObjectReply>(
+          ::SceneReq, ::ObjectBatchReply>(
             [this](::grpc::ServerContext* context,
                    ::grpc::ServerSplitStreamer<
-                     ::SceneReq, ::ObjectReply>* streamer) {
+                     ::SceneReq, ::ObjectBatchReply>* streamer) {
                        return this->StreamedGetSceneObjectData(context,
                          streamer);
                   }));
@@ -535,12 +538,12 @@ class SceneStreamService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetSceneObjectData(::grpc::ServerContext* /*context*/, const ::SceneReq* /*request*/, ::grpc::ServerWriter< ::ObjectReply>* /*writer*/) override {
+    ::grpc::Status GetSceneObjectData(::grpc::ServerContext* /*context*/, const ::SceneReq* /*request*/, ::grpc::ServerWriter< ::ObjectBatchReply>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with split streamed
-    virtual ::grpc::Status StreamedGetSceneObjectData(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::SceneReq,::ObjectReply>* server_split_streamer) = 0;
+    virtual ::grpc::Status StreamedGetSceneObjectData(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::SceneReq,::ObjectBatchReply>* server_split_streamer) = 0;
   };
   typedef WithSplitStreamingMethod_GetSceneObjectData<Service > SplitStreamedService;
   typedef WithStreamedUnaryMethod_GetSceneList<WithStreamedUnaryMethod_AskSceneInfo<WithSplitStreamingMethod_GetSceneObjectData<Service > > > StreamedService;
