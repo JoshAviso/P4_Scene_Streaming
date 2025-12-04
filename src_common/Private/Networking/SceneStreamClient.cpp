@@ -17,25 +17,15 @@ std::vector<std::string> SceneStreamClient::GetSceneList()
 	if (status.ok()) {
 		Logger::Log("SceneList received");
 
-		int byteSize = response.ByteSize();
-		std::string* sceneNames = new std::string[byteSize];
+		std::vector<String> vec(response.scenenames().begin(), response.scenenames().end());
 
-		//sceneNames array should have the scenes?
-		response.SerializeToArray(sceneNames, byteSize);
-
-		//array to pointer
-		size_t size = 5;
-
-		std::vector<std::string> vectorNames(sceneNames, sceneNames + size);
-
-		delete[] sceneNames;
-		sceneNames = nullptr;
-
-		return vectorNames;
+		return vec;
 	}
 	else {
 		Logger::LogWarning("Server call to GetSceneList failed.");
 	}
+
+	return std::vector<std::string>();
 }
 
 void SceneStreamClient::AskSceneInfo(bool* exists, int* totalObjects, std::string sceneName)

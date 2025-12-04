@@ -13,7 +13,7 @@ public:
 	static void Sleep(uint ms) 
 		{ std::this_thread::sleep_for(std::chrono::milliseconds(ms)); };
 
-protected:
+public:
 	virtual void Run() = 0;
 };
 

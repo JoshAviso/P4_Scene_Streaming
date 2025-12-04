@@ -288,8 +288,10 @@ SceneManager* SceneManager::Initialize(const Desc& desc)
 	if (_instance == nullptr)
 		_instance = new SceneManager(desc);
 
-	if (_instance->_isServer)
-		_instance->PopulateScenes();
+    if (_instance->_isServer)
+        _instance->PopulateScenes();
+    else
+        _instance->RequestScenes();
 
 	return _instance;
 }

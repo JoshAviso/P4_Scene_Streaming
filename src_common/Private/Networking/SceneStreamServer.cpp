@@ -68,10 +68,11 @@ grpc::Status SceneStreamServer::GetSceneObjectData(grpc::ServerContext* context,
 grpc::Status SceneStreamServer::GetSceneList(grpc::ServerContext* context, const Empty* request, SceneListReply* reply)
 {
 	Logger::Log("Sending scene list");
+	List<Shared<Scene>> scenelist = SceneManager::GetScenes();
 
-	for (int i = 0; i < SceneManager::GetScenes().size(); i++)
+	for (int i = 0; i < scenelist.size(); i++)
 	{
-		reply->add_scenenames(SceneManager::GetScenes()[i]);
+		reply->add_scenenames(scenelist[i]->GetName());
 	}
 
 	return grpc::Status::OK;
@@ -87,8 +88,26 @@ grpc::Status SceneStreamServer::AskSceneInfo(grpc::ServerContext* context, const
 	return grpc::Status::OK;
 }
 
+
 bool SceneStreamServer::fileExists(std::string fileName)
 {
 	std::ifstream file(fileName);
 	return file.good();
+}
+
+SceneStreamServer* SceneStreamServer::instance = nullptr;
+
+void RunServer(const String socket_address) {
+	SceneStreamServer service;
+
+	grpc::ServerBuilder builder;
+	builder.AddListeningPort(socket_address, grpc::InsecureServerCredentials())
+		.RegisterService(&service);
+
+	Unique<grpc::Server> server(builder.BuildAndStart());
+	Logger::Log("Server Listening at: " + socket_address);
+
+	SceneStreamServer::instance = &service;
+
+	while(!service.stopServer) server->Wait();
 }

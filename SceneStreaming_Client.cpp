@@ -12,10 +12,11 @@
 #include <UserInterface/UserInterfaceManager.h>
 #include <UserInterface/CustomUI/SceneSelectUI.h>
 
+#include <Networking/SceneStreamClient.h>
+
 int main()
 {
-    // Initialize Client Stuff
-	//RunClient("Frankling", "localhost:50051", true);
+    SceneStreamClient::Initialize("localhost:50051");
 
     Application* app = Application::Initialize({
         120.f,
@@ -25,7 +26,7 @@ int main()
                 Color::Black()
             }),
         SceneManager::Desc{
-            true, "MainCamera"
+            false, "MainCamera"
         }
     });
 

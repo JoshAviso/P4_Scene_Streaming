@@ -12,11 +12,12 @@
 #include <UserInterface/UserInterfaceManager.h>
 #include <UserInterface/CustomUI/SceneSelectUI.h>
 
+#include <Threading/RunServerThread.h>
+
+#include <Networking/SceneStreamServer.h>
+
 int main()
 {
-	// Initialize Server
-	RunServer("0.0.0.0:50051");
-
     Application* app = Application::Initialize({
         120.f,
         new Window({
@@ -29,6 +30,9 @@ int main()
         }
         });
 
+	// Initialize Server
+    std::thread server([] { RunServer("0.0.0.0:50051"); });
+
     // Camera Setup
     Object* cam = ObjectManager::RegisterObject(new Object("MainCamera"));
     cam->AddComponent(new CameraComponent("MainCam", new Camera::PerspectiveProjection(45.f, Application::GetWindow()->AspectRatio(), 0.01, 200.f)));
@@ -38,6 +42,8 @@ int main()
     UserInterfaceManager::AddUI(new SceneSelectUI());
 
     Application::Run();
+    SceneStreamServer::instance->stopServer = true;
+    server.join();
 
 	return 0;
 }
