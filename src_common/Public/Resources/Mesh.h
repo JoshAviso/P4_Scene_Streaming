@@ -12,11 +12,14 @@ private:
 	bool _loaded = false;
 
 public:
+	bool LoadFromVertexData(const List<Vertex>& vertData);
 	~Mesh();
 
 private:
 	bool LoadFromFile(String filepath) override;
 	void LogGLErrorsIfExists(String prefix);
+	bool LoadFromVertexData();
+
 	friend class MeshRenderer;
 	friend class ResourceManager;
 };
