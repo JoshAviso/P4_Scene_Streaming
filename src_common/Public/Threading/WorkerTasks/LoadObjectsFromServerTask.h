@@ -108,7 +108,7 @@ public:
                     Vertex vert;
                     vert.position = Vec3(v.position().x(), v.position().y(), v.position().z());
                     vert.normal = Vec3(v.normal().x(), v.normal().y(), v.normal().z());
-                    vert.uv = Vec2(v.uv().x(), v.uv().y());
+                    vert.uv = Vec2{ v.uv().x(), v.uv().y() };
 
                     vertex_data.push_back(vert);
                 }

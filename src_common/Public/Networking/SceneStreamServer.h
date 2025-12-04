@@ -9,7 +9,7 @@
 
 class SceneStreamServer final : public SceneStreamService::Service {
 public:
-	grpc::Status GetSceneObjectData(grpc::ServerContext* context, const SceneReq* request, grpc::ServerWriter<ObjectReply>* writer) override;
+	grpc::Status GetSceneObjectData(grpc::ServerContext* context, const SceneReq* request, grpc::ServerWriter<ObjectBatchReply>* writer) override;
 	grpc::Status GetSceneList(grpc::ServerContext* context, const Empty* request, SceneListReply* reply) override;
 	grpc::Status AskSceneInfo(grpc::ServerContext* context, const SceneReq* request, SceneInfoReply* reply) override;
 
