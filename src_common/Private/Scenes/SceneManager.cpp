@@ -13,37 +13,53 @@
 
 #include <algorithm>
 
+#include <SceneStreaming.grpc.pb.h>
+
+#include <Threading/ThreadPoolManager.h>
+#include <Threading/WorkerTasks/LoadObjectsFromServerTask.h>
+
 void SceneManager::LoadScene(const String sceneName)
 {
+    _instance->scenesMtx.lock();
     if (_instance->_scenes.find(sceneName) == _instance->_scenes.end()) {
+        _instance->scenesMtx.unlock();
+
         Logger::LogWarning("Trying to load a non-existent scene: " + sceneName);
         return;
     }
 
     Shared<Scene> scene = _instance->_scenes[sceneName];
+    _instance->scenesMtx.unlock();
+    
     scene->IsLoading = true;
     
-    // On the server side, have meshes begin to load from files
-    for (auto& obj : scene->_objects) {
-        List<MeshRenderer*> meshes = obj->GetComponents<MeshRenderer>();
-        for (auto& mesh : meshes) {
-            mesh->BeginLoad();
+    if (_instance->_isServer) {
+        // On the server side, have meshes begin to load from files
+        for (auto& obj : scene->_objects) {
+            List<MeshRenderer*> meshes = obj->GetComponents<MeshRenderer>();
+            for (auto& mesh : meshes) {
+                mesh->BeginLoad();
+            }
         }
     }
+    else {
+        _instance->ProcessStreamedScene(sceneName);
+    }
 
-    // On the client side, formulate a scene load request
-    // Parse reply via
-    _instance->ProcessStreamedScene();
 }
 
 void SceneManager::UnloadScene(const String sceneName)
 {
+    _instance->scenesMtx.lock();
     if (_instance->_scenes.find(sceneName) == _instance->_scenes.end()) {
+        _instance->scenesMtx.unlock();
         Logger::LogWarning("Trying to unload a non-existent scene: " + sceneName);
         return;
     }
 
     Shared<Scene> scene = _instance->_scenes[sceneName];
+    _instance->scenesMtx.unlock();
+
     for (auto& obj : scene->_objects) {
         List<MeshRenderer*> meshes = obj->GetComponents<MeshRenderer>();
         for (auto& mesh : meshes) {
@@ -55,7 +71,9 @@ void SceneManager::UnloadScene(const String sceneName)
 
 void SceneManager::OpenScene(const String sceneName)
 {
+    _instance->scenesMtx.lock();
 	if (_instance->_scenes.find(sceneName) == _instance->_scenes.end()) {
+        _instance->scenesMtx.unlock();
 		Logger::LogWarning("Trying to open a non-existent scene: " + sceneName);
 		return;
 	}
@@ -67,16 +85,19 @@ void SceneManager::OpenScene(const String sceneName)
     if (camera != nullptr)
         ObjectManager::RegisterObject(camera);
 	_instance->_scenes[sceneName]->Open();
+    _instance->scenesMtx.unlock();
 }
 
 void SceneManager::CloseAllScenes()
 {
+    _instance->scenesMtx.lock();
     Shared<Object> camera = nullptr;
     if (!IsEmptyOrWhitespace(_instance->_camName))
         camera = ObjectManager::FindObjectByName(_instance->_camName);
     ObjectManager::ClearObjects();
     if (camera != nullptr)
-        ObjectManager::RegisterObject(camera);
+        ObjectManager::RegisterObject(camera); 
+    _instance->scenesMtx.unlock();
 }
 
 
@@ -84,36 +105,53 @@ Shared<Scene> SceneManager::AddScene(Scene* scene)
 {
 	if (scene == nullptr) return nullptr;
 	String name = scene->SceneName;
+
+    _instance->scenesMtx.lock();
 	auto& scenes = _instance->_scenes;
-	if (scenes.find(name) != scenes.end()) 
+    if (scenes.find(name) != scenes.end()) {
+        _instance->scenesMtx.unlock();
 		return _instance->_scenes[name];
+    }
 	Shared<Scene> sc = Shared<Scene>(scene);
 	_instance->_scenes[name] = sc;
+    _instance->scenesMtx.unlock();
+
 	return sc;
 }
 
 Shared<Scene> SceneManager::GetScene(const String sceneName)
 {
+    _instance->scenesMtx.lock();
     if (_instance->_scenes.find(sceneName) == _instance->_scenes.end()) {
+        _instance->scenesMtx.unlock();
+
         Logger::LogWarning("Trying to get a non-existent scene: " + sceneName);
         return nullptr;
     }
-    return _instance->_scenes[sceneName];
+    
+    Shared<Scene> scene = _instance->_scenes[sceneName];
+    _instance->scenesMtx.unlock();
+    return scene;
 }
 
 List<Shared<Scene>> SceneManager::GetScenes()
 {
+    _instance->scenesMtx.lock();
+
     List<Shared<Scene>> list;
     list.reserve(_instance->_scenes.size());
 
     std::transform(_instance->_scenes.begin(), _instance->_scenes.end(),
         std::back_inserter(list),
         [](const auto& pair) { return pair.second; });
+    _instance->scenesMtx.unlock();
+
     return list;
 }
 
 void SceneManager::OpenAllScenes()
 {
+    _instance->scenesMtx.lock();
     Shared<Object> camera = nullptr;
     if (!IsEmptyOrWhitespace(_instance->_camName))
         camera = ObjectManager::FindObjectByName(_instance->_camName);
@@ -124,6 +162,7 @@ void SceneManager::OpenAllScenes()
     for (const auto& [key, scene] : _instance->_scenes) {
         scene->Open();
     }
+    _instance->scenesMtx.unlock();
 }
 
 void SceneManager::PopulateScenes()
@@ -215,27 +254,38 @@ void SceneManager::PopulateRandomScene(String name)
 /// </summary>
 void SceneManager::RequestScenes()
 {
-    // Construct the request to the server
+    // Any processing of the client request into a list of string names
+    List<String> scenelist; // = Client->RequestSceneList();
     
-    // Retry Policy await the server's scene list 
-    // If fails display error message
-    
-    // If success
-    // Parse reply to generate X scenes and put into the scene list
+    _scenes.clear();
+    for (int i = 0; i < scenelist.size(); i++) {
+        String name = scenelist[i];
+        Shared<Scene> scene = Make_Shared<Scene>(name);
+        scene->ScenePending = 1;
+        scene->IsLoading = true;
+        _scenes[name] = scene;
+        ProcessStreamedScene(name);
+    }
 
-    // For each
-    ProcessStreamedScene();
 }
 
 /// <summary>
-/// Interpret a passed grpc reply as a scene
+/// Construct and interpret scene data from client to server
 /// </summary>
-void SceneManager::ProcessStreamedScene()
+void SceneManager::ProcessStreamedScene(const String name)
 {
-    // For each, also start X streaming requests which do the following
-    // Parse out each scene's objects
-    // Parse out their vertex data into a mesh
-    // Load that mesh data into opengl memory, and make the MeshRenderer hold onto it not into the Resource Manager
+    // Request the server to get scene meta info
+    // Process result to variables
+    bool exists;
+    int objCount;
+
+    if (!exists) {
+        Logger::LogWarning("Tried to load a scene that does not exist on the server");
+        return;
+    }
+
+    // Create a worker task to get streamed data
+    ThreadPoolManager::GetThreadPool("Main")->ScheduleTask(new LoadObjectsFromServer(name));
 }
 
 // SINGLETON
