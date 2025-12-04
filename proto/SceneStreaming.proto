@@ -2,49 +2,50 @@
 syntax = "proto3";
 
 service SceneStreamService {
-	rpc PingHello(HelloReq) returns (HelloReply){}
-	rpc SendObject(ObjectReq) returns (ObjectReply){}
-	rpc SendScene(SceneReq) returns (SceneReply){}
-	rpc SendSceneList(SceneListReq) returns (SceneListReply) {}
+	rpc GetSceneList(Empty) returns (SceneListReply);
+	rpc AskSceneInfo(SceneReq) returns (SceneInfoReply);
+	rpc GetSceneObjectData(SceneReq) returns (stream SceneObjectsReply);
 }
 
-message HelloReq {
-	string name = 1;
+message Empty{}
+
+message Vec2 {
+	float x = 1; float y = 2;
 }
 
-message HelloReply {
-	bool status = 1;
-	string msg = 2;
+message Vec3 {
+	float x = 1; float y = 2; float z = 3;
 }
 
-message ObjectReq {
-	string name = 1;						//obj to be rendered
+message Quaternion {
+	float w = 1; float x = 2; float y = 3; float z = 4;
+}
+
+message Vertex {
+	Vec3 position = 1; Vec3 normal = 2; Vec2 uv = 3;
 }
 
 message ObjectReply {
-	repeated float vertexPos = 1;
-	
-	repeated float objectPos = 2;					//vector x y z
-	repeated float objectScale = 3;
-	repeated float objectRot = 4;
-}
+	Vec3 position = 1;
+	Quaternion rotation = 2;
+	Vec3 scale = 3;
 
-message SceneReq {
-	string name = 1;						//scene to be loaded
-}
-
-message SceneReply {
-	bool status = 1;						//if scene exists?
-	repeated ObjectReply objects = 2;		//objects within scene
-	float loadProgress = 3;					//load progress of scene
-}
-
-message SceneListReq {
-	bool yes = 1;							//test
+	repeated Vertex vertices = 4;
 }
 
 message SceneListReply {
-	repeated string sceneNames = 1;			//names of the scenes
-	repeated SceneReply scenes = 2;			//list of scenes
-	repeated float sceneLoadProgress = 3;	//progress of each scene
+	repeated string sceneNames = 1;
+}
+
+message SceneReq {
+	string name = 1;
+}
+
+message SceneInfoReply {
+	bool status = 1;							
+	int32 totalObjects = 2;				
+}
+
+message SceneObjectsReply {					
+	repeated ObjectReply objects = 1;			
 }
