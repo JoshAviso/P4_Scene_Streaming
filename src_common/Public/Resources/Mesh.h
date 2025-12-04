@@ -13,6 +13,7 @@ private:
 	bool _loaded = false;
 
 public:
+	Mesh() = default;
 	~Mesh();
 	bool LoadFromVertexData(const List<Vertex>& vertData);
 

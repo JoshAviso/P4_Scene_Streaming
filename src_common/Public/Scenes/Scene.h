@@ -16,6 +16,7 @@ public:
 	}
 	int SceneCompletion = 0;
 	std::mutex sceneMtx;
+	Shared<Object> AddObject(Object* obj);
 
 private:
 	String SceneName = "";
@@ -24,7 +25,7 @@ private:
 	
 private:
 	void Open();
-	Shared<Object> AddObject(Object* obj);
 
 	friend class SceneManager;
+	friend class LoadObjectsFromServerTask;
 };

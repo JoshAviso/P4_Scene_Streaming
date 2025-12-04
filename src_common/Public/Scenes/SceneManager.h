@@ -3,6 +3,7 @@
 #include <String.hpp>
 #include <Common.hpp>
 #include <Scenes/Scene.h>
+#include <mutex>
 
 class SceneManager {
 public:
@@ -16,6 +17,7 @@ private:
 	bool _isServer;
 	Dict<String, Shared<Scene>> _scenes;
 	String _camName;
+	std::mutex scenesMtx;
 
 public:
 	static void LoadScene(const String sceneName);
@@ -31,7 +33,7 @@ private:
 	void PopulateScenes();
 	void PopulateRandomScene(String name);
 	void RequestScenes();
-	void ProcessStreamedScene();
+	void ProcessStreamedScene(const String name);
 
 	// SINGLETON
 public:
