@@ -58,9 +58,9 @@ extern EmptyDefaultTypeInternal _Empty_default_instance_;
 class ObjectReply;
 struct ObjectReplyDefaultTypeInternal;
 extern ObjectReplyDefaultTypeInternal _ObjectReply_default_instance_;
-class Quaternion;
-struct QuaternionDefaultTypeInternal;
-extern QuaternionDefaultTypeInternal _Quaternion_default_instance_;
+class QuaternionReply;
+struct QuaternionReplyDefaultTypeInternal;
+extern QuaternionReplyDefaultTypeInternal _QuaternionReply_default_instance_;
 class SceneInfoReply;
 struct SceneInfoReplyDefaultTypeInternal;
 extern SceneInfoReplyDefaultTypeInternal _SceneInfoReply_default_instance_;
@@ -73,15 +73,15 @@ extern SceneObjectsReplyDefaultTypeInternal _SceneObjectsReply_default_instance_
 class SceneReq;
 struct SceneReqDefaultTypeInternal;
 extern SceneReqDefaultTypeInternal _SceneReq_default_instance_;
-class Vec2;
-struct Vec2DefaultTypeInternal;
-extern Vec2DefaultTypeInternal _Vec2_default_instance_;
-class Vec3;
-struct Vec3DefaultTypeInternal;
-extern Vec3DefaultTypeInternal _Vec3_default_instance_;
-class Vertex;
-struct VertexDefaultTypeInternal;
-extern VertexDefaultTypeInternal _Vertex_default_instance_;
+class Vec2Reply;
+struct Vec2ReplyDefaultTypeInternal;
+extern Vec2ReplyDefaultTypeInternal _Vec2Reply_default_instance_;
+class Vec3Reply;
+struct Vec3ReplyDefaultTypeInternal;
+extern Vec3ReplyDefaultTypeInternal _Vec3Reply_default_instance_;
+class VertexReply;
+struct VertexReplyDefaultTypeInternal;
+extern VertexReplyDefaultTypeInternal _VertexReply_default_instance_;
 namespace google {
 namespace protobuf {
 }  // namespace protobuf
@@ -93,31 +93,31 @@ namespace protobuf {
 
 // -------------------------------------------------------------------
 
-class Vec3 final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:Vec3) */ {
+class Vec3Reply final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:Vec3Reply) */ {
  public:
-  inline Vec3() : Vec3(nullptr) {}
-  ~Vec3() PROTOBUF_FINAL;
+  inline Vec3Reply() : Vec3Reply(nullptr) {}
+  ~Vec3Reply() PROTOBUF_FINAL;
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-  void operator delete(Vec3* msg, std::destroying_delete_t) {
+  void operator delete(Vec3Reply* msg, std::destroying_delete_t) {
     SharedDtor(*msg);
-    ::google::protobuf::internal::SizedDelete(msg, sizeof(Vec3));
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(Vec3Reply));
   }
 #endif
 
   template <typename = void>
-  explicit PROTOBUF_CONSTEXPR Vec3(
+  explicit PROTOBUF_CONSTEXPR Vec3Reply(
       ::google::protobuf::internal::ConstantInitialized);
 
-  inline Vec3(const Vec3& from) : Vec3(nullptr, from) {}
-  inline Vec3(Vec3&& from) noexcept
-      : Vec3(nullptr, std::move(from)) {}
-  inline Vec3& operator=(const Vec3& from) {
+  inline Vec3Reply(const Vec3Reply& from) : Vec3Reply(nullptr, from) {}
+  inline Vec3Reply(Vec3Reply&& from) noexcept
+      : Vec3Reply(nullptr, std::move(from)) {}
+  inline Vec3Reply& operator=(const Vec3Reply& from) {
     CopyFrom(from);
     return *this;
   }
-  inline Vec3& operator=(Vec3&& from) noexcept {
+  inline Vec3Reply& operator=(Vec3Reply&& from) noexcept {
     if (this == &from) return *this;
     if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
       InternalSwap(&from);
@@ -145,16 +145,16 @@ class Vec3 final : public ::google::protobuf::Message
   static const ::google::protobuf::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const Vec3& default_instance() {
+  static const Vec3Reply& default_instance() {
     return *internal_default_instance();
   }
-  static inline const Vec3* internal_default_instance() {
-    return reinterpret_cast<const Vec3*>(
-        &_Vec3_default_instance_);
+  static inline const Vec3Reply* internal_default_instance() {
+    return reinterpret_cast<const Vec3Reply*>(
+        &_Vec3Reply_default_instance_);
   }
   static constexpr int kIndexInFileMessages = 2;
-  friend void swap(Vec3& a, Vec3& b) { a.Swap(&b); }
-  inline void Swap(Vec3* other) {
+  friend void swap(Vec3Reply& a, Vec3Reply& b) { a.Swap(&b); }
+  inline void Swap(Vec3Reply* other) {
     if (other == this) return;
     if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
       InternalSwap(other);
@@ -162,7 +162,7 @@ class Vec3 final : public ::google::protobuf::Message
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(Vec3* other) {
+  void UnsafeArenaSwap(Vec3Reply* other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -170,13 +170,13 @@ class Vec3 final : public ::google::protobuf::Message
 
   // implements Message ----------------------------------------------
 
-  Vec3* New(::google::protobuf::Arena* arena = nullptr) const {
-    return ::google::protobuf::Message::DefaultConstruct<Vec3>(arena);
+  Vec3Reply* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<Vec3Reply>(arena);
   }
   using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const Vec3& from);
+  void CopyFrom(const Vec3Reply& from);
   using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const Vec3& from) { Vec3::MergeImpl(*this, from); }
+  void MergeFrom(const Vec3Reply& from) { Vec3Reply::MergeImpl(*this, from); }
 
   private:
   static void MergeImpl(
@@ -213,18 +213,18 @@ class Vec3 final : public ::google::protobuf::Message
   private:
   void SharedCtor(::google::protobuf::Arena* arena);
   static void SharedDtor(MessageLite& self);
-  void InternalSwap(Vec3* other);
+  void InternalSwap(Vec3Reply* other);
  private:
   template <typename T>
   friend ::absl::string_view(
       ::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "Vec3"; }
+  static ::absl::string_view FullMessageName() { return "Vec3Reply"; }
 
  protected:
-  explicit Vec3(::google::protobuf::Arena* arena);
-  Vec3(::google::protobuf::Arena* arena, const Vec3& from);
-  Vec3(::google::protobuf::Arena* arena, Vec3&& from) noexcept
-      : Vec3(arena) {
+  explicit Vec3Reply(::google::protobuf::Arena* arena);
+  Vec3Reply(::google::protobuf::Arena* arena, const Vec3Reply& from);
+  Vec3Reply(::google::protobuf::Arena* arena, Vec3Reply&& from) noexcept
+      : Vec3Reply(arena) {
     *this = ::std::move(from);
   }
   const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
@@ -273,7 +273,7 @@ class Vec3 final : public ::google::protobuf::Message
   void _internal_set_z(float value);
 
   public:
-  // @@protoc_insertion_point(class_scope:Vec3)
+  // @@protoc_insertion_point(class_scope:Vec3Reply)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
@@ -295,7 +295,7 @@ class Vec3 final : public ::google::protobuf::Message
                           ::google::protobuf::Arena* arena);
     inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                           ::google::protobuf::Arena* arena, const Impl_& from,
-                          const Vec3& from_msg);
+                          const Vec3Reply& from_msg);
     float x_;
     float y_;
     float z_;
@@ -307,31 +307,31 @@ class Vec3 final : public ::google::protobuf::Message
 };
 // -------------------------------------------------------------------
 
-class Vec2 final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:Vec2) */ {
+class Vec2Reply final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:Vec2Reply) */ {
  public:
-  inline Vec2() : Vec2(nullptr) {}
-  ~Vec2() PROTOBUF_FINAL;
+  inline Vec2Reply() : Vec2Reply(nullptr) {}
+  ~Vec2Reply() PROTOBUF_FINAL;
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-  void operator delete(Vec2* msg, std::destroying_delete_t) {
+  void operator delete(Vec2Reply* msg, std::destroying_delete_t) {
     SharedDtor(*msg);
-    ::google::protobuf::internal::SizedDelete(msg, sizeof(Vec2));
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(Vec2Reply));
   }
 #endif
 
   template <typename = void>
-  explicit PROTOBUF_CONSTEXPR Vec2(
+  explicit PROTOBUF_CONSTEXPR Vec2Reply(
       ::google::protobuf::internal::ConstantInitialized);
 
-  inline Vec2(const Vec2& from) : Vec2(nullptr, from) {}
-  inline Vec2(Vec2&& from) noexcept
-      : Vec2(nullptr, std::move(from)) {}
-  inline Vec2& operator=(const Vec2& from) {
+  inline Vec2Reply(const Vec2Reply& from) : Vec2Reply(nullptr, from) {}
+  inline Vec2Reply(Vec2Reply&& from) noexcept
+      : Vec2Reply(nullptr, std::move(from)) {}
+  inline Vec2Reply& operator=(const Vec2Reply& from) {
     CopyFrom(from);
     return *this;
   }
-  inline Vec2& operator=(Vec2&& from) noexcept {
+  inline Vec2Reply& operator=(Vec2Reply&& from) noexcept {
     if (this == &from) return *this;
     if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
       InternalSwap(&from);
@@ -359,16 +359,16 @@ class Vec2 final : public ::google::protobuf::Message
   static const ::google::protobuf::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const Vec2& default_instance() {
+  static const Vec2Reply& default_instance() {
     return *internal_default_instance();
   }
-  static inline const Vec2* internal_default_instance() {
-    return reinterpret_cast<const Vec2*>(
-        &_Vec2_default_instance_);
+  static inline const Vec2Reply* internal_default_instance() {
+    return reinterpret_cast<const Vec2Reply*>(
+        &_Vec2Reply_default_instance_);
   }
   static constexpr int kIndexInFileMessages = 1;
-  friend void swap(Vec2& a, Vec2& b) { a.Swap(&b); }
-  inline void Swap(Vec2* other) {
+  friend void swap(Vec2Reply& a, Vec2Reply& b) { a.Swap(&b); }
+  inline void Swap(Vec2Reply* other) {
     if (other == this) return;
     if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
       InternalSwap(other);
@@ -376,7 +376,7 @@ class Vec2 final : public ::google::protobuf::Message
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(Vec2* other) {
+  void UnsafeArenaSwap(Vec2Reply* other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -384,13 +384,13 @@ class Vec2 final : public ::google::protobuf::Message
 
   // implements Message ----------------------------------------------
 
-  Vec2* New(::google::protobuf::Arena* arena = nullptr) const {
-    return ::google::protobuf::Message::DefaultConstruct<Vec2>(arena);
+  Vec2Reply* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<Vec2Reply>(arena);
   }
   using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const Vec2& from);
+  void CopyFrom(const Vec2Reply& from);
   using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const Vec2& from) { Vec2::MergeImpl(*this, from); }
+  void MergeFrom(const Vec2Reply& from) { Vec2Reply::MergeImpl(*this, from); }
 
   private:
   static void MergeImpl(
@@ -427,18 +427,18 @@ class Vec2 final : public ::google::protobuf::Message
   private:
   void SharedCtor(::google::protobuf::Arena* arena);
   static void SharedDtor(MessageLite& self);
-  void InternalSwap(Vec2* other);
+  void InternalSwap(Vec2Reply* other);
  private:
   template <typename T>
   friend ::absl::string_view(
       ::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "Vec2"; }
+  static ::absl::string_view FullMessageName() { return "Vec2Reply"; }
 
  protected:
-  explicit Vec2(::google::protobuf::Arena* arena);
-  Vec2(::google::protobuf::Arena* arena, const Vec2& from);
-  Vec2(::google::protobuf::Arena* arena, Vec2&& from) noexcept
-      : Vec2(arena) {
+  explicit Vec2Reply(::google::protobuf::Arena* arena);
+  Vec2Reply(::google::protobuf::Arena* arena, const Vec2Reply& from);
+  Vec2Reply(::google::protobuf::Arena* arena, Vec2Reply&& from) noexcept
+      : Vec2Reply(arena) {
     *this = ::std::move(from);
   }
   const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
@@ -476,7 +476,7 @@ class Vec2 final : public ::google::protobuf::Message
   void _internal_set_y(float value);
 
   public:
-  // @@protoc_insertion_point(class_scope:Vec2)
+  // @@protoc_insertion_point(class_scope:Vec2Reply)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
@@ -498,7 +498,7 @@ class Vec2 final : public ::google::protobuf::Message
                           ::google::protobuf::Arena* arena);
     inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                           ::google::protobuf::Arena* arena, const Impl_& from,
-                          const Vec2& from_msg);
+                          const Vec2Reply& from_msg);
     float x_;
     float y_;
     ::google::protobuf::internal::CachedSize _cached_size_;
@@ -1109,31 +1109,31 @@ class SceneInfoReply final : public ::google::protobuf::Message
 };
 // -------------------------------------------------------------------
 
-class Quaternion final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:Quaternion) */ {
+class QuaternionReply final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:QuaternionReply) */ {
  public:
-  inline Quaternion() : Quaternion(nullptr) {}
-  ~Quaternion() PROTOBUF_FINAL;
+  inline QuaternionReply() : QuaternionReply(nullptr) {}
+  ~QuaternionReply() PROTOBUF_FINAL;
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-  void operator delete(Quaternion* msg, std::destroying_delete_t) {
+  void operator delete(QuaternionReply* msg, std::destroying_delete_t) {
     SharedDtor(*msg);
-    ::google::protobuf::internal::SizedDelete(msg, sizeof(Quaternion));
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(QuaternionReply));
   }
 #endif
 
   template <typename = void>
-  explicit PROTOBUF_CONSTEXPR Quaternion(
+  explicit PROTOBUF_CONSTEXPR QuaternionReply(
       ::google::protobuf::internal::ConstantInitialized);
 
-  inline Quaternion(const Quaternion& from) : Quaternion(nullptr, from) {}
-  inline Quaternion(Quaternion&& from) noexcept
-      : Quaternion(nullptr, std::move(from)) {}
-  inline Quaternion& operator=(const Quaternion& from) {
+  inline QuaternionReply(const QuaternionReply& from) : QuaternionReply(nullptr, from) {}
+  inline QuaternionReply(QuaternionReply&& from) noexcept
+      : QuaternionReply(nullptr, std::move(from)) {}
+  inline QuaternionReply& operator=(const QuaternionReply& from) {
     CopyFrom(from);
     return *this;
   }
-  inline Quaternion& operator=(Quaternion&& from) noexcept {
+  inline QuaternionReply& operator=(QuaternionReply&& from) noexcept {
     if (this == &from) return *this;
     if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
       InternalSwap(&from);
@@ -1161,16 +1161,16 @@ class Quaternion final : public ::google::protobuf::Message
   static const ::google::protobuf::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const Quaternion& default_instance() {
+  static const QuaternionReply& default_instance() {
     return *internal_default_instance();
   }
-  static inline const Quaternion* internal_default_instance() {
-    return reinterpret_cast<const Quaternion*>(
-        &_Quaternion_default_instance_);
+  static inline const QuaternionReply* internal_default_instance() {
+    return reinterpret_cast<const QuaternionReply*>(
+        &_QuaternionReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages = 3;
-  friend void swap(Quaternion& a, Quaternion& b) { a.Swap(&b); }
-  inline void Swap(Quaternion* other) {
+  friend void swap(QuaternionReply& a, QuaternionReply& b) { a.Swap(&b); }
+  inline void Swap(QuaternionReply* other) {
     if (other == this) return;
     if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
       InternalSwap(other);
@@ -1178,7 +1178,7 @@ class Quaternion final : public ::google::protobuf::Message
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(Quaternion* other) {
+  void UnsafeArenaSwap(QuaternionReply* other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -1186,13 +1186,13 @@ class Quaternion final : public ::google::protobuf::Message
 
   // implements Message ----------------------------------------------
 
-  Quaternion* New(::google::protobuf::Arena* arena = nullptr) const {
-    return ::google::protobuf::Message::DefaultConstruct<Quaternion>(arena);
+  QuaternionReply* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<QuaternionReply>(arena);
   }
   using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const Quaternion& from);
+  void CopyFrom(const QuaternionReply& from);
   using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const Quaternion& from) { Quaternion::MergeImpl(*this, from); }
+  void MergeFrom(const QuaternionReply& from) { QuaternionReply::MergeImpl(*this, from); }
 
   private:
   static void MergeImpl(
@@ -1229,18 +1229,18 @@ class Quaternion final : public ::google::protobuf::Message
   private:
   void SharedCtor(::google::protobuf::Arena* arena);
   static void SharedDtor(MessageLite& self);
-  void InternalSwap(Quaternion* other);
+  void InternalSwap(QuaternionReply* other);
  private:
   template <typename T>
   friend ::absl::string_view(
       ::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "Quaternion"; }
+  static ::absl::string_view FullMessageName() { return "QuaternionReply"; }
 
  protected:
-  explicit Quaternion(::google::protobuf::Arena* arena);
-  Quaternion(::google::protobuf::Arena* arena, const Quaternion& from);
-  Quaternion(::google::protobuf::Arena* arena, Quaternion&& from) noexcept
-      : Quaternion(arena) {
+  explicit QuaternionReply(::google::protobuf::Arena* arena);
+  QuaternionReply(::google::protobuf::Arena* arena, const QuaternionReply& from);
+  QuaternionReply(::google::protobuf::Arena* arena, QuaternionReply&& from) noexcept
+      : QuaternionReply(arena) {
     *this = ::std::move(from);
   }
   const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
@@ -1300,7 +1300,7 @@ class Quaternion final : public ::google::protobuf::Message
   void _internal_set_z(float value);
 
   public:
-  // @@protoc_insertion_point(class_scope:Quaternion)
+  // @@protoc_insertion_point(class_scope:QuaternionReply)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
@@ -1322,7 +1322,7 @@ class Quaternion final : public ::google::protobuf::Message
                           ::google::protobuf::Arena* arena);
     inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                           ::google::protobuf::Arena* arena, const Impl_& from,
-                          const Quaternion& from_msg);
+                          const QuaternionReply& from_msg);
     float w_;
     float x_;
     float y_;
@@ -1480,31 +1480,31 @@ class Empty final : public ::google::protobuf::internal::ZeroFieldsBase
 };
 // -------------------------------------------------------------------
 
-class Vertex final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:Vertex) */ {
+class VertexReply final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:VertexReply) */ {
  public:
-  inline Vertex() : Vertex(nullptr) {}
-  ~Vertex() PROTOBUF_FINAL;
+  inline VertexReply() : VertexReply(nullptr) {}
+  ~VertexReply() PROTOBUF_FINAL;
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-  void operator delete(Vertex* msg, std::destroying_delete_t) {
+  void operator delete(VertexReply* msg, std::destroying_delete_t) {
     SharedDtor(*msg);
-    ::google::protobuf::internal::SizedDelete(msg, sizeof(Vertex));
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(VertexReply));
   }
 #endif
 
   template <typename = void>
-  explicit PROTOBUF_CONSTEXPR Vertex(
+  explicit PROTOBUF_CONSTEXPR VertexReply(
       ::google::protobuf::internal::ConstantInitialized);
 
-  inline Vertex(const Vertex& from) : Vertex(nullptr, from) {}
-  inline Vertex(Vertex&& from) noexcept
-      : Vertex(nullptr, std::move(from)) {}
-  inline Vertex& operator=(const Vertex& from) {
+  inline VertexReply(const VertexReply& from) : VertexReply(nullptr, from) {}
+  inline VertexReply(VertexReply&& from) noexcept
+      : VertexReply(nullptr, std::move(from)) {}
+  inline VertexReply& operator=(const VertexReply& from) {
     CopyFrom(from);
     return *this;
   }
-  inline Vertex& operator=(Vertex&& from) noexcept {
+  inline VertexReply& operator=(VertexReply&& from) noexcept {
     if (this == &from) return *this;
     if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
       InternalSwap(&from);
@@ -1532,16 +1532,16 @@ class Vertex final : public ::google::protobuf::Message
   static const ::google::protobuf::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const Vertex& default_instance() {
+  static const VertexReply& default_instance() {
     return *internal_default_instance();
   }
-  static inline const Vertex* internal_default_instance() {
-    return reinterpret_cast<const Vertex*>(
-        &_Vertex_default_instance_);
+  static inline const VertexReply* internal_default_instance() {
+    return reinterpret_cast<const VertexReply*>(
+        &_VertexReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages = 4;
-  friend void swap(Vertex& a, Vertex& b) { a.Swap(&b); }
-  inline void Swap(Vertex* other) {
+  friend void swap(VertexReply& a, VertexReply& b) { a.Swap(&b); }
+  inline void Swap(VertexReply* other) {
     if (other == this) return;
     if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
       InternalSwap(other);
@@ -1549,7 +1549,7 @@ class Vertex final : public ::google::protobuf::Message
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(Vertex* other) {
+  void UnsafeArenaSwap(VertexReply* other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -1557,13 +1557,13 @@ class Vertex final : public ::google::protobuf::Message
 
   // implements Message ----------------------------------------------
 
-  Vertex* New(::google::protobuf::Arena* arena = nullptr) const {
-    return ::google::protobuf::Message::DefaultConstruct<Vertex>(arena);
+  VertexReply* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<VertexReply>(arena);
   }
   using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const Vertex& from);
+  void CopyFrom(const VertexReply& from);
   using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const Vertex& from) { Vertex::MergeImpl(*this, from); }
+  void MergeFrom(const VertexReply& from) { VertexReply::MergeImpl(*this, from); }
 
   private:
   static void MergeImpl(
@@ -1600,18 +1600,18 @@ class Vertex final : public ::google::protobuf::Message
   private:
   void SharedCtor(::google::protobuf::Arena* arena);
   static void SharedDtor(MessageLite& self);
-  void InternalSwap(Vertex* other);
+  void InternalSwap(VertexReply* other);
  private:
   template <typename T>
   friend ::absl::string_view(
       ::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "Vertex"; }
+  static ::absl::string_view FullMessageName() { return "VertexReply"; }
 
  protected:
-  explicit Vertex(::google::protobuf::Arena* arena);
-  Vertex(::google::protobuf::Arena* arena, const Vertex& from);
-  Vertex(::google::protobuf::Arena* arena, Vertex&& from) noexcept
-      : Vertex(arena) {
+  explicit VertexReply(::google::protobuf::Arena* arena);
+  VertexReply(::google::protobuf::Arena* arena, const VertexReply& from);
+  VertexReply(::google::protobuf::Arena* arena, VertexReply&& from) noexcept
+      : VertexReply(arena) {
     *this = ::std::move(from);
   }
   const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
@@ -1630,52 +1630,52 @@ class Vertex final : public ::google::protobuf::Message
     kNormalFieldNumber = 2,
     kUvFieldNumber = 3,
   };
-  // .Vec3 position = 1;
+  // .Vec3Reply position = 1;
   bool has_position() const;
   void clear_position() ;
-  const ::Vec3& position() const;
-  PROTOBUF_NODISCARD ::Vec3* release_position();
-  ::Vec3* mutable_position();
-  void set_allocated_position(::Vec3* value);
-  void unsafe_arena_set_allocated_position(::Vec3* value);
-  ::Vec3* unsafe_arena_release_position();
+  const ::Vec3Reply& position() const;
+  PROTOBUF_NODISCARD ::Vec3Reply* release_position();
+  ::Vec3Reply* mutable_position();
+  void set_allocated_position(::Vec3Reply* value);
+  void unsafe_arena_set_allocated_position(::Vec3Reply* value);
+  ::Vec3Reply* unsafe_arena_release_position();
 
   private:
-  const ::Vec3& _internal_position() const;
-  ::Vec3* _internal_mutable_position();
+  const ::Vec3Reply& _internal_position() const;
+  ::Vec3Reply* _internal_mutable_position();
 
   public:
-  // .Vec3 normal = 2;
+  // .Vec3Reply normal = 2;
   bool has_normal() const;
   void clear_normal() ;
-  const ::Vec3& normal() const;
-  PROTOBUF_NODISCARD ::Vec3* release_normal();
-  ::Vec3* mutable_normal();
-  void set_allocated_normal(::Vec3* value);
-  void unsafe_arena_set_allocated_normal(::Vec3* value);
-  ::Vec3* unsafe_arena_release_normal();
+  const ::Vec3Reply& normal() const;
+  PROTOBUF_NODISCARD ::Vec3Reply* release_normal();
+  ::Vec3Reply* mutable_normal();
+  void set_allocated_normal(::Vec3Reply* value);
+  void unsafe_arena_set_allocated_normal(::Vec3Reply* value);
+  ::Vec3Reply* unsafe_arena_release_normal();
 
   private:
-  const ::Vec3& _internal_normal() const;
-  ::Vec3* _internal_mutable_normal();
+  const ::Vec3Reply& _internal_normal() const;
+  ::Vec3Reply* _internal_mutable_normal();
 
   public:
-  // .Vec2 uv = 3;
+  // .Vec2Reply uv = 3;
   bool has_uv() const;
   void clear_uv() ;
-  const ::Vec2& uv() const;
-  PROTOBUF_NODISCARD ::Vec2* release_uv();
-  ::Vec2* mutable_uv();
-  void set_allocated_uv(::Vec2* value);
-  void unsafe_arena_set_allocated_uv(::Vec2* value);
-  ::Vec2* unsafe_arena_release_uv();
+  const ::Vec2Reply& uv() const;
+  PROTOBUF_NODISCARD ::Vec2Reply* release_uv();
+  ::Vec2Reply* mutable_uv();
+  void set_allocated_uv(::Vec2Reply* value);
+  void unsafe_arena_set_allocated_uv(::Vec2Reply* value);
+  ::Vec2Reply* unsafe_arena_release_uv();
 
   private:
-  const ::Vec2& _internal_uv() const;
-  ::Vec2* _internal_mutable_uv();
+  const ::Vec2Reply& _internal_uv() const;
+  ::Vec2Reply* _internal_mutable_uv();
 
   public:
-  // @@protoc_insertion_point(class_scope:Vertex)
+  // @@protoc_insertion_point(class_scope:VertexReply)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
@@ -1697,12 +1697,12 @@ class Vertex final : public ::google::protobuf::Message
                           ::google::protobuf::Arena* arena);
     inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                           ::google::protobuf::Arena* arena, const Impl_& from,
-                          const Vertex& from_msg);
+                          const VertexReply& from_msg);
     ::google::protobuf::internal::HasBits<1> _has_bits_;
     ::google::protobuf::internal::CachedSize _cached_size_;
-    ::Vec3* position_;
-    ::Vec3* normal_;
-    ::Vec2* uv_;
+    ::Vec3Reply* position_;
+    ::Vec3Reply* normal_;
+    ::Vec2Reply* uv_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -1861,66 +1861,66 @@ class ObjectReply final : public ::google::protobuf::Message
     kRotationFieldNumber = 2,
     kScaleFieldNumber = 3,
   };
-  // repeated .Vertex vertices = 4;
+  // repeated .VertexReply vertices = 4;
   int vertices_size() const;
   private:
   int _internal_vertices_size() const;
 
   public:
   void clear_vertices() ;
-  ::Vertex* mutable_vertices(int index);
-  ::google::protobuf::RepeatedPtrField<::Vertex>* mutable_vertices();
+  ::VertexReply* mutable_vertices(int index);
+  ::google::protobuf::RepeatedPtrField<::VertexReply>* mutable_vertices();
 
   private:
-  const ::google::protobuf::RepeatedPtrField<::Vertex>& _internal_vertices() const;
-  ::google::protobuf::RepeatedPtrField<::Vertex>* _internal_mutable_vertices();
+  const ::google::protobuf::RepeatedPtrField<::VertexReply>& _internal_vertices() const;
+  ::google::protobuf::RepeatedPtrField<::VertexReply>* _internal_mutable_vertices();
   public:
-  const ::Vertex& vertices(int index) const;
-  ::Vertex* add_vertices();
-  const ::google::protobuf::RepeatedPtrField<::Vertex>& vertices() const;
-  // .Vec3 position = 1;
+  const ::VertexReply& vertices(int index) const;
+  ::VertexReply* add_vertices();
+  const ::google::protobuf::RepeatedPtrField<::VertexReply>& vertices() const;
+  // .Vec3Reply position = 1;
   bool has_position() const;
   void clear_position() ;
-  const ::Vec3& position() const;
-  PROTOBUF_NODISCARD ::Vec3* release_position();
-  ::Vec3* mutable_position();
-  void set_allocated_position(::Vec3* value);
-  void unsafe_arena_set_allocated_position(::Vec3* value);
-  ::Vec3* unsafe_arena_release_position();
+  const ::Vec3Reply& position() const;
+  PROTOBUF_NODISCARD ::Vec3Reply* release_position();
+  ::Vec3Reply* mutable_position();
+  void set_allocated_position(::Vec3Reply* value);
+  void unsafe_arena_set_allocated_position(::Vec3Reply* value);
+  ::Vec3Reply* unsafe_arena_release_position();
 
   private:
-  const ::Vec3& _internal_position() const;
-  ::Vec3* _internal_mutable_position();
+  const ::Vec3Reply& _internal_position() const;
+  ::Vec3Reply* _internal_mutable_position();
 
   public:
-  // .Quaternion rotation = 2;
+  // .QuaternionReply rotation = 2;
   bool has_rotation() const;
   void clear_rotation() ;
-  const ::Quaternion& rotation() const;
-  PROTOBUF_NODISCARD ::Quaternion* release_rotation();
-  ::Quaternion* mutable_rotation();
-  void set_allocated_rotation(::Quaternion* value);
-  void unsafe_arena_set_allocated_rotation(::Quaternion* value);
-  ::Quaternion* unsafe_arena_release_rotation();
+  const ::QuaternionReply& rotation() const;
+  PROTOBUF_NODISCARD ::QuaternionReply* release_rotation();
+  ::QuaternionReply* mutable_rotation();
+  void set_allocated_rotation(::QuaternionReply* value);
+  void unsafe_arena_set_allocated_rotation(::QuaternionReply* value);
+  ::QuaternionReply* unsafe_arena_release_rotation();
 
   private:
-  const ::Quaternion& _internal_rotation() const;
-  ::Quaternion* _internal_mutable_rotation();
+  const ::QuaternionReply& _internal_rotation() const;
+  ::QuaternionReply* _internal_mutable_rotation();
 
   public:
-  // .Vec3 scale = 3;
+  // .Vec3Reply scale = 3;
   bool has_scale() const;
   void clear_scale() ;
-  const ::Vec3& scale() const;
-  PROTOBUF_NODISCARD ::Vec3* release_scale();
-  ::Vec3* mutable_scale();
-  void set_allocated_scale(::Vec3* value);
-  void unsafe_arena_set_allocated_scale(::Vec3* value);
-  ::Vec3* unsafe_arena_release_scale();
+  const ::Vec3Reply& scale() const;
+  PROTOBUF_NODISCARD ::Vec3Reply* release_scale();
+  ::Vec3Reply* mutable_scale();
+  void set_allocated_scale(::Vec3Reply* value);
+  void unsafe_arena_set_allocated_scale(::Vec3Reply* value);
+  ::Vec3Reply* unsafe_arena_release_scale();
 
   private:
-  const ::Vec3& _internal_scale() const;
-  ::Vec3* _internal_mutable_scale();
+  const ::Vec3Reply& _internal_scale() const;
+  ::Vec3Reply* _internal_mutable_scale();
 
   public:
   // @@protoc_insertion_point(class_scope:ObjectReply)
@@ -1948,10 +1948,10 @@ class ObjectReply final : public ::google::protobuf::Message
                           const ObjectReply& from_msg);
     ::google::protobuf::internal::HasBits<1> _has_bits_;
     ::google::protobuf::internal::CachedSize _cached_size_;
-    ::google::protobuf::RepeatedPtrField< ::Vertex > vertices_;
-    ::Vec3* position_;
-    ::Quaternion* rotation_;
-    ::Vec3* scale_;
+    ::google::protobuf::RepeatedPtrField< ::VertexReply > vertices_;
+    ::Vec3Reply* position_;
+    ::QuaternionReply* rotation_;
+    ::Vec3Reply* scale_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -2173,256 +2173,256 @@ class SceneObjectsReply final : public ::google::protobuf::Message
 
 // -------------------------------------------------------------------
 
-// Vec2
+// Vec2Reply
 
 // float x = 1;
-inline void Vec2::clear_x() {
+inline void Vec2Reply::clear_x() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.x_ = 0;
 }
-inline float Vec2::x() const {
-  // @@protoc_insertion_point(field_get:Vec2.x)
+inline float Vec2Reply::x() const {
+  // @@protoc_insertion_point(field_get:Vec2Reply.x)
   return _internal_x();
 }
-inline void Vec2::set_x(float value) {
+inline void Vec2Reply::set_x(float value) {
   _internal_set_x(value);
-  // @@protoc_insertion_point(field_set:Vec2.x)
+  // @@protoc_insertion_point(field_set:Vec2Reply.x)
 }
-inline float Vec2::_internal_x() const {
+inline float Vec2Reply::_internal_x() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.x_;
 }
-inline void Vec2::_internal_set_x(float value) {
+inline void Vec2Reply::_internal_set_x(float value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.x_ = value;
 }
 
 // float y = 2;
-inline void Vec2::clear_y() {
+inline void Vec2Reply::clear_y() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.y_ = 0;
 }
-inline float Vec2::y() const {
-  // @@protoc_insertion_point(field_get:Vec2.y)
+inline float Vec2Reply::y() const {
+  // @@protoc_insertion_point(field_get:Vec2Reply.y)
   return _internal_y();
 }
-inline void Vec2::set_y(float value) {
+inline void Vec2Reply::set_y(float value) {
   _internal_set_y(value);
-  // @@protoc_insertion_point(field_set:Vec2.y)
+  // @@protoc_insertion_point(field_set:Vec2Reply.y)
 }
-inline float Vec2::_internal_y() const {
+inline float Vec2Reply::_internal_y() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.y_;
 }
-inline void Vec2::_internal_set_y(float value) {
+inline void Vec2Reply::_internal_set_y(float value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.y_ = value;
 }
 
 // -------------------------------------------------------------------
 
-// Vec3
+// Vec3Reply
 
 // float x = 1;
-inline void Vec3::clear_x() {
+inline void Vec3Reply::clear_x() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.x_ = 0;
 }
-inline float Vec3::x() const {
-  // @@protoc_insertion_point(field_get:Vec3.x)
+inline float Vec3Reply::x() const {
+  // @@protoc_insertion_point(field_get:Vec3Reply.x)
   return _internal_x();
 }
-inline void Vec3::set_x(float value) {
+inline void Vec3Reply::set_x(float value) {
   _internal_set_x(value);
-  // @@protoc_insertion_point(field_set:Vec3.x)
+  // @@protoc_insertion_point(field_set:Vec3Reply.x)
 }
-inline float Vec3::_internal_x() const {
+inline float Vec3Reply::_internal_x() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.x_;
 }
-inline void Vec3::_internal_set_x(float value) {
+inline void Vec3Reply::_internal_set_x(float value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.x_ = value;
 }
 
 // float y = 2;
-inline void Vec3::clear_y() {
+inline void Vec3Reply::clear_y() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.y_ = 0;
 }
-inline float Vec3::y() const {
-  // @@protoc_insertion_point(field_get:Vec3.y)
+inline float Vec3Reply::y() const {
+  // @@protoc_insertion_point(field_get:Vec3Reply.y)
   return _internal_y();
 }
-inline void Vec3::set_y(float value) {
+inline void Vec3Reply::set_y(float value) {
   _internal_set_y(value);
-  // @@protoc_insertion_point(field_set:Vec3.y)
+  // @@protoc_insertion_point(field_set:Vec3Reply.y)
 }
-inline float Vec3::_internal_y() const {
+inline float Vec3Reply::_internal_y() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.y_;
 }
-inline void Vec3::_internal_set_y(float value) {
+inline void Vec3Reply::_internal_set_y(float value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.y_ = value;
 }
 
 // float z = 3;
-inline void Vec3::clear_z() {
+inline void Vec3Reply::clear_z() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.z_ = 0;
 }
-inline float Vec3::z() const {
-  // @@protoc_insertion_point(field_get:Vec3.z)
+inline float Vec3Reply::z() const {
+  // @@protoc_insertion_point(field_get:Vec3Reply.z)
   return _internal_z();
 }
-inline void Vec3::set_z(float value) {
+inline void Vec3Reply::set_z(float value) {
   _internal_set_z(value);
-  // @@protoc_insertion_point(field_set:Vec3.z)
+  // @@protoc_insertion_point(field_set:Vec3Reply.z)
 }
-inline float Vec3::_internal_z() const {
+inline float Vec3Reply::_internal_z() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.z_;
 }
-inline void Vec3::_internal_set_z(float value) {
+inline void Vec3Reply::_internal_set_z(float value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.z_ = value;
 }
 
 // -------------------------------------------------------------------
 
-// Quaternion
+// QuaternionReply
 
 // float w = 1;
-inline void Quaternion::clear_w() {
+inline void QuaternionReply::clear_w() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.w_ = 0;
 }
-inline float Quaternion::w() const {
-  // @@protoc_insertion_point(field_get:Quaternion.w)
+inline float QuaternionReply::w() const {
+  // @@protoc_insertion_point(field_get:QuaternionReply.w)
   return _internal_w();
 }
-inline void Quaternion::set_w(float value) {
+inline void QuaternionReply::set_w(float value) {
   _internal_set_w(value);
-  // @@protoc_insertion_point(field_set:Quaternion.w)
+  // @@protoc_insertion_point(field_set:QuaternionReply.w)
 }
-inline float Quaternion::_internal_w() const {
+inline float QuaternionReply::_internal_w() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.w_;
 }
-inline void Quaternion::_internal_set_w(float value) {
+inline void QuaternionReply::_internal_set_w(float value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.w_ = value;
 }
 
 // float x = 2;
-inline void Quaternion::clear_x() {
+inline void QuaternionReply::clear_x() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.x_ = 0;
 }
-inline float Quaternion::x() const {
-  // @@protoc_insertion_point(field_get:Quaternion.x)
+inline float QuaternionReply::x() const {
+  // @@protoc_insertion_point(field_get:QuaternionReply.x)
   return _internal_x();
 }
-inline void Quaternion::set_x(float value) {
+inline void QuaternionReply::set_x(float value) {
   _internal_set_x(value);
-  // @@protoc_insertion_point(field_set:Quaternion.x)
+  // @@protoc_insertion_point(field_set:QuaternionReply.x)
 }
-inline float Quaternion::_internal_x() const {
+inline float QuaternionReply::_internal_x() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.x_;
 }
-inline void Quaternion::_internal_set_x(float value) {
+inline void QuaternionReply::_internal_set_x(float value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.x_ = value;
 }
 
 // float y = 3;
-inline void Quaternion::clear_y() {
+inline void QuaternionReply::clear_y() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.y_ = 0;
 }
-inline float Quaternion::y() const {
-  // @@protoc_insertion_point(field_get:Quaternion.y)
+inline float QuaternionReply::y() const {
+  // @@protoc_insertion_point(field_get:QuaternionReply.y)
   return _internal_y();
 }
-inline void Quaternion::set_y(float value) {
+inline void QuaternionReply::set_y(float value) {
   _internal_set_y(value);
-  // @@protoc_insertion_point(field_set:Quaternion.y)
+  // @@protoc_insertion_point(field_set:QuaternionReply.y)
 }
-inline float Quaternion::_internal_y() const {
+inline float QuaternionReply::_internal_y() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.y_;
 }
-inline void Quaternion::_internal_set_y(float value) {
+inline void QuaternionReply::_internal_set_y(float value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.y_ = value;
 }
 
 // float z = 4;
-inline void Quaternion::clear_z() {
+inline void QuaternionReply::clear_z() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.z_ = 0;
 }
-inline float Quaternion::z() const {
-  // @@protoc_insertion_point(field_get:Quaternion.z)
+inline float QuaternionReply::z() const {
+  // @@protoc_insertion_point(field_get:QuaternionReply.z)
   return _internal_z();
 }
-inline void Quaternion::set_z(float value) {
+inline void QuaternionReply::set_z(float value) {
   _internal_set_z(value);
-  // @@protoc_insertion_point(field_set:Quaternion.z)
+  // @@protoc_insertion_point(field_set:QuaternionReply.z)
 }
-inline float Quaternion::_internal_z() const {
+inline float QuaternionReply::_internal_z() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.z_;
 }
-inline void Quaternion::_internal_set_z(float value) {
+inline void QuaternionReply::_internal_set_z(float value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.z_ = value;
 }
 
 // -------------------------------------------------------------------
 
-// Vertex
+// VertexReply
 
-// .Vec3 position = 1;
-inline bool Vertex::has_position() const {
+// .Vec3Reply position = 1;
+inline bool VertexReply::has_position() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.position_ != nullptr);
   return value;
 }
-inline void Vertex::clear_position() {
+inline void VertexReply::clear_position() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.position_ != nullptr) _impl_.position_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const ::Vec3& Vertex::_internal_position() const {
+inline const ::Vec3Reply& VertexReply::_internal_position() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  const ::Vec3* p = _impl_.position_;
-  return p != nullptr ? *p : reinterpret_cast<const ::Vec3&>(::_Vec3_default_instance_);
+  const ::Vec3Reply* p = _impl_.position_;
+  return p != nullptr ? *p : reinterpret_cast<const ::Vec3Reply&>(::_Vec3Reply_default_instance_);
 }
-inline const ::Vec3& Vertex::position() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:Vertex.position)
+inline const ::Vec3Reply& VertexReply::position() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:VertexReply.position)
   return _internal_position();
 }
-inline void Vertex::unsafe_arena_set_allocated_position(::Vec3* value) {
+inline void VertexReply::unsafe_arena_set_allocated_position(::Vec3Reply* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.position_);
   }
-  _impl_.position_ = reinterpret_cast<::Vec3*>(value);
+  _impl_.position_ = reinterpret_cast<::Vec3Reply*>(value);
   if (value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Vertex.position)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:VertexReply.position)
 }
-inline ::Vec3* Vertex::release_position() {
+inline ::Vec3Reply* VertexReply::release_position() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::Vec3* released = _impl_.position_;
+  ::Vec3Reply* released = _impl_.position_;
   _impl_.position_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
     auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
@@ -2437,30 +2437,30 @@ inline ::Vec3* Vertex::release_position() {
   }
   return released;
 }
-inline ::Vec3* Vertex::unsafe_arena_release_position() {
+inline ::Vec3Reply* VertexReply::unsafe_arena_release_position() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:Vertex.position)
+  // @@protoc_insertion_point(field_release:VertexReply.position)
 
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::Vec3* temp = _impl_.position_;
+  ::Vec3Reply* temp = _impl_.position_;
   _impl_.position_ = nullptr;
   return temp;
 }
-inline ::Vec3* Vertex::_internal_mutable_position() {
+inline ::Vec3Reply* VertexReply::_internal_mutable_position() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.position_ == nullptr) {
-    auto* p = ::google::protobuf::Message::DefaultConstruct<::Vec3>(GetArena());
-    _impl_.position_ = reinterpret_cast<::Vec3*>(p);
+    auto* p = ::google::protobuf::Message::DefaultConstruct<::Vec3Reply>(GetArena());
+    _impl_.position_ = reinterpret_cast<::Vec3Reply*>(p);
   }
   return _impl_.position_;
 }
-inline ::Vec3* Vertex::mutable_position() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline ::Vec3Reply* VertexReply::mutable_position() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   _impl_._has_bits_[0] |= 0x00000001u;
-  ::Vec3* _msg = _internal_mutable_position();
-  // @@protoc_insertion_point(field_mutable:Vertex.position)
+  ::Vec3Reply* _msg = _internal_mutable_position();
+  // @@protoc_insertion_point(field_mutable:VertexReply.position)
   return _msg;
 }
-inline void Vertex::set_allocated_position(::Vec3* value) {
+inline void VertexReply::set_allocated_position(::Vec3Reply* value) {
   ::google::protobuf::Arena* message_arena = GetArena();
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (message_arena == nullptr) {
@@ -2477,48 +2477,48 @@ inline void Vertex::set_allocated_position(::Vec3* value) {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
 
-  _impl_.position_ = reinterpret_cast<::Vec3*>(value);
-  // @@protoc_insertion_point(field_set_allocated:Vertex.position)
+  _impl_.position_ = reinterpret_cast<::Vec3Reply*>(value);
+  // @@protoc_insertion_point(field_set_allocated:VertexReply.position)
 }
 
-// .Vec3 normal = 2;
-inline bool Vertex::has_normal() const {
+// .Vec3Reply normal = 2;
+inline bool VertexReply::has_normal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.normal_ != nullptr);
   return value;
 }
-inline void Vertex::clear_normal() {
+inline void VertexReply::clear_normal() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.normal_ != nullptr) _impl_.normal_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const ::Vec3& Vertex::_internal_normal() const {
+inline const ::Vec3Reply& VertexReply::_internal_normal() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  const ::Vec3* p = _impl_.normal_;
-  return p != nullptr ? *p : reinterpret_cast<const ::Vec3&>(::_Vec3_default_instance_);
+  const ::Vec3Reply* p = _impl_.normal_;
+  return p != nullptr ? *p : reinterpret_cast<const ::Vec3Reply&>(::_Vec3Reply_default_instance_);
 }
-inline const ::Vec3& Vertex::normal() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:Vertex.normal)
+inline const ::Vec3Reply& VertexReply::normal() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:VertexReply.normal)
   return _internal_normal();
 }
-inline void Vertex::unsafe_arena_set_allocated_normal(::Vec3* value) {
+inline void VertexReply::unsafe_arena_set_allocated_normal(::Vec3Reply* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.normal_);
   }
-  _impl_.normal_ = reinterpret_cast<::Vec3*>(value);
+  _impl_.normal_ = reinterpret_cast<::Vec3Reply*>(value);
   if (value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Vertex.normal)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:VertexReply.normal)
 }
-inline ::Vec3* Vertex::release_normal() {
+inline ::Vec3Reply* VertexReply::release_normal() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::Vec3* released = _impl_.normal_;
+  ::Vec3Reply* released = _impl_.normal_;
   _impl_.normal_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
     auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
@@ -2533,30 +2533,30 @@ inline ::Vec3* Vertex::release_normal() {
   }
   return released;
 }
-inline ::Vec3* Vertex::unsafe_arena_release_normal() {
+inline ::Vec3Reply* VertexReply::unsafe_arena_release_normal() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:Vertex.normal)
+  // @@protoc_insertion_point(field_release:VertexReply.normal)
 
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::Vec3* temp = _impl_.normal_;
+  ::Vec3Reply* temp = _impl_.normal_;
   _impl_.normal_ = nullptr;
   return temp;
 }
-inline ::Vec3* Vertex::_internal_mutable_normal() {
+inline ::Vec3Reply* VertexReply::_internal_mutable_normal() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.normal_ == nullptr) {
-    auto* p = ::google::protobuf::Message::DefaultConstruct<::Vec3>(GetArena());
-    _impl_.normal_ = reinterpret_cast<::Vec3*>(p);
+    auto* p = ::google::protobuf::Message::DefaultConstruct<::Vec3Reply>(GetArena());
+    _impl_.normal_ = reinterpret_cast<::Vec3Reply*>(p);
   }
   return _impl_.normal_;
 }
-inline ::Vec3* Vertex::mutable_normal() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline ::Vec3Reply* VertexReply::mutable_normal() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   _impl_._has_bits_[0] |= 0x00000002u;
-  ::Vec3* _msg = _internal_mutable_normal();
-  // @@protoc_insertion_point(field_mutable:Vertex.normal)
+  ::Vec3Reply* _msg = _internal_mutable_normal();
+  // @@protoc_insertion_point(field_mutable:VertexReply.normal)
   return _msg;
 }
-inline void Vertex::set_allocated_normal(::Vec3* value) {
+inline void VertexReply::set_allocated_normal(::Vec3Reply* value) {
   ::google::protobuf::Arena* message_arena = GetArena();
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (message_arena == nullptr) {
@@ -2573,48 +2573,48 @@ inline void Vertex::set_allocated_normal(::Vec3* value) {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
 
-  _impl_.normal_ = reinterpret_cast<::Vec3*>(value);
-  // @@protoc_insertion_point(field_set_allocated:Vertex.normal)
+  _impl_.normal_ = reinterpret_cast<::Vec3Reply*>(value);
+  // @@protoc_insertion_point(field_set_allocated:VertexReply.normal)
 }
 
-// .Vec2 uv = 3;
-inline bool Vertex::has_uv() const {
+// .Vec2Reply uv = 3;
+inline bool VertexReply::has_uv() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.uv_ != nullptr);
   return value;
 }
-inline void Vertex::clear_uv() {
+inline void VertexReply::clear_uv() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.uv_ != nullptr) _impl_.uv_->Clear();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const ::Vec2& Vertex::_internal_uv() const {
+inline const ::Vec2Reply& VertexReply::_internal_uv() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  const ::Vec2* p = _impl_.uv_;
-  return p != nullptr ? *p : reinterpret_cast<const ::Vec2&>(::_Vec2_default_instance_);
+  const ::Vec2Reply* p = _impl_.uv_;
+  return p != nullptr ? *p : reinterpret_cast<const ::Vec2Reply&>(::_Vec2Reply_default_instance_);
 }
-inline const ::Vec2& Vertex::uv() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:Vertex.uv)
+inline const ::Vec2Reply& VertexReply::uv() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:VertexReply.uv)
   return _internal_uv();
 }
-inline void Vertex::unsafe_arena_set_allocated_uv(::Vec2* value) {
+inline void VertexReply::unsafe_arena_set_allocated_uv(::Vec2Reply* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.uv_);
   }
-  _impl_.uv_ = reinterpret_cast<::Vec2*>(value);
+  _impl_.uv_ = reinterpret_cast<::Vec2Reply*>(value);
   if (value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Vertex.uv)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:VertexReply.uv)
 }
-inline ::Vec2* Vertex::release_uv() {
+inline ::Vec2Reply* VertexReply::release_uv() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::Vec2* released = _impl_.uv_;
+  ::Vec2Reply* released = _impl_.uv_;
   _impl_.uv_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
     auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
@@ -2629,30 +2629,30 @@ inline ::Vec2* Vertex::release_uv() {
   }
   return released;
 }
-inline ::Vec2* Vertex::unsafe_arena_release_uv() {
+inline ::Vec2Reply* VertexReply::unsafe_arena_release_uv() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:Vertex.uv)
+  // @@protoc_insertion_point(field_release:VertexReply.uv)
 
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::Vec2* temp = _impl_.uv_;
+  ::Vec2Reply* temp = _impl_.uv_;
   _impl_.uv_ = nullptr;
   return temp;
 }
-inline ::Vec2* Vertex::_internal_mutable_uv() {
+inline ::Vec2Reply* VertexReply::_internal_mutable_uv() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.uv_ == nullptr) {
-    auto* p = ::google::protobuf::Message::DefaultConstruct<::Vec2>(GetArena());
-    _impl_.uv_ = reinterpret_cast<::Vec2*>(p);
+    auto* p = ::google::protobuf::Message::DefaultConstruct<::Vec2Reply>(GetArena());
+    _impl_.uv_ = reinterpret_cast<::Vec2Reply*>(p);
   }
   return _impl_.uv_;
 }
-inline ::Vec2* Vertex::mutable_uv() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline ::Vec2Reply* VertexReply::mutable_uv() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   _impl_._has_bits_[0] |= 0x00000004u;
-  ::Vec2* _msg = _internal_mutable_uv();
-  // @@protoc_insertion_point(field_mutable:Vertex.uv)
+  ::Vec2Reply* _msg = _internal_mutable_uv();
+  // @@protoc_insertion_point(field_mutable:VertexReply.uv)
   return _msg;
 }
-inline void Vertex::set_allocated_uv(::Vec2* value) {
+inline void VertexReply::set_allocated_uv(::Vec2Reply* value) {
   ::google::protobuf::Arena* message_arena = GetArena();
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (message_arena == nullptr) {
@@ -2669,15 +2669,15 @@ inline void Vertex::set_allocated_uv(::Vec2* value) {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
 
-  _impl_.uv_ = reinterpret_cast<::Vec2*>(value);
-  // @@protoc_insertion_point(field_set_allocated:Vertex.uv)
+  _impl_.uv_ = reinterpret_cast<::Vec2Reply*>(value);
+  // @@protoc_insertion_point(field_set_allocated:VertexReply.uv)
 }
 
 // -------------------------------------------------------------------
 
 // ObjectReply
 
-// .Vec3 position = 1;
+// .Vec3Reply position = 1;
 inline bool ObjectReply::has_position() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.position_ != nullptr);
@@ -2688,21 +2688,21 @@ inline void ObjectReply::clear_position() {
   if (_impl_.position_ != nullptr) _impl_.position_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const ::Vec3& ObjectReply::_internal_position() const {
+inline const ::Vec3Reply& ObjectReply::_internal_position() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  const ::Vec3* p = _impl_.position_;
-  return p != nullptr ? *p : reinterpret_cast<const ::Vec3&>(::_Vec3_default_instance_);
+  const ::Vec3Reply* p = _impl_.position_;
+  return p != nullptr ? *p : reinterpret_cast<const ::Vec3Reply&>(::_Vec3Reply_default_instance_);
 }
-inline const ::Vec3& ObjectReply::position() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline const ::Vec3Reply& ObjectReply::position() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
   // @@protoc_insertion_point(field_get:ObjectReply.position)
   return _internal_position();
 }
-inline void ObjectReply::unsafe_arena_set_allocated_position(::Vec3* value) {
+inline void ObjectReply::unsafe_arena_set_allocated_position(::Vec3Reply* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.position_);
   }
-  _impl_.position_ = reinterpret_cast<::Vec3*>(value);
+  _impl_.position_ = reinterpret_cast<::Vec3Reply*>(value);
   if (value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
@@ -2710,11 +2710,11 @@ inline void ObjectReply::unsafe_arena_set_allocated_position(::Vec3* value) {
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ObjectReply.position)
 }
-inline ::Vec3* ObjectReply::release_position() {
+inline ::Vec3Reply* ObjectReply::release_position() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::Vec3* released = _impl_.position_;
+  ::Vec3Reply* released = _impl_.position_;
   _impl_.position_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
     auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
@@ -2729,30 +2729,30 @@ inline ::Vec3* ObjectReply::release_position() {
   }
   return released;
 }
-inline ::Vec3* ObjectReply::unsafe_arena_release_position() {
+inline ::Vec3Reply* ObjectReply::unsafe_arena_release_position() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:ObjectReply.position)
 
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::Vec3* temp = _impl_.position_;
+  ::Vec3Reply* temp = _impl_.position_;
   _impl_.position_ = nullptr;
   return temp;
 }
-inline ::Vec3* ObjectReply::_internal_mutable_position() {
+inline ::Vec3Reply* ObjectReply::_internal_mutable_position() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.position_ == nullptr) {
-    auto* p = ::google::protobuf::Message::DefaultConstruct<::Vec3>(GetArena());
-    _impl_.position_ = reinterpret_cast<::Vec3*>(p);
+    auto* p = ::google::protobuf::Message::DefaultConstruct<::Vec3Reply>(GetArena());
+    _impl_.position_ = reinterpret_cast<::Vec3Reply*>(p);
   }
   return _impl_.position_;
 }
-inline ::Vec3* ObjectReply::mutable_position() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline ::Vec3Reply* ObjectReply::mutable_position() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   _impl_._has_bits_[0] |= 0x00000001u;
-  ::Vec3* _msg = _internal_mutable_position();
+  ::Vec3Reply* _msg = _internal_mutable_position();
   // @@protoc_insertion_point(field_mutable:ObjectReply.position)
   return _msg;
 }
-inline void ObjectReply::set_allocated_position(::Vec3* value) {
+inline void ObjectReply::set_allocated_position(::Vec3Reply* value) {
   ::google::protobuf::Arena* message_arena = GetArena();
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (message_arena == nullptr) {
@@ -2769,11 +2769,11 @@ inline void ObjectReply::set_allocated_position(::Vec3* value) {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
 
-  _impl_.position_ = reinterpret_cast<::Vec3*>(value);
+  _impl_.position_ = reinterpret_cast<::Vec3Reply*>(value);
   // @@protoc_insertion_point(field_set_allocated:ObjectReply.position)
 }
 
-// .Quaternion rotation = 2;
+// .QuaternionReply rotation = 2;
 inline bool ObjectReply::has_rotation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.rotation_ != nullptr);
@@ -2784,21 +2784,21 @@ inline void ObjectReply::clear_rotation() {
   if (_impl_.rotation_ != nullptr) _impl_.rotation_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const ::Quaternion& ObjectReply::_internal_rotation() const {
+inline const ::QuaternionReply& ObjectReply::_internal_rotation() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  const ::Quaternion* p = _impl_.rotation_;
-  return p != nullptr ? *p : reinterpret_cast<const ::Quaternion&>(::_Quaternion_default_instance_);
+  const ::QuaternionReply* p = _impl_.rotation_;
+  return p != nullptr ? *p : reinterpret_cast<const ::QuaternionReply&>(::_QuaternionReply_default_instance_);
 }
-inline const ::Quaternion& ObjectReply::rotation() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline const ::QuaternionReply& ObjectReply::rotation() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
   // @@protoc_insertion_point(field_get:ObjectReply.rotation)
   return _internal_rotation();
 }
-inline void ObjectReply::unsafe_arena_set_allocated_rotation(::Quaternion* value) {
+inline void ObjectReply::unsafe_arena_set_allocated_rotation(::QuaternionReply* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.rotation_);
   }
-  _impl_.rotation_ = reinterpret_cast<::Quaternion*>(value);
+  _impl_.rotation_ = reinterpret_cast<::QuaternionReply*>(value);
   if (value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
@@ -2806,11 +2806,11 @@ inline void ObjectReply::unsafe_arena_set_allocated_rotation(::Quaternion* value
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ObjectReply.rotation)
 }
-inline ::Quaternion* ObjectReply::release_rotation() {
+inline ::QuaternionReply* ObjectReply::release_rotation() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::Quaternion* released = _impl_.rotation_;
+  ::QuaternionReply* released = _impl_.rotation_;
   _impl_.rotation_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
     auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
@@ -2825,30 +2825,30 @@ inline ::Quaternion* ObjectReply::release_rotation() {
   }
   return released;
 }
-inline ::Quaternion* ObjectReply::unsafe_arena_release_rotation() {
+inline ::QuaternionReply* ObjectReply::unsafe_arena_release_rotation() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:ObjectReply.rotation)
 
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::Quaternion* temp = _impl_.rotation_;
+  ::QuaternionReply* temp = _impl_.rotation_;
   _impl_.rotation_ = nullptr;
   return temp;
 }
-inline ::Quaternion* ObjectReply::_internal_mutable_rotation() {
+inline ::QuaternionReply* ObjectReply::_internal_mutable_rotation() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.rotation_ == nullptr) {
-    auto* p = ::google::protobuf::Message::DefaultConstruct<::Quaternion>(GetArena());
-    _impl_.rotation_ = reinterpret_cast<::Quaternion*>(p);
+    auto* p = ::google::protobuf::Message::DefaultConstruct<::QuaternionReply>(GetArena());
+    _impl_.rotation_ = reinterpret_cast<::QuaternionReply*>(p);
   }
   return _impl_.rotation_;
 }
-inline ::Quaternion* ObjectReply::mutable_rotation() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline ::QuaternionReply* ObjectReply::mutable_rotation() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   _impl_._has_bits_[0] |= 0x00000002u;
-  ::Quaternion* _msg = _internal_mutable_rotation();
+  ::QuaternionReply* _msg = _internal_mutable_rotation();
   // @@protoc_insertion_point(field_mutable:ObjectReply.rotation)
   return _msg;
 }
-inline void ObjectReply::set_allocated_rotation(::Quaternion* value) {
+inline void ObjectReply::set_allocated_rotation(::QuaternionReply* value) {
   ::google::protobuf::Arena* message_arena = GetArena();
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (message_arena == nullptr) {
@@ -2865,11 +2865,11 @@ inline void ObjectReply::set_allocated_rotation(::Quaternion* value) {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
 
-  _impl_.rotation_ = reinterpret_cast<::Quaternion*>(value);
+  _impl_.rotation_ = reinterpret_cast<::QuaternionReply*>(value);
   // @@protoc_insertion_point(field_set_allocated:ObjectReply.rotation)
 }
 
-// .Vec3 scale = 3;
+// .Vec3Reply scale = 3;
 inline bool ObjectReply::has_scale() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.scale_ != nullptr);
@@ -2880,21 +2880,21 @@ inline void ObjectReply::clear_scale() {
   if (_impl_.scale_ != nullptr) _impl_.scale_->Clear();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const ::Vec3& ObjectReply::_internal_scale() const {
+inline const ::Vec3Reply& ObjectReply::_internal_scale() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  const ::Vec3* p = _impl_.scale_;
-  return p != nullptr ? *p : reinterpret_cast<const ::Vec3&>(::_Vec3_default_instance_);
+  const ::Vec3Reply* p = _impl_.scale_;
+  return p != nullptr ? *p : reinterpret_cast<const ::Vec3Reply&>(::_Vec3Reply_default_instance_);
 }
-inline const ::Vec3& ObjectReply::scale() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline const ::Vec3Reply& ObjectReply::scale() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
   // @@protoc_insertion_point(field_get:ObjectReply.scale)
   return _internal_scale();
 }
-inline void ObjectReply::unsafe_arena_set_allocated_scale(::Vec3* value) {
+inline void ObjectReply::unsafe_arena_set_allocated_scale(::Vec3Reply* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.scale_);
   }
-  _impl_.scale_ = reinterpret_cast<::Vec3*>(value);
+  _impl_.scale_ = reinterpret_cast<::Vec3Reply*>(value);
   if (value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
@@ -2902,11 +2902,11 @@ inline void ObjectReply::unsafe_arena_set_allocated_scale(::Vec3* value) {
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ObjectReply.scale)
 }
-inline ::Vec3* ObjectReply::release_scale() {
+inline ::Vec3Reply* ObjectReply::release_scale() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::Vec3* released = _impl_.scale_;
+  ::Vec3Reply* released = _impl_.scale_;
   _impl_.scale_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
     auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
@@ -2921,30 +2921,30 @@ inline ::Vec3* ObjectReply::release_scale() {
   }
   return released;
 }
-inline ::Vec3* ObjectReply::unsafe_arena_release_scale() {
+inline ::Vec3Reply* ObjectReply::unsafe_arena_release_scale() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:ObjectReply.scale)
 
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::Vec3* temp = _impl_.scale_;
+  ::Vec3Reply* temp = _impl_.scale_;
   _impl_.scale_ = nullptr;
   return temp;
 }
-inline ::Vec3* ObjectReply::_internal_mutable_scale() {
+inline ::Vec3Reply* ObjectReply::_internal_mutable_scale() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.scale_ == nullptr) {
-    auto* p = ::google::protobuf::Message::DefaultConstruct<::Vec3>(GetArena());
-    _impl_.scale_ = reinterpret_cast<::Vec3*>(p);
+    auto* p = ::google::protobuf::Message::DefaultConstruct<::Vec3Reply>(GetArena());
+    _impl_.scale_ = reinterpret_cast<::Vec3Reply*>(p);
   }
   return _impl_.scale_;
 }
-inline ::Vec3* ObjectReply::mutable_scale() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline ::Vec3Reply* ObjectReply::mutable_scale() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   _impl_._has_bits_[0] |= 0x00000004u;
-  ::Vec3* _msg = _internal_mutable_scale();
+  ::Vec3Reply* _msg = _internal_mutable_scale();
   // @@protoc_insertion_point(field_mutable:ObjectReply.scale)
   return _msg;
 }
-inline void ObjectReply::set_allocated_scale(::Vec3* value) {
+inline void ObjectReply::set_allocated_scale(::Vec3Reply* value) {
   ::google::protobuf::Arena* message_arena = GetArena();
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (message_arena == nullptr) {
@@ -2961,11 +2961,11 @@ inline void ObjectReply::set_allocated_scale(::Vec3* value) {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
 
-  _impl_.scale_ = reinterpret_cast<::Vec3*>(value);
+  _impl_.scale_ = reinterpret_cast<::Vec3Reply*>(value);
   // @@protoc_insertion_point(field_set_allocated:ObjectReply.scale)
 }
 
-// repeated .Vertex vertices = 4;
+// repeated .VertexReply vertices = 4;
 inline int ObjectReply::_internal_vertices_size() const {
   return _internal_vertices().size();
 }
@@ -2976,39 +2976,39 @@ inline void ObjectReply::clear_vertices() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.vertices_.Clear();
 }
-inline ::Vertex* ObjectReply::mutable_vertices(int index)
+inline ::VertexReply* ObjectReply::mutable_vertices(int index)
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   // @@protoc_insertion_point(field_mutable:ObjectReply.vertices)
   return _internal_mutable_vertices()->Mutable(index);
 }
-inline ::google::protobuf::RepeatedPtrField<::Vertex>* ObjectReply::mutable_vertices()
+inline ::google::protobuf::RepeatedPtrField<::VertexReply>* ObjectReply::mutable_vertices()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   // @@protoc_insertion_point(field_mutable_list:ObjectReply.vertices)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _internal_mutable_vertices();
 }
-inline const ::Vertex& ObjectReply::vertices(int index) const
+inline const ::VertexReply& ObjectReply::vertices(int index) const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   // @@protoc_insertion_point(field_get:ObjectReply.vertices)
   return _internal_vertices().Get(index);
 }
-inline ::Vertex* ObjectReply::add_vertices() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline ::VertexReply* ObjectReply::add_vertices() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  ::Vertex* _add = _internal_mutable_vertices()->Add();
+  ::VertexReply* _add = _internal_mutable_vertices()->Add();
   // @@protoc_insertion_point(field_add:ObjectReply.vertices)
   return _add;
 }
-inline const ::google::protobuf::RepeatedPtrField<::Vertex>& ObjectReply::vertices() const
+inline const ::google::protobuf::RepeatedPtrField<::VertexReply>& ObjectReply::vertices() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   // @@protoc_insertion_point(field_list:ObjectReply.vertices)
   return _internal_vertices();
 }
-inline const ::google::protobuf::RepeatedPtrField<::Vertex>&
+inline const ::google::protobuf::RepeatedPtrField<::VertexReply>&
 ObjectReply::_internal_vertices() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.vertices_;
 }
-inline ::google::protobuf::RepeatedPtrField<::Vertex>*
+inline ::google::protobuf::RepeatedPtrField<::VertexReply>*
 ObjectReply::_internal_mutable_vertices() {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return &_impl_.vertices_;

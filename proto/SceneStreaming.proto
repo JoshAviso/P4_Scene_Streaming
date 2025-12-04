@@ -9,28 +9,28 @@ service SceneStreamService {
 
 message Empty{}
 
-message Vec2 {
+message Vec2Reply {
 	float x = 1; float y = 2;
 }
 
-message Vec3 {
+message Vec3Reply {
 	float x = 1; float y = 2; float z = 3;
 }
 
-message Quaternion {
+message QuaternionReply {
 	float w = 1; float x = 2; float y = 3; float z = 4;
 }
 
-message Vertex {
-	Vec3 position = 1; Vec3 normal = 2; Vec2 uv = 3;
+message VertexReply {
+	Vec3Reply position = 1; Vec3Reply normal = 2; Vec2Reply uv = 3;
 }
 
 message ObjectReply {
-	Vec3 position = 1;
-	Quaternion rotation = 2;
-	Vec3 scale = 3;
+	Vec3Reply position = 1;
+	QuaternionReply rotation = 2;
+	Vec3Reply scale = 3;
 
-	repeated Vertex vertices = 4;
+	repeated VertexReply vertices = 4;
 }
 
 message SceneListReply {

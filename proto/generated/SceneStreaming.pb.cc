@@ -25,7 +25,7 @@ namespace _pb = ::google::protobuf;
 namespace _pbi = ::google::protobuf::internal;
 namespace _fl = ::google::protobuf::internal::field_layout;
 
-inline constexpr Vec3::Impl_::Impl_(
+inline constexpr Vec3Reply::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : x_{0},
         y_{0},
@@ -33,7 +33,7 @@ inline constexpr Vec3::Impl_::Impl_(
         _cached_size_{0} {}
 
 template <typename>
-PROTOBUF_CONSTEXPR Vec3::Vec3(::_pbi::ConstantInitialized)
+PROTOBUF_CONSTEXPR Vec3Reply::Vec3Reply(::_pbi::ConstantInitialized)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(_class_data_.base()),
 #else   // PROTOBUF_CUSTOM_VTABLE
@@ -41,25 +41,25 @@ PROTOBUF_CONSTEXPR Vec3::Vec3(::_pbi::ConstantInitialized)
 #endif  // PROTOBUF_CUSTOM_VTABLE
       _impl_(::_pbi::ConstantInitialized()) {
 }
-struct Vec3DefaultTypeInternal {
-  PROTOBUF_CONSTEXPR Vec3DefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~Vec3DefaultTypeInternal() {}
+struct Vec3ReplyDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR Vec3ReplyDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~Vec3ReplyDefaultTypeInternal() {}
   union {
-    Vec3 _instance;
+    Vec3Reply _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Vec3DefaultTypeInternal _Vec3_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Vec3ReplyDefaultTypeInternal _Vec3Reply_default_instance_;
 
-inline constexpr Vec2::Impl_::Impl_(
+inline constexpr Vec2Reply::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : x_{0},
         y_{0},
         _cached_size_{0} {}
 
 template <typename>
-PROTOBUF_CONSTEXPR Vec2::Vec2(::_pbi::ConstantInitialized)
+PROTOBUF_CONSTEXPR Vec2Reply::Vec2Reply(::_pbi::ConstantInitialized)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(_class_data_.base()),
 #else   // PROTOBUF_CUSTOM_VTABLE
@@ -67,16 +67,16 @@ PROTOBUF_CONSTEXPR Vec2::Vec2(::_pbi::ConstantInitialized)
 #endif  // PROTOBUF_CUSTOM_VTABLE
       _impl_(::_pbi::ConstantInitialized()) {
 }
-struct Vec2DefaultTypeInternal {
-  PROTOBUF_CONSTEXPR Vec2DefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~Vec2DefaultTypeInternal() {}
+struct Vec2ReplyDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR Vec2ReplyDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~Vec2ReplyDefaultTypeInternal() {}
   union {
-    Vec2 _instance;
+    Vec2Reply _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Vec2DefaultTypeInternal _Vec2_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Vec2ReplyDefaultTypeInternal _Vec2Reply_default_instance_;
 
 inline constexpr SceneReq::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
@@ -156,7 +156,7 @@ struct SceneInfoReplyDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SceneInfoReplyDefaultTypeInternal _SceneInfoReply_default_instance_;
 
-inline constexpr Quaternion::Impl_::Impl_(
+inline constexpr QuaternionReply::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : w_{0},
         x_{0},
@@ -165,7 +165,7 @@ inline constexpr Quaternion::Impl_::Impl_(
         _cached_size_{0} {}
 
 template <typename>
-PROTOBUF_CONSTEXPR Quaternion::Quaternion(::_pbi::ConstantInitialized)
+PROTOBUF_CONSTEXPR QuaternionReply::QuaternionReply(::_pbi::ConstantInitialized)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(_class_data_.base()),
 #else   // PROTOBUF_CUSTOM_VTABLE
@@ -173,16 +173,16 @@ PROTOBUF_CONSTEXPR Quaternion::Quaternion(::_pbi::ConstantInitialized)
 #endif  // PROTOBUF_CUSTOM_VTABLE
       _impl_(::_pbi::ConstantInitialized()) {
 }
-struct QuaternionDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR QuaternionDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~QuaternionDefaultTypeInternal() {}
+struct QuaternionReplyDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR QuaternionReplyDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~QuaternionReplyDefaultTypeInternal() {}
   union {
-    Quaternion _instance;
+    QuaternionReply _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 QuaternionDefaultTypeInternal _Quaternion_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 QuaternionReplyDefaultTypeInternal _QuaternionReply_default_instance_;
               template <typename>
 PROTOBUF_CONSTEXPR Empty::Empty(::_pbi::ConstantInitialized)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
@@ -202,7 +202,7 @@ struct EmptyDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 EmptyDefaultTypeInternal _Empty_default_instance_;
 
-inline constexpr Vertex::Impl_::Impl_(
+inline constexpr VertexReply::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : _cached_size_{0},
         position_{nullptr},
@@ -210,7 +210,7 @@ inline constexpr Vertex::Impl_::Impl_(
         uv_{nullptr} {}
 
 template <typename>
-PROTOBUF_CONSTEXPR Vertex::Vertex(::_pbi::ConstantInitialized)
+PROTOBUF_CONSTEXPR VertexReply::VertexReply(::_pbi::ConstantInitialized)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(_class_data_.base()),
 #else   // PROTOBUF_CUSTOM_VTABLE
@@ -218,16 +218,16 @@ PROTOBUF_CONSTEXPR Vertex::Vertex(::_pbi::ConstantInitialized)
 #endif  // PROTOBUF_CUSTOM_VTABLE
       _impl_(::_pbi::ConstantInitialized()) {
 }
-struct VertexDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR VertexDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~VertexDefaultTypeInternal() {}
+struct VertexReplyDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR VertexReplyDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~VertexReplyDefaultTypeInternal() {}
   union {
-    Vertex _instance;
+    VertexReply _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 VertexDefaultTypeInternal _Vertex_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 VertexReplyDefaultTypeInternal _VertexReply_default_instance_;
 
 inline constexpr ObjectReply::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
@@ -297,49 +297,49 @@ const ::uint32_t
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
         ~0u,  // no _has_bits_
-        PROTOBUF_FIELD_OFFSET(::Vec2, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::Vec2Reply, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::Vec2, _impl_.x_),
-        PROTOBUF_FIELD_OFFSET(::Vec2, _impl_.y_),
+        PROTOBUF_FIELD_OFFSET(::Vec2Reply, _impl_.x_),
+        PROTOBUF_FIELD_OFFSET(::Vec2Reply, _impl_.y_),
         ~0u,  // no _has_bits_
-        PROTOBUF_FIELD_OFFSET(::Vec3, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::Vec3Reply, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::Vec3, _impl_.x_),
-        PROTOBUF_FIELD_OFFSET(::Vec3, _impl_.y_),
-        PROTOBUF_FIELD_OFFSET(::Vec3, _impl_.z_),
+        PROTOBUF_FIELD_OFFSET(::Vec3Reply, _impl_.x_),
+        PROTOBUF_FIELD_OFFSET(::Vec3Reply, _impl_.y_),
+        PROTOBUF_FIELD_OFFSET(::Vec3Reply, _impl_.z_),
         ~0u,  // no _has_bits_
-        PROTOBUF_FIELD_OFFSET(::Quaternion, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::QuaternionReply, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::Quaternion, _impl_.w_),
-        PROTOBUF_FIELD_OFFSET(::Quaternion, _impl_.x_),
-        PROTOBUF_FIELD_OFFSET(::Quaternion, _impl_.y_),
-        PROTOBUF_FIELD_OFFSET(::Quaternion, _impl_.z_),
-        PROTOBUF_FIELD_OFFSET(::Vertex, _impl_._has_bits_),
-        PROTOBUF_FIELD_OFFSET(::Vertex, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::QuaternionReply, _impl_.w_),
+        PROTOBUF_FIELD_OFFSET(::QuaternionReply, _impl_.x_),
+        PROTOBUF_FIELD_OFFSET(::QuaternionReply, _impl_.y_),
+        PROTOBUF_FIELD_OFFSET(::QuaternionReply, _impl_.z_),
+        PROTOBUF_FIELD_OFFSET(::VertexReply, _impl_._has_bits_),
+        PROTOBUF_FIELD_OFFSET(::VertexReply, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::Vertex, _impl_.position_),
-        PROTOBUF_FIELD_OFFSET(::Vertex, _impl_.normal_),
-        PROTOBUF_FIELD_OFFSET(::Vertex, _impl_.uv_),
+        PROTOBUF_FIELD_OFFSET(::VertexReply, _impl_.position_),
+        PROTOBUF_FIELD_OFFSET(::VertexReply, _impl_.normal_),
+        PROTOBUF_FIELD_OFFSET(::VertexReply, _impl_.uv_),
         0,
         1,
         2,
@@ -401,10 +401,10 @@ const ::uint32_t
 static const ::_pbi::MigrationSchema
     schemas[] ABSL_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
         {0, -1, -1, sizeof(::Empty)},
-        {8, -1, -1, sizeof(::Vec2)},
-        {18, -1, -1, sizeof(::Vec3)},
-        {29, -1, -1, sizeof(::Quaternion)},
-        {41, 52, -1, sizeof(::Vertex)},
+        {8, -1, -1, sizeof(::Vec2Reply)},
+        {18, -1, -1, sizeof(::Vec3Reply)},
+        {29, -1, -1, sizeof(::QuaternionReply)},
+        {41, 52, -1, sizeof(::VertexReply)},
         {55, 67, -1, sizeof(::ObjectReply)},
         {71, -1, -1, sizeof(::SceneListReply)},
         {80, -1, -1, sizeof(::SceneReq)},
@@ -413,10 +413,10 @@ static const ::_pbi::MigrationSchema
 };
 static const ::_pb::Message* const file_default_instances[] = {
     &::_Empty_default_instance_._instance,
-    &::_Vec2_default_instance_._instance,
-    &::_Vec3_default_instance_._instance,
-    &::_Quaternion_default_instance_._instance,
-    &::_Vertex_default_instance_._instance,
+    &::_Vec2Reply_default_instance_._instance,
+    &::_Vec3Reply_default_instance_._instance,
+    &::_QuaternionReply_default_instance_._instance,
+    &::_VertexReply_default_instance_._instance,
     &::_ObjectReply_default_instance_._instance,
     &::_SceneListReply_default_instance_._instance,
     &::_SceneReq_default_instance_._instance,
@@ -425,30 +425,31 @@ static const ::_pb::Message* const file_default_instances[] = {
 };
 const char descriptor_table_protodef_SceneStreaming_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
     protodesc_cold) = {
-    "\n\024SceneStreaming.proto\"\007\n\005Empty\"\034\n\004Vec2\022"
-    "\t\n\001x\030\001 \001(\002\022\t\n\001y\030\002 \001(\002\"\'\n\004Vec3\022\t\n\001x\030\001 \001(\002"
-    "\022\t\n\001y\030\002 \001(\002\022\t\n\001z\030\003 \001(\002\"8\n\nQuaternion\022\t\n\001"
-    "w\030\001 \001(\002\022\t\n\001x\030\002 \001(\002\022\t\n\001y\030\003 \001(\002\022\t\n\001z\030\004 \001(\002"
-    "\"K\n\006Vertex\022\027\n\010position\030\001 \001(\0132\005.Vec3\022\025\n\006n"
-    "ormal\030\002 \001(\0132\005.Vec3\022\021\n\002uv\030\003 \001(\0132\005.Vec2\"v\n"
-    "\013ObjectReply\022\027\n\010position\030\001 \001(\0132\005.Vec3\022\035\n"
-    "\010rotation\030\002 \001(\0132\013.Quaternion\022\024\n\005scale\030\003 "
-    "\001(\0132\005.Vec3\022\031\n\010vertices\030\004 \003(\0132\007.Vertex\"$\n"
-    "\016SceneListReply\022\022\n\nsceneNames\030\001 \003(\t\"\030\n\010S"
-    "ceneReq\022\014\n\004name\030\001 \001(\t\"6\n\016SceneInfoReply\022"
-    "\016\n\006status\030\001 \001(\010\022\024\n\014totalObjects\030\002 \001(\005\"2\n"
-    "\021SceneObjectsReply\022\035\n\007objects\030\001 \003(\0132\014.Ob"
-    "jectReply2\240\001\n\022SceneStreamService\022\'\n\014GetS"
-    "ceneList\022\006.Empty\032\017.SceneListReply\022*\n\014Ask"
-    "SceneInfo\022\t.SceneReq\032\017.SceneInfoReply\0225\n"
-    "\022GetSceneObjectData\022\t.SceneReq\032\022.SceneOb"
-    "jectsReply0\001b\006proto3"
+    "\n\024SceneStreaming.proto\"\007\n\005Empty\"!\n\tVec2R"
+    "eply\022\t\n\001x\030\001 \001(\002\022\t\n\001y\030\002 \001(\002\",\n\tVec3Reply\022"
+    "\t\n\001x\030\001 \001(\002\022\t\n\001y\030\002 \001(\002\022\t\n\001z\030\003 \001(\002\"=\n\017Quat"
+    "ernionReply\022\t\n\001w\030\001 \001(\002\022\t\n\001x\030\002 \001(\002\022\t\n\001y\030\003"
+    " \001(\002\022\t\n\001z\030\004 \001(\002\"_\n\013VertexReply\022\034\n\010positi"
+    "on\030\001 \001(\0132\n.Vec3Reply\022\032\n\006normal\030\002 \001(\0132\n.V"
+    "ec3Reply\022\026\n\002uv\030\003 \001(\0132\n.Vec2Reply\"\212\001\n\013Obj"
+    "ectReply\022\034\n\010position\030\001 \001(\0132\n.Vec3Reply\022\""
+    "\n\010rotation\030\002 \001(\0132\020.QuaternionReply\022\031\n\005sc"
+    "ale\030\003 \001(\0132\n.Vec3Reply\022\036\n\010vertices\030\004 \003(\0132"
+    "\014.VertexReply\"$\n\016SceneListReply\022\022\n\nscene"
+    "Names\030\001 \003(\t\"\030\n\010SceneReq\022\014\n\004name\030\001 \001(\t\"6\n"
+    "\016SceneInfoReply\022\016\n\006status\030\001 \001(\010\022\024\n\014total"
+    "Objects\030\002 \001(\005\"2\n\021SceneObjectsReply\022\035\n\007ob"
+    "jects\030\001 \003(\0132\014.ObjectReply2\240\001\n\022SceneStrea"
+    "mService\022\'\n\014GetSceneList\022\006.Empty\032\017.Scene"
+    "ListReply\022*\n\014AskSceneInfo\022\t.SceneReq\032\017.S"
+    "ceneInfoReply\0225\n\022GetSceneObjectData\022\t.Sc"
+    "eneReq\032\022.SceneObjectsReply0\001b\006proto3"
 };
 static ::absl::once_flag descriptor_table_SceneStreaming_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_SceneStreaming_2eproto = {
     false,
     false,
-    700,
+    756,
     descriptor_table_protodef_SceneStreaming_2eproto,
     "SceneStreaming.proto",
     &descriptor_table_SceneStreaming_2eproto_once,
@@ -566,30 +567,30 @@ const ::_pbi::TcParseTable<0, 0, 0, 0, 2> Empty::_table_ = {
 }
 // ===================================================================
 
-class Vec2::_Internal {
+class Vec2Reply::_Internal {
  public:
 };
 
-Vec2::Vec2(::google::protobuf::Arena* arena)
+Vec2Reply::Vec2Reply(::google::protobuf::Arena* arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:Vec2)
+  // @@protoc_insertion_point(arena_constructor:Vec2Reply)
 }
-Vec2::Vec2(
-    ::google::protobuf::Arena* arena, const Vec2& from)
-    : Vec2(arena) {
+Vec2Reply::Vec2Reply(
+    ::google::protobuf::Arena* arena, const Vec2Reply& from)
+    : Vec2Reply(arena) {
   MergeFrom(from);
 }
-inline PROTOBUF_NDEBUG_INLINE Vec2::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE Vec2Reply::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
       : _cached_size_{0} {}
 
-inline void Vec2::SharedCtor(::_pb::Arena* arena) {
+inline void Vec2Reply::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
   ::memset(reinterpret_cast<char *>(&_impl_) +
                offsetof(Impl_, x_),
@@ -598,54 +599,54 @@ inline void Vec2::SharedCtor(::_pb::Arena* arena) {
                offsetof(Impl_, x_) +
                sizeof(Impl_::y_));
 }
-Vec2::~Vec2() {
-  // @@protoc_insertion_point(destructor:Vec2)
+Vec2Reply::~Vec2Reply() {
+  // @@protoc_insertion_point(destructor:Vec2Reply)
   SharedDtor(*this);
 }
-inline void Vec2::SharedDtor(MessageLite& self) {
-  Vec2& this_ = static_cast<Vec2&>(self);
+inline void Vec2Reply::SharedDtor(MessageLite& self) {
+  Vec2Reply& this_ = static_cast<Vec2Reply&>(self);
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.~Impl_();
 }
 
-inline void* Vec2::PlacementNew_(const void*, void* mem,
+inline void* Vec2Reply::PlacementNew_(const void*, void* mem,
                                         ::google::protobuf::Arena* arena) {
-  return ::new (mem) Vec2(arena);
+  return ::new (mem) Vec2Reply(arena);
 }
-constexpr auto Vec2::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::ZeroInit(sizeof(Vec2),
-                                            alignof(Vec2));
+constexpr auto Vec2Reply::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::ZeroInit(sizeof(Vec2Reply),
+                                            alignof(Vec2Reply));
 }
 PROTOBUF_CONSTINIT
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::google::protobuf::internal::ClassDataFull Vec2::_class_data_ = {
+const ::google::protobuf::internal::ClassDataFull Vec2Reply::_class_data_ = {
     ::google::protobuf::internal::ClassData{
-        &_Vec2_default_instance_._instance,
+        &_Vec2Reply_default_instance_._instance,
         &_table_.header,
         nullptr,  // OnDemandRegisterArenaDtor
         nullptr,  // IsInitialized
-        &Vec2::MergeImpl,
-        ::google::protobuf::Message::GetNewImpl<Vec2>(),
+        &Vec2Reply::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<Vec2Reply>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        &Vec2::SharedDtor,
-        ::google::protobuf::Message::GetClearImpl<Vec2>(), &Vec2::ByteSizeLong,
-            &Vec2::_InternalSerialize,
+        &Vec2Reply::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<Vec2Reply>(), &Vec2Reply::ByteSizeLong,
+            &Vec2Reply::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-        PROTOBUF_FIELD_OFFSET(Vec2, _impl_._cached_size_),
+        PROTOBUF_FIELD_OFFSET(Vec2Reply, _impl_._cached_size_),
         false,
     },
-    &Vec2::kDescriptorMethods,
+    &Vec2Reply::kDescriptorMethods,
     &descriptor_table_SceneStreaming_2eproto,
     nullptr,  // tracker
 };
-const ::google::protobuf::internal::ClassData* Vec2::GetClassData() const {
+const ::google::protobuf::internal::ClassData* Vec2Reply::GetClassData() const {
   ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
   ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 2, 0, 0, 2> Vec2::_table_ = {
+const ::_pbi::TcParseTable<1, 2, 0, 0, 2> Vec2Reply::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -660,23 +661,23 @@ const ::_pbi::TcParseTable<1, 2, 0, 0, 2> Vec2::_table_ = {
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::Vec2>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::Vec2Reply>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     // float y = 2;
     {::_pbi::TcParser::FastF32S1,
-     {21, 63, 0, PROTOBUF_FIELD_OFFSET(Vec2, _impl_.y_)}},
+     {21, 63, 0, PROTOBUF_FIELD_OFFSET(Vec2Reply, _impl_.y_)}},
     // float x = 1;
     {::_pbi::TcParser::FastF32S1,
-     {13, 63, 0, PROTOBUF_FIELD_OFFSET(Vec2, _impl_.x_)}},
+     {13, 63, 0, PROTOBUF_FIELD_OFFSET(Vec2Reply, _impl_.x_)}},
   }}, {{
     65535, 65535
   }}, {{
     // float x = 1;
-    {PROTOBUF_FIELD_OFFSET(Vec2, _impl_.x_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Vec2Reply, _impl_.x_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
     // float y = 2;
-    {PROTOBUF_FIELD_OFFSET(Vec2, _impl_.y_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Vec2Reply, _impl_.y_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
   }},
   // no aux_entries
@@ -684,8 +685,8 @@ const ::_pbi::TcParseTable<1, 2, 0, 0, 2> Vec2::_table_ = {
   }},
 };
 
-PROTOBUF_NOINLINE void Vec2::Clear() {
-// @@protoc_insertion_point(message_clear_start:Vec2)
+PROTOBUF_NOINLINE void Vec2Reply::Clear() {
+// @@protoc_insertion_point(message_clear_start:Vec2Reply)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -698,17 +699,17 @@ PROTOBUF_NOINLINE void Vec2::Clear() {
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::uint8_t* Vec2::_InternalSerialize(
+        ::uint8_t* Vec2Reply::_InternalSerialize(
             const MessageLite& base, ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) {
-          const Vec2& this_ = static_cast<const Vec2&>(base);
+          const Vec2Reply& this_ = static_cast<const Vec2Reply&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::uint8_t* Vec2::_InternalSerialize(
+        ::uint8_t* Vec2Reply::_InternalSerialize(
             ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-          const Vec2& this_ = *this;
+          const Vec2Reply& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(serialize_to_array_start:Vec2)
+          // @@protoc_insertion_point(serialize_to_array_start:Vec2Reply)
           ::uint32_t cached_has_bits = 0;
           (void)cached_has_bits;
 
@@ -731,18 +732,18 @@ PROTOBUF_NOINLINE void Vec2::Clear() {
                 ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
                     this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
           }
-          // @@protoc_insertion_point(serialize_to_array_end:Vec2)
+          // @@protoc_insertion_point(serialize_to_array_end:Vec2Reply)
           return target;
         }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::size_t Vec2::ByteSizeLong(const MessageLite& base) {
-          const Vec2& this_ = static_cast<const Vec2&>(base);
+        ::size_t Vec2Reply::ByteSizeLong(const MessageLite& base) {
+          const Vec2Reply& this_ = static_cast<const Vec2Reply&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::size_t Vec2::ByteSizeLong() const {
-          const Vec2& this_ = *this;
+        ::size_t Vec2Reply::ByteSizeLong() const {
+          const Vec2Reply& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(message_byte_size_start:Vec2)
+          // @@protoc_insertion_point(message_byte_size_start:Vec2Reply)
           ::size_t total_size = 0;
 
           ::uint32_t cached_has_bits = 0;
@@ -764,10 +765,10 @@ PROTOBUF_NOINLINE void Vec2::Clear() {
                                                      &this_._impl_._cached_size_);
         }
 
-void Vec2::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<Vec2*>(&to_msg);
-  auto& from = static_cast<const Vec2&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:Vec2)
+void Vec2Reply::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<Vec2Reply*>(&to_msg);
+  auto& from = static_cast<const Vec2Reply&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:Vec2Reply)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -781,54 +782,54 @@ void Vec2::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::pr
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void Vec2::CopyFrom(const Vec2& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:Vec2)
+void Vec2Reply::CopyFrom(const Vec2Reply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Vec2Reply)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void Vec2::InternalSwap(Vec2* PROTOBUF_RESTRICT other) {
+void Vec2Reply::InternalSwap(Vec2Reply* PROTOBUF_RESTRICT other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Vec2, _impl_.y_)
-      + sizeof(Vec2::_impl_.y_)
-      - PROTOBUF_FIELD_OFFSET(Vec2, _impl_.x_)>(
+      PROTOBUF_FIELD_OFFSET(Vec2Reply, _impl_.y_)
+      + sizeof(Vec2Reply::_impl_.y_)
+      - PROTOBUF_FIELD_OFFSET(Vec2Reply, _impl_.x_)>(
           reinterpret_cast<char*>(&_impl_.x_),
           reinterpret_cast<char*>(&other->_impl_.x_));
 }
 
-::google::protobuf::Metadata Vec2::GetMetadata() const {
+::google::protobuf::Metadata Vec2Reply::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
 
-class Vec3::_Internal {
+class Vec3Reply::_Internal {
  public:
 };
 
-Vec3::Vec3(::google::protobuf::Arena* arena)
+Vec3Reply::Vec3Reply(::google::protobuf::Arena* arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:Vec3)
+  // @@protoc_insertion_point(arena_constructor:Vec3Reply)
 }
-Vec3::Vec3(
-    ::google::protobuf::Arena* arena, const Vec3& from)
-    : Vec3(arena) {
+Vec3Reply::Vec3Reply(
+    ::google::protobuf::Arena* arena, const Vec3Reply& from)
+    : Vec3Reply(arena) {
   MergeFrom(from);
 }
-inline PROTOBUF_NDEBUG_INLINE Vec3::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE Vec3Reply::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
       : _cached_size_{0} {}
 
-inline void Vec3::SharedCtor(::_pb::Arena* arena) {
+inline void Vec3Reply::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
   ::memset(reinterpret_cast<char *>(&_impl_) +
                offsetof(Impl_, x_),
@@ -837,54 +838,54 @@ inline void Vec3::SharedCtor(::_pb::Arena* arena) {
                offsetof(Impl_, x_) +
                sizeof(Impl_::z_));
 }
-Vec3::~Vec3() {
-  // @@protoc_insertion_point(destructor:Vec3)
+Vec3Reply::~Vec3Reply() {
+  // @@protoc_insertion_point(destructor:Vec3Reply)
   SharedDtor(*this);
 }
-inline void Vec3::SharedDtor(MessageLite& self) {
-  Vec3& this_ = static_cast<Vec3&>(self);
+inline void Vec3Reply::SharedDtor(MessageLite& self) {
+  Vec3Reply& this_ = static_cast<Vec3Reply&>(self);
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.~Impl_();
 }
 
-inline void* Vec3::PlacementNew_(const void*, void* mem,
+inline void* Vec3Reply::PlacementNew_(const void*, void* mem,
                                         ::google::protobuf::Arena* arena) {
-  return ::new (mem) Vec3(arena);
+  return ::new (mem) Vec3Reply(arena);
 }
-constexpr auto Vec3::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::ZeroInit(sizeof(Vec3),
-                                            alignof(Vec3));
+constexpr auto Vec3Reply::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::ZeroInit(sizeof(Vec3Reply),
+                                            alignof(Vec3Reply));
 }
 PROTOBUF_CONSTINIT
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::google::protobuf::internal::ClassDataFull Vec3::_class_data_ = {
+const ::google::protobuf::internal::ClassDataFull Vec3Reply::_class_data_ = {
     ::google::protobuf::internal::ClassData{
-        &_Vec3_default_instance_._instance,
+        &_Vec3Reply_default_instance_._instance,
         &_table_.header,
         nullptr,  // OnDemandRegisterArenaDtor
         nullptr,  // IsInitialized
-        &Vec3::MergeImpl,
-        ::google::protobuf::Message::GetNewImpl<Vec3>(),
+        &Vec3Reply::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<Vec3Reply>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        &Vec3::SharedDtor,
-        ::google::protobuf::Message::GetClearImpl<Vec3>(), &Vec3::ByteSizeLong,
-            &Vec3::_InternalSerialize,
+        &Vec3Reply::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<Vec3Reply>(), &Vec3Reply::ByteSizeLong,
+            &Vec3Reply::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-        PROTOBUF_FIELD_OFFSET(Vec3, _impl_._cached_size_),
+        PROTOBUF_FIELD_OFFSET(Vec3Reply, _impl_._cached_size_),
         false,
     },
-    &Vec3::kDescriptorMethods,
+    &Vec3Reply::kDescriptorMethods,
     &descriptor_table_SceneStreaming_2eproto,
     nullptr,  // tracker
 };
-const ::google::protobuf::internal::ClassData* Vec3::GetClassData() const {
+const ::google::protobuf::internal::ClassData* Vec3Reply::GetClassData() const {
   ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
   ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 3, 0, 0, 2> Vec3::_table_ = {
+const ::_pbi::TcParseTable<2, 3, 0, 0, 2> Vec3Reply::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -899,30 +900,30 @@ const ::_pbi::TcParseTable<2, 3, 0, 0, 2> Vec3::_table_ = {
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::Vec3>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::Vec3Reply>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
     // float x = 1;
     {::_pbi::TcParser::FastF32S1,
-     {13, 63, 0, PROTOBUF_FIELD_OFFSET(Vec3, _impl_.x_)}},
+     {13, 63, 0, PROTOBUF_FIELD_OFFSET(Vec3Reply, _impl_.x_)}},
     // float y = 2;
     {::_pbi::TcParser::FastF32S1,
-     {21, 63, 0, PROTOBUF_FIELD_OFFSET(Vec3, _impl_.y_)}},
+     {21, 63, 0, PROTOBUF_FIELD_OFFSET(Vec3Reply, _impl_.y_)}},
     // float z = 3;
     {::_pbi::TcParser::FastF32S1,
-     {29, 63, 0, PROTOBUF_FIELD_OFFSET(Vec3, _impl_.z_)}},
+     {29, 63, 0, PROTOBUF_FIELD_OFFSET(Vec3Reply, _impl_.z_)}},
   }}, {{
     65535, 65535
   }}, {{
     // float x = 1;
-    {PROTOBUF_FIELD_OFFSET(Vec3, _impl_.x_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Vec3Reply, _impl_.x_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
     // float y = 2;
-    {PROTOBUF_FIELD_OFFSET(Vec3, _impl_.y_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Vec3Reply, _impl_.y_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
     // float z = 3;
-    {PROTOBUF_FIELD_OFFSET(Vec3, _impl_.z_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Vec3Reply, _impl_.z_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
   }},
   // no aux_entries
@@ -930,8 +931,8 @@ const ::_pbi::TcParseTable<2, 3, 0, 0, 2> Vec3::_table_ = {
   }},
 };
 
-PROTOBUF_NOINLINE void Vec3::Clear() {
-// @@protoc_insertion_point(message_clear_start:Vec3)
+PROTOBUF_NOINLINE void Vec3Reply::Clear() {
+// @@protoc_insertion_point(message_clear_start:Vec3Reply)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -944,17 +945,17 @@ PROTOBUF_NOINLINE void Vec3::Clear() {
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::uint8_t* Vec3::_InternalSerialize(
+        ::uint8_t* Vec3Reply::_InternalSerialize(
             const MessageLite& base, ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) {
-          const Vec3& this_ = static_cast<const Vec3&>(base);
+          const Vec3Reply& this_ = static_cast<const Vec3Reply&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::uint8_t* Vec3::_InternalSerialize(
+        ::uint8_t* Vec3Reply::_InternalSerialize(
             ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-          const Vec3& this_ = *this;
+          const Vec3Reply& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(serialize_to_array_start:Vec3)
+          // @@protoc_insertion_point(serialize_to_array_start:Vec3Reply)
           ::uint32_t cached_has_bits = 0;
           (void)cached_has_bits;
 
@@ -984,18 +985,18 @@ PROTOBUF_NOINLINE void Vec3::Clear() {
                 ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
                     this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
           }
-          // @@protoc_insertion_point(serialize_to_array_end:Vec3)
+          // @@protoc_insertion_point(serialize_to_array_end:Vec3Reply)
           return target;
         }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::size_t Vec3::ByteSizeLong(const MessageLite& base) {
-          const Vec3& this_ = static_cast<const Vec3&>(base);
+        ::size_t Vec3Reply::ByteSizeLong(const MessageLite& base) {
+          const Vec3Reply& this_ = static_cast<const Vec3Reply&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::size_t Vec3::ByteSizeLong() const {
-          const Vec3& this_ = *this;
+        ::size_t Vec3Reply::ByteSizeLong() const {
+          const Vec3Reply& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(message_byte_size_start:Vec3)
+          // @@protoc_insertion_point(message_byte_size_start:Vec3Reply)
           ::size_t total_size = 0;
 
           ::uint32_t cached_has_bits = 0;
@@ -1021,10 +1022,10 @@ PROTOBUF_NOINLINE void Vec3::Clear() {
                                                      &this_._impl_._cached_size_);
         }
 
-void Vec3::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<Vec3*>(&to_msg);
-  auto& from = static_cast<const Vec3&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:Vec3)
+void Vec3Reply::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<Vec3Reply*>(&to_msg);
+  auto& from = static_cast<const Vec3Reply&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:Vec3Reply)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1041,54 +1042,54 @@ void Vec3::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::pr
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void Vec3::CopyFrom(const Vec3& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:Vec3)
+void Vec3Reply::CopyFrom(const Vec3Reply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Vec3Reply)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void Vec3::InternalSwap(Vec3* PROTOBUF_RESTRICT other) {
+void Vec3Reply::InternalSwap(Vec3Reply* PROTOBUF_RESTRICT other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Vec3, _impl_.z_)
-      + sizeof(Vec3::_impl_.z_)
-      - PROTOBUF_FIELD_OFFSET(Vec3, _impl_.x_)>(
+      PROTOBUF_FIELD_OFFSET(Vec3Reply, _impl_.z_)
+      + sizeof(Vec3Reply::_impl_.z_)
+      - PROTOBUF_FIELD_OFFSET(Vec3Reply, _impl_.x_)>(
           reinterpret_cast<char*>(&_impl_.x_),
           reinterpret_cast<char*>(&other->_impl_.x_));
 }
 
-::google::protobuf::Metadata Vec3::GetMetadata() const {
+::google::protobuf::Metadata Vec3Reply::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
 
-class Quaternion::_Internal {
+class QuaternionReply::_Internal {
  public:
 };
 
-Quaternion::Quaternion(::google::protobuf::Arena* arena)
+QuaternionReply::QuaternionReply(::google::protobuf::Arena* arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:Quaternion)
+  // @@protoc_insertion_point(arena_constructor:QuaternionReply)
 }
-Quaternion::Quaternion(
-    ::google::protobuf::Arena* arena, const Quaternion& from)
-    : Quaternion(arena) {
+QuaternionReply::QuaternionReply(
+    ::google::protobuf::Arena* arena, const QuaternionReply& from)
+    : QuaternionReply(arena) {
   MergeFrom(from);
 }
-inline PROTOBUF_NDEBUG_INLINE Quaternion::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE QuaternionReply::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
       : _cached_size_{0} {}
 
-inline void Quaternion::SharedCtor(::_pb::Arena* arena) {
+inline void QuaternionReply::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
   ::memset(reinterpret_cast<char *>(&_impl_) +
                offsetof(Impl_, w_),
@@ -1097,54 +1098,54 @@ inline void Quaternion::SharedCtor(::_pb::Arena* arena) {
                offsetof(Impl_, w_) +
                sizeof(Impl_::z_));
 }
-Quaternion::~Quaternion() {
-  // @@protoc_insertion_point(destructor:Quaternion)
+QuaternionReply::~QuaternionReply() {
+  // @@protoc_insertion_point(destructor:QuaternionReply)
   SharedDtor(*this);
 }
-inline void Quaternion::SharedDtor(MessageLite& self) {
-  Quaternion& this_ = static_cast<Quaternion&>(self);
+inline void QuaternionReply::SharedDtor(MessageLite& self) {
+  QuaternionReply& this_ = static_cast<QuaternionReply&>(self);
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.~Impl_();
 }
 
-inline void* Quaternion::PlacementNew_(const void*, void* mem,
+inline void* QuaternionReply::PlacementNew_(const void*, void* mem,
                                         ::google::protobuf::Arena* arena) {
-  return ::new (mem) Quaternion(arena);
+  return ::new (mem) QuaternionReply(arena);
 }
-constexpr auto Quaternion::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::ZeroInit(sizeof(Quaternion),
-                                            alignof(Quaternion));
+constexpr auto QuaternionReply::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::ZeroInit(sizeof(QuaternionReply),
+                                            alignof(QuaternionReply));
 }
 PROTOBUF_CONSTINIT
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::google::protobuf::internal::ClassDataFull Quaternion::_class_data_ = {
+const ::google::protobuf::internal::ClassDataFull QuaternionReply::_class_data_ = {
     ::google::protobuf::internal::ClassData{
-        &_Quaternion_default_instance_._instance,
+        &_QuaternionReply_default_instance_._instance,
         &_table_.header,
         nullptr,  // OnDemandRegisterArenaDtor
         nullptr,  // IsInitialized
-        &Quaternion::MergeImpl,
-        ::google::protobuf::Message::GetNewImpl<Quaternion>(),
+        &QuaternionReply::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<QuaternionReply>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        &Quaternion::SharedDtor,
-        ::google::protobuf::Message::GetClearImpl<Quaternion>(), &Quaternion::ByteSizeLong,
-            &Quaternion::_InternalSerialize,
+        &QuaternionReply::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<QuaternionReply>(), &QuaternionReply::ByteSizeLong,
+            &QuaternionReply::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-        PROTOBUF_FIELD_OFFSET(Quaternion, _impl_._cached_size_),
+        PROTOBUF_FIELD_OFFSET(QuaternionReply, _impl_._cached_size_),
         false,
     },
-    &Quaternion::kDescriptorMethods,
+    &QuaternionReply::kDescriptorMethods,
     &descriptor_table_SceneStreaming_2eproto,
     nullptr,  // tracker
 };
-const ::google::protobuf::internal::ClassData* Quaternion::GetClassData() const {
+const ::google::protobuf::internal::ClassData* QuaternionReply::GetClassData() const {
   ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
   ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 4, 0, 0, 2> Quaternion::_table_ = {
+const ::_pbi::TcParseTable<2, 4, 0, 0, 2> QuaternionReply::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -1159,35 +1160,35 @@ const ::_pbi::TcParseTable<2, 4, 0, 0, 2> Quaternion::_table_ = {
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::Quaternion>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::QuaternionReply>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     // float z = 4;
     {::_pbi::TcParser::FastF32S1,
-     {37, 63, 0, PROTOBUF_FIELD_OFFSET(Quaternion, _impl_.z_)}},
+     {37, 63, 0, PROTOBUF_FIELD_OFFSET(QuaternionReply, _impl_.z_)}},
     // float w = 1;
     {::_pbi::TcParser::FastF32S1,
-     {13, 63, 0, PROTOBUF_FIELD_OFFSET(Quaternion, _impl_.w_)}},
+     {13, 63, 0, PROTOBUF_FIELD_OFFSET(QuaternionReply, _impl_.w_)}},
     // float x = 2;
     {::_pbi::TcParser::FastF32S1,
-     {21, 63, 0, PROTOBUF_FIELD_OFFSET(Quaternion, _impl_.x_)}},
+     {21, 63, 0, PROTOBUF_FIELD_OFFSET(QuaternionReply, _impl_.x_)}},
     // float y = 3;
     {::_pbi::TcParser::FastF32S1,
-     {29, 63, 0, PROTOBUF_FIELD_OFFSET(Quaternion, _impl_.y_)}},
+     {29, 63, 0, PROTOBUF_FIELD_OFFSET(QuaternionReply, _impl_.y_)}},
   }}, {{
     65535, 65535
   }}, {{
     // float w = 1;
-    {PROTOBUF_FIELD_OFFSET(Quaternion, _impl_.w_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(QuaternionReply, _impl_.w_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
     // float x = 2;
-    {PROTOBUF_FIELD_OFFSET(Quaternion, _impl_.x_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(QuaternionReply, _impl_.x_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
     // float y = 3;
-    {PROTOBUF_FIELD_OFFSET(Quaternion, _impl_.y_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(QuaternionReply, _impl_.y_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
     // float z = 4;
-    {PROTOBUF_FIELD_OFFSET(Quaternion, _impl_.z_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(QuaternionReply, _impl_.z_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
   }},
   // no aux_entries
@@ -1195,8 +1196,8 @@ const ::_pbi::TcParseTable<2, 4, 0, 0, 2> Quaternion::_table_ = {
   }},
 };
 
-PROTOBUF_NOINLINE void Quaternion::Clear() {
-// @@protoc_insertion_point(message_clear_start:Quaternion)
+PROTOBUF_NOINLINE void QuaternionReply::Clear() {
+// @@protoc_insertion_point(message_clear_start:QuaternionReply)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -1209,17 +1210,17 @@ PROTOBUF_NOINLINE void Quaternion::Clear() {
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::uint8_t* Quaternion::_InternalSerialize(
+        ::uint8_t* QuaternionReply::_InternalSerialize(
             const MessageLite& base, ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) {
-          const Quaternion& this_ = static_cast<const Quaternion&>(base);
+          const QuaternionReply& this_ = static_cast<const QuaternionReply&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::uint8_t* Quaternion::_InternalSerialize(
+        ::uint8_t* QuaternionReply::_InternalSerialize(
             ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-          const Quaternion& this_ = *this;
+          const QuaternionReply& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(serialize_to_array_start:Quaternion)
+          // @@protoc_insertion_point(serialize_to_array_start:QuaternionReply)
           ::uint32_t cached_has_bits = 0;
           (void)cached_has_bits;
 
@@ -1256,18 +1257,18 @@ PROTOBUF_NOINLINE void Quaternion::Clear() {
                 ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
                     this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
           }
-          // @@protoc_insertion_point(serialize_to_array_end:Quaternion)
+          // @@protoc_insertion_point(serialize_to_array_end:QuaternionReply)
           return target;
         }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::size_t Quaternion::ByteSizeLong(const MessageLite& base) {
-          const Quaternion& this_ = static_cast<const Quaternion&>(base);
+        ::size_t QuaternionReply::ByteSizeLong(const MessageLite& base) {
+          const QuaternionReply& this_ = static_cast<const QuaternionReply&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::size_t Quaternion::ByteSizeLong() const {
-          const Quaternion& this_ = *this;
+        ::size_t QuaternionReply::ByteSizeLong() const {
+          const QuaternionReply& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(message_byte_size_start:Quaternion)
+          // @@protoc_insertion_point(message_byte_size_start:QuaternionReply)
           ::size_t total_size = 0;
 
           ::uint32_t cached_has_bits = 0;
@@ -1297,10 +1298,10 @@ PROTOBUF_NOINLINE void Quaternion::Clear() {
                                                      &this_._impl_._cached_size_);
         }
 
-void Quaternion::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<Quaternion*>(&to_msg);
-  auto& from = static_cast<const Quaternion&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:Quaternion)
+void QuaternionReply::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<QuaternionReply*>(&to_msg);
+  auto& from = static_cast<const QuaternionReply&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:QuaternionReply)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1320,85 +1321,85 @@ void Quaternion::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::goog
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void Quaternion::CopyFrom(const Quaternion& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:Quaternion)
+void QuaternionReply::CopyFrom(const QuaternionReply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:QuaternionReply)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void Quaternion::InternalSwap(Quaternion* PROTOBUF_RESTRICT other) {
+void QuaternionReply::InternalSwap(QuaternionReply* PROTOBUF_RESTRICT other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Quaternion, _impl_.z_)
-      + sizeof(Quaternion::_impl_.z_)
-      - PROTOBUF_FIELD_OFFSET(Quaternion, _impl_.w_)>(
+      PROTOBUF_FIELD_OFFSET(QuaternionReply, _impl_.z_)
+      + sizeof(QuaternionReply::_impl_.z_)
+      - PROTOBUF_FIELD_OFFSET(QuaternionReply, _impl_.w_)>(
           reinterpret_cast<char*>(&_impl_.w_),
           reinterpret_cast<char*>(&other->_impl_.w_));
 }
 
-::google::protobuf::Metadata Quaternion::GetMetadata() const {
+::google::protobuf::Metadata QuaternionReply::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
 
-class Vertex::_Internal {
+class VertexReply::_Internal {
  public:
   using HasBits =
-      decltype(std::declval<Vertex>()._impl_._has_bits_);
+      decltype(std::declval<VertexReply>()._impl_._has_bits_);
   static constexpr ::int32_t kHasBitsOffset =
-      8 * PROTOBUF_FIELD_OFFSET(Vertex, _impl_._has_bits_);
+      8 * PROTOBUF_FIELD_OFFSET(VertexReply, _impl_._has_bits_);
 };
 
-Vertex::Vertex(::google::protobuf::Arena* arena)
+VertexReply::VertexReply(::google::protobuf::Arena* arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:Vertex)
+  // @@protoc_insertion_point(arena_constructor:VertexReply)
 }
-inline PROTOBUF_NDEBUG_INLINE Vertex::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE VertexReply::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
-    const Impl_& from, const ::Vertex& from_msg)
+    const Impl_& from, const ::VertexReply& from_msg)
       : _has_bits_{from._has_bits_},
         _cached_size_{0} {}
 
-Vertex::Vertex(
+VertexReply::VertexReply(
     ::google::protobuf::Arena* arena,
-    const Vertex& from)
+    const VertexReply& from)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  Vertex* const _this = this;
+  VertexReply* const _this = this;
   (void)_this;
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
   ::uint32_t cached_has_bits = _impl_._has_bits_[0];
-  _impl_.position_ = (cached_has_bits & 0x00000001u) ? ::google::protobuf::Message::CopyConstruct<::Vec3>(
+  _impl_.position_ = (cached_has_bits & 0x00000001u) ? ::google::protobuf::Message::CopyConstruct<::Vec3Reply>(
                               arena, *from._impl_.position_)
                         : nullptr;
-  _impl_.normal_ = (cached_has_bits & 0x00000002u) ? ::google::protobuf::Message::CopyConstruct<::Vec3>(
+  _impl_.normal_ = (cached_has_bits & 0x00000002u) ? ::google::protobuf::Message::CopyConstruct<::Vec3Reply>(
                               arena, *from._impl_.normal_)
                         : nullptr;
-  _impl_.uv_ = (cached_has_bits & 0x00000004u) ? ::google::protobuf::Message::CopyConstruct<::Vec2>(
+  _impl_.uv_ = (cached_has_bits & 0x00000004u) ? ::google::protobuf::Message::CopyConstruct<::Vec2Reply>(
                               arena, *from._impl_.uv_)
                         : nullptr;
 
-  // @@protoc_insertion_point(copy_constructor:Vertex)
+  // @@protoc_insertion_point(copy_constructor:VertexReply)
 }
-inline PROTOBUF_NDEBUG_INLINE Vertex::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE VertexReply::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
       : _cached_size_{0} {}
 
-inline void Vertex::SharedCtor(::_pb::Arena* arena) {
+inline void VertexReply::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
   ::memset(reinterpret_cast<char *>(&_impl_) +
                offsetof(Impl_, position_),
@@ -1407,12 +1408,12 @@ inline void Vertex::SharedCtor(::_pb::Arena* arena) {
                offsetof(Impl_, position_) +
                sizeof(Impl_::uv_));
 }
-Vertex::~Vertex() {
-  // @@protoc_insertion_point(destructor:Vertex)
+VertexReply::~VertexReply() {
+  // @@protoc_insertion_point(destructor:VertexReply)
   SharedDtor(*this);
 }
-inline void Vertex::SharedDtor(MessageLite& self) {
-  Vertex& this_ = static_cast<Vertex&>(self);
+inline void VertexReply::SharedDtor(MessageLite& self) {
+  VertexReply& this_ = static_cast<VertexReply&>(self);
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   delete this_._impl_.position_;
@@ -1421,45 +1422,45 @@ inline void Vertex::SharedDtor(MessageLite& self) {
   this_._impl_.~Impl_();
 }
 
-inline void* Vertex::PlacementNew_(const void*, void* mem,
+inline void* VertexReply::PlacementNew_(const void*, void* mem,
                                         ::google::protobuf::Arena* arena) {
-  return ::new (mem) Vertex(arena);
+  return ::new (mem) VertexReply(arena);
 }
-constexpr auto Vertex::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::ZeroInit(sizeof(Vertex),
-                                            alignof(Vertex));
+constexpr auto VertexReply::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::ZeroInit(sizeof(VertexReply),
+                                            alignof(VertexReply));
 }
 PROTOBUF_CONSTINIT
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::google::protobuf::internal::ClassDataFull Vertex::_class_data_ = {
+const ::google::protobuf::internal::ClassDataFull VertexReply::_class_data_ = {
     ::google::protobuf::internal::ClassData{
-        &_Vertex_default_instance_._instance,
+        &_VertexReply_default_instance_._instance,
         &_table_.header,
         nullptr,  // OnDemandRegisterArenaDtor
         nullptr,  // IsInitialized
-        &Vertex::MergeImpl,
-        ::google::protobuf::Message::GetNewImpl<Vertex>(),
+        &VertexReply::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<VertexReply>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        &Vertex::SharedDtor,
-        ::google::protobuf::Message::GetClearImpl<Vertex>(), &Vertex::ByteSizeLong,
-            &Vertex::_InternalSerialize,
+        &VertexReply::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<VertexReply>(), &VertexReply::ByteSizeLong,
+            &VertexReply::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-        PROTOBUF_FIELD_OFFSET(Vertex, _impl_._cached_size_),
+        PROTOBUF_FIELD_OFFSET(VertexReply, _impl_._cached_size_),
         false,
     },
-    &Vertex::kDescriptorMethods,
+    &VertexReply::kDescriptorMethods,
     &descriptor_table_SceneStreaming_2eproto,
     nullptr,  // tracker
 };
-const ::google::protobuf::internal::ClassData* Vertex::GetClassData() const {
+const ::google::protobuf::internal::ClassData* VertexReply::GetClassData() const {
   ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
   ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 3, 3, 0, 2> Vertex::_table_ = {
+const ::_pbi::TcParseTable<2, 3, 3, 0, 2> VertexReply::_table_ = {
   {
-    PROTOBUF_FIELD_OFFSET(Vertex, _impl_._has_bits_),
+    PROTOBUF_FIELD_OFFSET(VertexReply, _impl_._has_bits_),
     0, // no _extensions_
     3, 24,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
@@ -1472,41 +1473,41 @@ const ::_pbi::TcParseTable<2, 3, 3, 0, 2> Vertex::_table_ = {
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::Vertex>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::VertexReply>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
-    // .Vec3 position = 1;
+    // .Vec3Reply position = 1;
     {::_pbi::TcParser::FastMtS1,
-     {10, 0, 0, PROTOBUF_FIELD_OFFSET(Vertex, _impl_.position_)}},
-    // .Vec3 normal = 2;
+     {10, 0, 0, PROTOBUF_FIELD_OFFSET(VertexReply, _impl_.position_)}},
+    // .Vec3Reply normal = 2;
     {::_pbi::TcParser::FastMtS1,
-     {18, 1, 1, PROTOBUF_FIELD_OFFSET(Vertex, _impl_.normal_)}},
-    // .Vec2 uv = 3;
+     {18, 1, 1, PROTOBUF_FIELD_OFFSET(VertexReply, _impl_.normal_)}},
+    // .Vec2Reply uv = 3;
     {::_pbi::TcParser::FastMtS1,
-     {26, 2, 2, PROTOBUF_FIELD_OFFSET(Vertex, _impl_.uv_)}},
+     {26, 2, 2, PROTOBUF_FIELD_OFFSET(VertexReply, _impl_.uv_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // .Vec3 position = 1;
-    {PROTOBUF_FIELD_OFFSET(Vertex, _impl_.position_), _Internal::kHasBitsOffset + 0, 0,
+    // .Vec3Reply position = 1;
+    {PROTOBUF_FIELD_OFFSET(VertexReply, _impl_.position_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-    // .Vec3 normal = 2;
-    {PROTOBUF_FIELD_OFFSET(Vertex, _impl_.normal_), _Internal::kHasBitsOffset + 1, 1,
+    // .Vec3Reply normal = 2;
+    {PROTOBUF_FIELD_OFFSET(VertexReply, _impl_.normal_), _Internal::kHasBitsOffset + 1, 1,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-    // .Vec2 uv = 3;
-    {PROTOBUF_FIELD_OFFSET(Vertex, _impl_.uv_), _Internal::kHasBitsOffset + 2, 2,
+    // .Vec2Reply uv = 3;
+    {PROTOBUF_FIELD_OFFSET(VertexReply, _impl_.uv_), _Internal::kHasBitsOffset + 2, 2,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
   }}, {{
-    {::_pbi::TcParser::GetTable<::Vec3>()},
-    {::_pbi::TcParser::GetTable<::Vec3>()},
-    {::_pbi::TcParser::GetTable<::Vec2>()},
+    {::_pbi::TcParser::GetTable<::Vec3Reply>()},
+    {::_pbi::TcParser::GetTable<::Vec3Reply>()},
+    {::_pbi::TcParser::GetTable<::Vec2Reply>()},
   }}, {{
   }},
 };
 
-PROTOBUF_NOINLINE void Vertex::Clear() {
-// @@protoc_insertion_point(message_clear_start:Vertex)
+PROTOBUF_NOINLINE void VertexReply::Clear() {
+// @@protoc_insertion_point(message_clear_start:VertexReply)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -1532,36 +1533,36 @@ PROTOBUF_NOINLINE void Vertex::Clear() {
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::uint8_t* Vertex::_InternalSerialize(
+        ::uint8_t* VertexReply::_InternalSerialize(
             const MessageLite& base, ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) {
-          const Vertex& this_ = static_cast<const Vertex&>(base);
+          const VertexReply& this_ = static_cast<const VertexReply&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::uint8_t* Vertex::_InternalSerialize(
+        ::uint8_t* VertexReply::_InternalSerialize(
             ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-          const Vertex& this_ = *this;
+          const VertexReply& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(serialize_to_array_start:Vertex)
+          // @@protoc_insertion_point(serialize_to_array_start:VertexReply)
           ::uint32_t cached_has_bits = 0;
           (void)cached_has_bits;
 
           cached_has_bits = this_._impl_._has_bits_[0];
-          // .Vec3 position = 1;
+          // .Vec3Reply position = 1;
           if (cached_has_bits & 0x00000001u) {
             target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
                 1, *this_._impl_.position_, this_._impl_.position_->GetCachedSize(), target,
                 stream);
           }
 
-          // .Vec3 normal = 2;
+          // .Vec3Reply normal = 2;
           if (cached_has_bits & 0x00000002u) {
             target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
                 2, *this_._impl_.normal_, this_._impl_.normal_->GetCachedSize(), target,
                 stream);
           }
 
-          // .Vec2 uv = 3;
+          // .Vec2Reply uv = 3;
           if (cached_has_bits & 0x00000004u) {
             target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
                 3, *this_._impl_.uv_, this_._impl_.uv_->GetCachedSize(), target,
@@ -1573,18 +1574,18 @@ PROTOBUF_NOINLINE void Vertex::Clear() {
                 ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
                     this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
           }
-          // @@protoc_insertion_point(serialize_to_array_end:Vertex)
+          // @@protoc_insertion_point(serialize_to_array_end:VertexReply)
           return target;
         }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::size_t Vertex::ByteSizeLong(const MessageLite& base) {
-          const Vertex& this_ = static_cast<const Vertex&>(base);
+        ::size_t VertexReply::ByteSizeLong(const MessageLite& base) {
+          const VertexReply& this_ = static_cast<const VertexReply&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::size_t Vertex::ByteSizeLong() const {
-          const Vertex& this_ = *this;
+        ::size_t VertexReply::ByteSizeLong() const {
+          const VertexReply& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(message_byte_size_start:Vertex)
+          // @@protoc_insertion_point(message_byte_size_start:VertexReply)
           ::size_t total_size = 0;
 
           ::uint32_t cached_has_bits = 0;
@@ -1594,17 +1595,17 @@ PROTOBUF_NOINLINE void Vertex::Clear() {
           ::_pbi::Prefetch5LinesFrom7Lines(&this_);
           cached_has_bits = this_._impl_._has_bits_[0];
           if (cached_has_bits & 0x00000007u) {
-            // .Vec3 position = 1;
+            // .Vec3Reply position = 1;
             if (cached_has_bits & 0x00000001u) {
               total_size += 1 +
                             ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.position_);
             }
-            // .Vec3 normal = 2;
+            // .Vec3Reply normal = 2;
             if (cached_has_bits & 0x00000002u) {
               total_size += 1 +
                             ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.normal_);
             }
-            // .Vec2 uv = 3;
+            // .Vec2Reply uv = 3;
             if (cached_has_bits & 0x00000004u) {
               total_size += 1 +
                             ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.uv_);
@@ -1614,11 +1615,11 @@ PROTOBUF_NOINLINE void Vertex::Clear() {
                                                      &this_._impl_._cached_size_);
         }
 
-void Vertex::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<Vertex*>(&to_msg);
-  auto& from = static_cast<const Vertex&>(from_msg);
+void VertexReply::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<VertexReply*>(&to_msg);
+  auto& from = static_cast<const VertexReply&>(from_msg);
   ::google::protobuf::Arena* arena = _this->GetArena();
-  // @@protoc_insertion_point(class_specific_merge_from_start:Vertex)
+  // @@protoc_insertion_point(class_specific_merge_from_start:VertexReply)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1629,7 +1630,7 @@ void Vertex::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::
       ABSL_DCHECK(from._impl_.position_ != nullptr);
       if (_this->_impl_.position_ == nullptr) {
         _this->_impl_.position_ =
-            ::google::protobuf::Message::CopyConstruct<::Vec3>(arena, *from._impl_.position_);
+            ::google::protobuf::Message::CopyConstruct<::Vec3Reply>(arena, *from._impl_.position_);
       } else {
         _this->_impl_.position_->MergeFrom(*from._impl_.position_);
       }
@@ -1638,7 +1639,7 @@ void Vertex::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::
       ABSL_DCHECK(from._impl_.normal_ != nullptr);
       if (_this->_impl_.normal_ == nullptr) {
         _this->_impl_.normal_ =
-            ::google::protobuf::Message::CopyConstruct<::Vec3>(arena, *from._impl_.normal_);
+            ::google::protobuf::Message::CopyConstruct<::Vec3Reply>(arena, *from._impl_.normal_);
       } else {
         _this->_impl_.normal_->MergeFrom(*from._impl_.normal_);
       }
@@ -1647,7 +1648,7 @@ void Vertex::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::
       ABSL_DCHECK(from._impl_.uv_ != nullptr);
       if (_this->_impl_.uv_ == nullptr) {
         _this->_impl_.uv_ =
-            ::google::protobuf::Message::CopyConstruct<::Vec2>(arena, *from._impl_.uv_);
+            ::google::protobuf::Message::CopyConstruct<::Vec2Reply>(arena, *from._impl_.uv_);
       } else {
         _this->_impl_.uv_->MergeFrom(*from._impl_.uv_);
       }
@@ -1657,27 +1658,27 @@ void Vertex::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void Vertex::CopyFrom(const Vertex& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:Vertex)
+void VertexReply::CopyFrom(const VertexReply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:VertexReply)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void Vertex::InternalSwap(Vertex* PROTOBUF_RESTRICT other) {
+void VertexReply::InternalSwap(VertexReply* PROTOBUF_RESTRICT other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Vertex, _impl_.uv_)
-      + sizeof(Vertex::_impl_.uv_)
-      - PROTOBUF_FIELD_OFFSET(Vertex, _impl_.position_)>(
+      PROTOBUF_FIELD_OFFSET(VertexReply, _impl_.uv_)
+      + sizeof(VertexReply::_impl_.uv_)
+      - PROTOBUF_FIELD_OFFSET(VertexReply, _impl_.position_)>(
           reinterpret_cast<char*>(&_impl_.position_),
           reinterpret_cast<char*>(&other->_impl_.position_));
 }
 
-::google::protobuf::Metadata Vertex::GetMetadata() const {
+::google::protobuf::Metadata VertexReply::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
@@ -1720,13 +1721,13 @@ ObjectReply::ObjectReply(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
   ::uint32_t cached_has_bits = _impl_._has_bits_[0];
-  _impl_.position_ = (cached_has_bits & 0x00000001u) ? ::google::protobuf::Message::CopyConstruct<::Vec3>(
+  _impl_.position_ = (cached_has_bits & 0x00000001u) ? ::google::protobuf::Message::CopyConstruct<::Vec3Reply>(
                               arena, *from._impl_.position_)
                         : nullptr;
-  _impl_.rotation_ = (cached_has_bits & 0x00000002u) ? ::google::protobuf::Message::CopyConstruct<::Quaternion>(
+  _impl_.rotation_ = (cached_has_bits & 0x00000002u) ? ::google::protobuf::Message::CopyConstruct<::QuaternionReply>(
                               arena, *from._impl_.rotation_)
                         : nullptr;
-  _impl_.scale_ = (cached_has_bits & 0x00000004u) ? ::google::protobuf::Message::CopyConstruct<::Vec3>(
+  _impl_.scale_ = (cached_has_bits & 0x00000004u) ? ::google::protobuf::Message::CopyConstruct<::Vec3Reply>(
                               arena, *from._impl_.scale_)
                         : nullptr;
 
@@ -1827,38 +1828,38 @@ const ::_pbi::TcParseTable<2, 4, 4, 0, 2> ObjectReply::_table_ = {
     ::_pbi::TcParser::GetTable<::ObjectReply>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // repeated .Vertex vertices = 4;
+    // repeated .VertexReply vertices = 4;
     {::_pbi::TcParser::FastMtR1,
      {34, 63, 3, PROTOBUF_FIELD_OFFSET(ObjectReply, _impl_.vertices_)}},
-    // .Vec3 position = 1;
+    // .Vec3Reply position = 1;
     {::_pbi::TcParser::FastMtS1,
      {10, 0, 0, PROTOBUF_FIELD_OFFSET(ObjectReply, _impl_.position_)}},
-    // .Quaternion rotation = 2;
+    // .QuaternionReply rotation = 2;
     {::_pbi::TcParser::FastMtS1,
      {18, 1, 1, PROTOBUF_FIELD_OFFSET(ObjectReply, _impl_.rotation_)}},
-    // .Vec3 scale = 3;
+    // .Vec3Reply scale = 3;
     {::_pbi::TcParser::FastMtS1,
      {26, 2, 2, PROTOBUF_FIELD_OFFSET(ObjectReply, _impl_.scale_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // .Vec3 position = 1;
+    // .Vec3Reply position = 1;
     {PROTOBUF_FIELD_OFFSET(ObjectReply, _impl_.position_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-    // .Quaternion rotation = 2;
+    // .QuaternionReply rotation = 2;
     {PROTOBUF_FIELD_OFFSET(ObjectReply, _impl_.rotation_), _Internal::kHasBitsOffset + 1, 1,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-    // .Vec3 scale = 3;
+    // .Vec3Reply scale = 3;
     {PROTOBUF_FIELD_OFFSET(ObjectReply, _impl_.scale_), _Internal::kHasBitsOffset + 2, 2,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-    // repeated .Vertex vertices = 4;
+    // repeated .VertexReply vertices = 4;
     {PROTOBUF_FIELD_OFFSET(ObjectReply, _impl_.vertices_), -1, 3,
     (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
   }}, {{
-    {::_pbi::TcParser::GetTable<::Vec3>()},
-    {::_pbi::TcParser::GetTable<::Quaternion>()},
-    {::_pbi::TcParser::GetTable<::Vec3>()},
-    {::_pbi::TcParser::GetTable<::Vertex>()},
+    {::_pbi::TcParser::GetTable<::Vec3Reply>()},
+    {::_pbi::TcParser::GetTable<::QuaternionReply>()},
+    {::_pbi::TcParser::GetTable<::Vec3Reply>()},
+    {::_pbi::TcParser::GetTable<::VertexReply>()},
   }}, {{
   }},
 };
@@ -1906,28 +1907,28 @@ PROTOBUF_NOINLINE void ObjectReply::Clear() {
           (void)cached_has_bits;
 
           cached_has_bits = this_._impl_._has_bits_[0];
-          // .Vec3 position = 1;
+          // .Vec3Reply position = 1;
           if (cached_has_bits & 0x00000001u) {
             target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
                 1, *this_._impl_.position_, this_._impl_.position_->GetCachedSize(), target,
                 stream);
           }
 
-          // .Quaternion rotation = 2;
+          // .QuaternionReply rotation = 2;
           if (cached_has_bits & 0x00000002u) {
             target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
                 2, *this_._impl_.rotation_, this_._impl_.rotation_->GetCachedSize(), target,
                 stream);
           }
 
-          // .Vec3 scale = 3;
+          // .Vec3Reply scale = 3;
           if (cached_has_bits & 0x00000004u) {
             target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
                 3, *this_._impl_.scale_, this_._impl_.scale_->GetCachedSize(), target,
                 stream);
           }
 
-          // repeated .Vertex vertices = 4;
+          // repeated .VertexReply vertices = 4;
           for (unsigned i = 0, n = static_cast<unsigned>(
                                    this_._internal_vertices_size());
                i < n; i++) {
@@ -1963,7 +1964,7 @@ PROTOBUF_NOINLINE void ObjectReply::Clear() {
 
           ::_pbi::Prefetch5LinesFrom7Lines(&this_);
            {
-            // repeated .Vertex vertices = 4;
+            // repeated .VertexReply vertices = 4;
             {
               total_size += 1UL * this_._internal_vertices_size();
               for (const auto& msg : this_._internal_vertices()) {
@@ -1973,17 +1974,17 @@ PROTOBUF_NOINLINE void ObjectReply::Clear() {
           }
           cached_has_bits = this_._impl_._has_bits_[0];
           if (cached_has_bits & 0x00000007u) {
-            // .Vec3 position = 1;
+            // .Vec3Reply position = 1;
             if (cached_has_bits & 0x00000001u) {
               total_size += 1 +
                             ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.position_);
             }
-            // .Quaternion rotation = 2;
+            // .QuaternionReply rotation = 2;
             if (cached_has_bits & 0x00000002u) {
               total_size += 1 +
                             ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.rotation_);
             }
-            // .Vec3 scale = 3;
+            // .Vec3Reply scale = 3;
             if (cached_has_bits & 0x00000004u) {
               total_size += 1 +
                             ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.scale_);
@@ -2010,7 +2011,7 @@ void ObjectReply::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::goo
       ABSL_DCHECK(from._impl_.position_ != nullptr);
       if (_this->_impl_.position_ == nullptr) {
         _this->_impl_.position_ =
-            ::google::protobuf::Message::CopyConstruct<::Vec3>(arena, *from._impl_.position_);
+            ::google::protobuf::Message::CopyConstruct<::Vec3Reply>(arena, *from._impl_.position_);
       } else {
         _this->_impl_.position_->MergeFrom(*from._impl_.position_);
       }
@@ -2019,7 +2020,7 @@ void ObjectReply::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::goo
       ABSL_DCHECK(from._impl_.rotation_ != nullptr);
       if (_this->_impl_.rotation_ == nullptr) {
         _this->_impl_.rotation_ =
-            ::google::protobuf::Message::CopyConstruct<::Quaternion>(arena, *from._impl_.rotation_);
+            ::google::protobuf::Message::CopyConstruct<::QuaternionReply>(arena, *from._impl_.rotation_);
       } else {
         _this->_impl_.rotation_->MergeFrom(*from._impl_.rotation_);
       }
@@ -2028,7 +2029,7 @@ void ObjectReply::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::goo
       ABSL_DCHECK(from._impl_.scale_ != nullptr);
       if (_this->_impl_.scale_ == nullptr) {
         _this->_impl_.scale_ =
-            ::google::protobuf::Message::CopyConstruct<::Vec3>(arena, *from._impl_.scale_);
+            ::google::protobuf::Message::CopyConstruct<::Vec3Reply>(arena, *from._impl_.scale_);
       } else {
         _this->_impl_.scale_->MergeFrom(*from._impl_.scale_);
       }
