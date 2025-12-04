@@ -17,6 +17,6 @@ public:
 		_meshToLoad->LoadFromVertexData(_vert_data);
 
 		if (_callback)
-			_callback->OnThreadFinished();
+			_callback->OnThreadFinished(id);
 	}
 };

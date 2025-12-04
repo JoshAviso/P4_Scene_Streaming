@@ -29,7 +29,7 @@ private:
 	int _finishedChildren = 0;
 
 public:
-	LoadObjectsFromServer(const String sceneName, int objCount) : _sceneName(sceneName), _objCount(objCount) {
+	LoadObjectsFromServerTask(const String sceneName, int objCount) : _sceneName(sceneName), _objCount(objCount) {
 		_scene = SceneManager::GetScene(_sceneName);
 	};
 
@@ -41,18 +41,20 @@ public:
 		_scene->ScenePending = _objCount;
 		_scene->IsLoading = true;
 
+		_scene->_objects.clear();
+
 		// Make call to client for server
 		// Somehow get object info and do the following for each
 
 		{
 			// Process object data into the following variables
-			Vec3 objPosition;
-			Quaternion objRotation;
-			Vec3 objScale;
+			Vec3 objPosition = Vec3(0.f);
+			Quaternion objRotation = Quaternion::Identity();
+			Vec3 objScale = Vec3(0.f);
 
 			List<Vertex> vertex_data;
 
-			Shared<Object> obj = scene->AddObject(new Object("ObjectX")); // TODO : Modify to name based on pang ilang object sya to prevent dupe names
+			Shared<Object> obj = _scene->AddObject(new Object("ObjectX")); // TODO : Modify to name based on pang ilang object sya to prevent dupe names
 			obj->transform.position = objPosition;
 			obj->transform.scale = objScale;
 			obj->transform.rotation = objRotation;
@@ -60,7 +62,7 @@ public:
 			// Only make a mesh if it does indeed have one
 			if (vertex_data.size() > 0) {
 				Shared<Mesh> mesh = Make_Shared<Mesh>();
-				Shared<MeshRenderer> renderer = obj->AddComponent<MeshRenderer>();
+				MeshRenderer* renderer = obj->AddComponent(new MeshRenderer());
 				renderer->ActiveMesh = mesh;
 
 				// Create a thread for mesh to begin loading data without blocking this thread
@@ -68,12 +70,13 @@ public:
 				_pendingChildren++;
 			}
 
-			while (_finishedChildren < _pendingChildren);
 		}
 
-		void OnThreadFinished(int id) override {
-			_finishedChildren++;
-			if (!_scene) _scene->SceneCompletion = _scene->SceneCompletion + 1;
-		}
+		while (_finishedChildren < _pendingChildren);
+	}
+
+	void OnThreadFinished(int id) override {
+		_finishedChildren++;
+		if (!_scene) _scene->SceneCompletion = _scene->SceneCompletion + 1;
 	}
 };

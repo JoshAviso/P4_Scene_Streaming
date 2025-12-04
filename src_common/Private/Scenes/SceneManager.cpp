@@ -285,7 +285,7 @@ void SceneManager::ProcessStreamedScene(const String name)
     }
 
     // Create a worker task to get streamed data
-    ThreadPoolManager::GetThreadPool("Main")->ScheduleTask(new LoadObjectsFromServer(name));
+    ThreadPoolManager::GetThreadPool("Main")->ScheduleTask(new LoadObjectsFromServerTask(name, objCount));
 }
 
 // SINGLETON
