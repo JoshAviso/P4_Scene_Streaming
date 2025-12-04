@@ -22,12 +22,18 @@ void SceneManager::LoadScene(const String sceneName)
 
     Shared<Scene> scene = _instance->_scenes[sceneName];
     scene->IsLoading = true;
+    
+    // On the server side, have meshes begin to load from files
     for (auto& obj : scene->_objects) {
         List<MeshRenderer*> meshes = obj->GetComponents<MeshRenderer>();
         for (auto& mesh : meshes) {
             mesh->BeginLoad();
         }
     }
+
+    // On the client side, formulate a scene load request
+    // Parse reply via
+    _instance->ProcessStreamedScene();
 }
 
 void SceneManager::UnloadScene(const String sceneName)
@@ -201,6 +207,35 @@ void SceneManager::PopulateRandomScene(String name)
         float z = (float)Random::RandInt(-6, 6) * interval;
         obj->transform.position = Vec3(x, y ,z);
     }
+}
+
+/// <summary>
+/// On the client side, request scenes from the server then construct dummy scenes in the client's scene manager
+/// Runs once on startup
+/// </summary>
+void SceneManager::RequestScenes()
+{
+    // Construct the request to the server
+    
+    // Retry Policy await the server's scene list 
+    // If fails display error message
+    
+    // If success
+    // Parse reply to generate X scenes and put into the scene list
+
+    // For each
+    ProcessStreamedScene();
+}
+
+/// <summary>
+/// Interpret a passed grpc reply as a scene
+/// </summary>
+void SceneManager::ProcessStreamedScene()
+{
+    // For each, also start X streaming requests which do the following
+    // Parse out each scene's objects
+    // Parse out their vertex data into a mesh
+    // Load that mesh data into opengl memory, and make the MeshRenderer hold onto it not into the Resource Manager
 }
 
 // SINGLETON

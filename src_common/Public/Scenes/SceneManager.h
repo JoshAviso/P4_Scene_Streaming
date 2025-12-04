@@ -30,6 +30,8 @@ public:
 private:
 	void PopulateScenes();
 	void PopulateRandomScene(String name);
+	void RequestScenes();
+	void ProcessStreamedScene();
 
 	// SINGLETON
 public:
