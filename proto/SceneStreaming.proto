@@ -4,7 +4,9 @@ syntax = "proto3";
 service SceneStreamService {
 	rpc GetSceneList(Empty) returns (SceneListReply);
 	rpc AskSceneInfo(SceneReq) returns (SceneInfoReply);
-	rpc GetSceneObjectData(SceneReq) returns (stream ObjectReply);
+	//rpc GetSceneObjectData(SceneReq) returns (stream ObjectReply);
+	rpc GetSceneObjectData(SceneReq) returns (stream ObjectBatchReply);
+
 }
 
 message Empty{}
@@ -46,4 +48,8 @@ message SceneReq {
 message SceneInfoReply {
 	bool status = 1;							
 	int32 totalObjects = 2;				
+}
+
+message ObjectBatchReply {
+    repeated ObjectReply objects = 1;
 }

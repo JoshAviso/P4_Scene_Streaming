@@ -5,65 +5,85 @@
 #include <../Public/Scenes/SceneManager.h>
 #include <../Public/Components/Renderers/MeshRenderer.h>
 
-grpc::Status SceneStreamServer::GetSceneObjectData(grpc::ServerContext* context, const SceneReq* request, grpc::ServerWriter<ObjectReply>* writer)
+grpc::Status SceneStreamServer::GetSceneObjectData(
+    grpc::ServerContext* context,
+    const SceneReq* request,
+    grpc::ServerWriter<ObjectBatchReply>* writer)
 {
-	Logger::Log("Sending scene data for " + request->name());
+    Logger::Log("Sending scene data for " + request->name());
 
-	Shared<Scene> scene = SceneManager::GetScene(request->name());
+    Shared<Scene> scene = SceneManager::GetScene(request->name());
+    int numObjects = scene->_objects.size();
 
-	int numObjects = scene->_objects.size();
+    const int BATCH_SIZE = 50;  // You can tune this
 
+    ObjectBatchReply batch;
 
-	for (int i = 0; i < numObjects; i++)
-	{
-		ObjectReply object;
+    for (int i = 0; i < numObjects; i++)
+    {
+        Shared<Object> sceneObject = scene->_objects[i];
 
-		Shared<Object> sceneObject = scene->_objects[i];
+        // --- Add a new ObjectReply to batch ---
+        ObjectReply* object = batch.add_objects();
 
-		Vec3Reply* pos = object.mutable_position();
-		pos->set_x(sceneObject->transform.position.x);
-		pos->set_y(sceneObject->transform.position.y);
-		pos->set_z(sceneObject->transform.position.z);
+        // --- Transform ---
+        Vec3Reply* pos = object->mutable_position();
+        pos->set_x(sceneObject->transform.position.x);
+        pos->set_y(sceneObject->transform.position.y);
+        pos->set_z(sceneObject->transform.position.z);
 
-		QuaternionReply* rot = object.mutable_rotation();
-		rot->set_w(sceneObject->transform.rotation.w);
-		rot->set_x(sceneObject->transform.rotation.x);
-		rot->set_y(sceneObject->transform.rotation.y);
-		rot->set_z(sceneObject->transform.rotation.z);
+        QuaternionReply* rot = object->mutable_rotation();
+        rot->set_w(sceneObject->transform.rotation.w);
+        rot->set_x(sceneObject->transform.rotation.x);
+        rot->set_y(sceneObject->transform.rotation.y);
+        rot->set_z(sceneObject->transform.rotation.z);
 
-		Vec3Reply* scale = object.mutable_scale();
-		scale->set_x(sceneObject->transform.scale.x);
-		scale->set_y(sceneObject->transform.scale.y);
-		scale->set_z(sceneObject->transform.scale.z);
+        Vec3Reply* scale = object->mutable_scale();
+        scale->set_x(sceneObject->transform.scale.x);
+        scale->set_y(sceneObject->transform.scale.y);
+        scale->set_z(sceneObject->transform.scale.z);
 
-		MeshRenderer* mesh = sceneObject->GetComponent<MeshRenderer>();
-		if (mesh == nullptr) continue;
-		if (mesh->ActiveMesh == nullptr) continue;
-		List<Vertex> vertexData = mesh->ActiveMesh->_vertex_data;
-		for (int j = 0; j < vertexData.size(); j++)
-		{
-			VertexReply* vertex = object.add_vertices();
+        // --- Mesh Data ---
+        MeshRenderer* mesh = sceneObject->GetComponent<MeshRenderer>();
+        if (!mesh || !mesh->ActiveMesh)
+            continue;
 
-			Vec3Reply* vertexPos = vertex->mutable_position();
-			vertexPos->set_x(vertexData[j].position.x);
-			vertexPos->set_y(vertexData[j].position.y);
-			vertexPos->set_z(vertexData[j].position.z);
+        List<Vertex>& vertexData = mesh->ActiveMesh->_vertex_data;
 
-			Vec3Reply* vertexNorm = vertex->mutable_normal();
-			vertexNorm->set_x(vertexData[j].normal.x);
-			vertexNorm->set_y(vertexData[j].normal.y);
-			vertexNorm->set_z(vertexData[j].normal.z);
+        for (int j = 0; j < vertexData.size(); j++)
+        {
+            VertexReply* vertex = object->add_vertices();
 
-			Vec2Reply* vertexUv = vertex->mutable_uv();
-			vertexUv->set_x(vertexData[j].uv.x);
-			vertexUv->set_y(vertexData[j].uv.y);
-		}
+            Vec3Reply* vertexPos = vertex->mutable_position();
+            vertexPos->set_x(vertexData[j].position.x);
+            vertexPos->set_y(vertexData[j].position.y);
+            vertexPos->set_z(vertexData[j].position.z);
 
-		writer->Write(object);
-	}
+            Vec3Reply* vertexNorm = vertex->mutable_normal();
+            vertexNorm->set_x(vertexData[j].normal.x);
+            vertexNorm->set_y(vertexData[j].normal.y);
+            vertexNorm->set_z(vertexData[j].normal.z);
 
-	return grpc::Status::OK;
+            Vec2Reply* vertexUv = vertex->mutable_uv();
+            vertexUv->set_x(vertexData[j].uv.x);
+            vertexUv->set_y(vertexData[j].uv.y);
+        }
+
+        // --- When batch is full, write & clear ---
+        if (batch.objects_size() >= BATCH_SIZE)
+        {
+            writer->Write(batch);
+            batch.clear_objects();
+        }
+    }
+
+    // Send remaining objects if not empty
+    if (batch.objects_size() > 0)
+        writer->Write(batch);
+
+    return grpc::Status::OK;
 }
+
 
 grpc::Status SceneStreamServer::GetSceneList(grpc::ServerContext* context, const Empty* request, SceneListReply* reply)
 {

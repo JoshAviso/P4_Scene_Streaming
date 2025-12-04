@@ -35,78 +35,112 @@ public:
 		_scene = SceneManager::GetScene(_sceneName);
 	};
 
-	void DoWorkerTask(int id) override {
+    void DoWorkerTask(int id) override {
 
-		// Request the server to get scene meta info
-		bool exists;
-		int objCount;
+        bool exists;
+        int objCount;
 
-		SceneStreamClient::Instance()->AskSceneInfo(&exists, &objCount, _sceneName);
+        SceneStreamClient::Instance()->AskSceneInfo(&exists, &objCount, _sceneName);
 
-		if (!exists) {
-			Logger::LogWarning("Tried to load a scene that does not exist on the server");
-			return;
-		}
+        if (!exists) {
+            Logger::LogWarning("Tried to load a scene that does not exist on the server");
+            return;
+        }
 
-		if (_scene == nullptr)
-			_scene = SceneManager::AddScene(new Scene(_sceneName));
+        if (_scene == nullptr)
+            _scene = SceneManager::AddScene(new Scene(_sceneName));
 
-		_scene->SceneCompletion = 0;
-		_scene->ScenePending = objCount;
-		_scene->IsLoading = true;
+        _scene->SceneCompletion = 0;
+        _scene->ScenePending = objCount;
+        _scene->IsLoading = true;
+        _scene->_objects.clear();
 
-		_scene->_objects.clear();
+        SceneReq request;
+        request.set_name(_sceneName);
 
-		SceneReq request;
-		request.set_name(_sceneName);
+        grpc::ClientContext context;
 
-		grpc::ClientContext context;
-		// Make call to client for server
-		std::shared_ptr<grpc::ClientReader<ObjectReply>> reader =
-			SceneStreamClient::Instance()->_stub->GetSceneObjectData(&context, request);
+        // CHANGE: now reading ObjectBatchReply instead of ObjectReply
+        std::shared_ptr<grpc::ClientReader<ObjectBatchReply>> reader =
+            SceneStreamClient::Instance()->_stub->GetSceneObjectData(&context, request);
 
-		// Read and parse object info in reply
-		ObjectReply obj;
-		while (reader->Read(&obj))
-		{
-			// Process object data into the following variables
-			Vec3 objPosition = Vec3(obj.position().x(), obj.position().y(), obj.position().z());
-			Quaternion objRotation = Quaternion(
-				obj.rotation().w(), obj.rotation().x(), obj.rotation().y(), obj.rotation().z());
-			Vec3 objScale = Vec3(obj.scale().x(), obj.scale().y(), obj.scale().z());
+        ObjectBatchReply batch;
 
-			List<Vertex> vertex_data;
+        while (reader->Read(&batch))
+        {
+            // Iterate over objects inside the batch
+            for (const auto& objMsg : batch.objects())
+            {
+                // --- Parse transform ---
+                Vec3 objPosition(
+                    objMsg.position().x(),
+                    objMsg.position().y(),
+                    objMsg.position().z()
+                );
 
-			Shared<Object> obj = _scene->AddObject(new Object("Object" + std::to_string(_pendingChildren + 1)));
-			obj->transform.position = objPosition;
-			obj->transform.scale = objScale;
-			obj->transform.rotation = objRotation;
+                Quaternion objRotation(
+                    objMsg.rotation().w(),
+                    objMsg.rotation().x(),
+                    objMsg.rotation().y(),
+                    objMsg.rotation().z()
+                );
 
-			// Only make a mesh if it does indeed have one
-			if (vertex_data.size() > 0) {
-				Shared<Mesh> mesh = Make_Shared<Mesh>();
-				MeshRenderer* renderer = obj->AddComponent(new MeshRenderer());
-				renderer->ActiveMesh = mesh;
+                Vec3 objScale(
+                    objMsg.scale().x(),
+                    objMsg.scale().y(),
+                    objMsg.scale().z()
+                );
 
-				// Create a thread for mesh to begin loading data without 
-				// blocking this thread or waiting for all data to be sent
-				ThreadPoolManager::GetThreadPool("Main")
-					->ScheduleTask(new MeshVertexLoadTask(mesh, vertex_data, this));
-				_pendingChildren++;
-			}
+                // --- Create the scene object ---
+                Shared<Object> obj =
+                    _scene->AddObject(new Object("Object" + std::to_string(_pendingChildren + 1)));
 
-		}
+                obj->transform.position = objPosition;
+                obj->transform.rotation = objRotation;
+                obj->transform.scale = objScale;
 
-		grpc::Status status = reader->Finish();
-		if (status.ok()) Logger::Log("Successful object stream for Scene: " + _sceneName);
-		else {
-			Logger::LogWarning("Object streaming failed for Scene: " + _sceneName);
-			return;
-		}
-		
-		// Dont finish the thread while children are still pending
-		while (_finishedChildren < _pendingChildren);
-	}
+                // --- Parse vertex data ---
+                List<Vertex> vertex_data;
+                vertex_data.reserve(objMsg.vertices_size());
+
+                for (const auto& v : objMsg.vertices())
+                {
+                    Vertex vert;
+                    vert.position = Vec3(v.position().x(), v.position().y(), v.position().z());
+                    vert.normal = Vec3(v.normal().x(), v.normal().y(), v.normal().z());
+                    vert.uv = Vec2(v.uv().x(), v.uv().y());
+
+                    vertex_data.push_back(vert);
+                }
+
+                // --- Only create mesh if it actually has vertices ---
+                if (!vertex_data.empty()) {
+
+                    Shared<Mesh> mesh = Make_Shared<Mesh>();
+                    MeshRenderer* renderer = obj->AddComponent(new MeshRenderer());
+                    renderer->ActiveMesh = mesh;
+
+                    ThreadPoolManager::GetThreadPool("Main")
+                        ->ScheduleTask(new MeshVertexLoadTask(mesh, vertex_data, this));
+
+                    _pendingChildren++;
+                }
+            }
+        }
+
+        grpc::Status status = reader->Finish();
+        if (status.ok()) {
+            Logger::Log("Successful object stream for Scene: " + _sceneName);
+        }
+        else {
+            Logger::LogWarning("Object streaming failed for Scene: " + _sceneName);
+            return;
+        }
+
+        // Wait for all mesh loading tasks
+        while (_finishedChildren < _pendingChildren);
+    }
+
 
 	void OnThreadFinished(int id) override {
 		_finishedChildren++;
