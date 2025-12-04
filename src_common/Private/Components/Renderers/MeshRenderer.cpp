@@ -33,7 +33,7 @@ MeshRenderer::MeshRenderer(String asyncResourceName, String asyncResourcePath, u
 	_asyncResourceName(asyncResourceName), _asyncResourcePath(asyncResourcePath), _loadDelay(loadDelay), _assignedScene(assignedScene)
 {
 	// Load resources first then trigger delayed mesh assignment (side step)
-	ResourceManager::LoadFromFile<Mesh>(asyncResourceName, asyncResourcePath);
+	//ResourceManager::LoadFromFile<Mesh>(asyncResourceName, asyncResourcePath);
 	BeginLoad();
 }
 

@@ -9,11 +9,12 @@ class Mesh : public IResource {
 private:
 	GLuint _vao, _vbo;
 	List<Vertex> _vertex_data;
+	List<GLfloat> _gl_vert_data;
 	bool _loaded = false;
 
 public:
-	bool LoadFromVertexData(const List<Vertex>& vertData);
 	~Mesh();
+	bool LoadFromVertexData(const List<Vertex>& vertData);
 
 private:
 	bool LoadFromFile(String filepath) override;
@@ -22,4 +23,5 @@ private:
 
 	friend class MeshRenderer;
 	friend class ResourceManager;
+	friend class GraphicsSystem;
 };

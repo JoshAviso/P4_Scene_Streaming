@@ -5,6 +5,8 @@
 #include <Common.hpp>
 #include <Logger.hpp>
 
+#include <Graphics/GraphicsSystem.h>
+
 Mesh::~Mesh()
 {
 	if (_loaded) {
@@ -37,7 +39,6 @@ bool Mesh::LoadFromFile(String filepath)
 		return false;
 	}
 
-	List<GLfloat> vert_data;
 	for (int i = 0; i < shapes[0].mesh.indices.size(); i++) {
 		tinyobj::index_t vData = shapes[0].mesh.indices[i];
 
@@ -53,14 +54,14 @@ bool Mesh::LoadFromFile(String filepath)
 		float u = 0;//attribs.texcoords[(vData.texcoord_index * 2) + 0];
 		float v = 0;//attribs.texcoords[(vData.texcoord_index * 2) + 1];
 
-		vert_data.push_back(x);
-		vert_data.push_back(y);
-		vert_data.push_back(z);
-		vert_data.push_back(Nx);
-		vert_data.push_back(Ny);
-		vert_data.push_back(Nz);
-		vert_data.push_back(u);
-		vert_data.push_back(v);
+		_gl_vert_data.push_back(x);
+		_gl_vert_data.push_back(y);
+		_gl_vert_data.push_back(z);
+		_gl_vert_data.push_back(Nx);
+		_gl_vert_data.push_back(Ny);
+		_gl_vert_data.push_back(Nz);
+		_gl_vert_data.push_back(u);
+		_gl_vert_data.push_back(v);
 
 		Vertex vert;
 		vert.position = { x, y, z };
@@ -69,44 +70,7 @@ bool Mesh::LoadFromFile(String filepath)
 		_vertex_data.push_back(vert);
 	}
 
-	glGenVertexArrays(1, &_vao);
-	LogGLErrorsIfExists("VAO Gen");
-	glGenBuffers(1, &_vbo);
-	LogGLErrorsIfExists("VBO Gen");
-	glBindVertexArray(_vao);
-	LogGLErrorsIfExists("VAO Bind");
-	glBindBuffer(GL_ARRAY_BUFFER, _vbo);
-	LogGLErrorsIfExists("VBO Bind");
-
-	glBufferData(
-		GL_ARRAY_BUFFER,
-		sizeof(GLfloat) * vert_data.size(), 
-		vert_data.data(),
-		GL_DYNAMIC_DRAW
-	);
-	LogGLErrorsIfExists("Buffer Data Copy");
-
-	int vertex_size = 8;
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, vertex_size * sizeof(float), (void*)0);
-	glEnableVertexAttribArray(0);
-	LogGLErrorsIfExists("Position Attrib pointer");
-
-	GLintptr norm_stride = 3 * sizeof(float);
-	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, vertex_size * sizeof(float), (void*)norm_stride);
-	glEnableVertexAttribArray(1);
-	LogGLErrorsIfExists("Normals Attrib pointer");
-
-	GLintptr uv_stride = 2 * sizeof(float);
-	glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, vertex_size * sizeof(float), (void*)uv_stride);
-	glEnableVertexAttribArray(1);
-	LogGLErrorsIfExists("UVs Attrib pointer");
-
-	glBindVertexArray(0);
-	LogGLErrorsIfExists("Clear VAO");
-	glBindBuffer(GL_ARRAY_BUFFER, 0);
-	LogGLErrorsIfExists("Clear VBO");
-
-	_loaded = true;
+	GraphicsSystem::SubmitMeshForUpload(this);
 
 	return true;
 }
@@ -138,7 +102,6 @@ bool Mesh::LoadFromVertexData()
 		return false;
 	}
 
-	List<GLfloat> vert_data;
 	for (int i = 0; i < _vertex_data.size(); i++) {
 		/* Load X, Y, Z, Nx, Ny, Nz, U, and V data */
 		float x = _vertex_data[i].position.x;
@@ -152,54 +115,17 @@ bool Mesh::LoadFromVertexData()
 		float u = 0;//attribs.texcoords[(vData.texcoord_index * 2) + 0];
 		float v = 0;//attribs.texcoords[(vData.texcoord_index * 2) + 1];
 
-		vert_data.push_back(x);
-		vert_data.push_back(y);
-		vert_data.push_back(z);
-		vert_data.push_back(Nx);
-		vert_data.push_back(Ny);
-		vert_data.push_back(Nz);
-		vert_data.push_back(u);
-		vert_data.push_back(v);
+		_gl_vert_data.push_back(x);
+		_gl_vert_data.push_back(y);
+		_gl_vert_data.push_back(z);
+		_gl_vert_data.push_back(Nx);
+		_gl_vert_data.push_back(Ny);
+		_gl_vert_data.push_back(Nz);
+		_gl_vert_data.push_back(u);
+		_gl_vert_data.push_back(v);
 	}
 
-	glGenVertexArrays(1, &_vao);
-	LogGLErrorsIfExists("VAO Gen");
-	glGenBuffers(1, &_vbo);
-	LogGLErrorsIfExists("VBO Gen");
-	glBindVertexArray(_vao);
-	LogGLErrorsIfExists("VAO Bind");
-	glBindBuffer(GL_ARRAY_BUFFER, _vbo);
-	LogGLErrorsIfExists("VBO Bind");
-
-	glBufferData(
-		GL_ARRAY_BUFFER,
-		sizeof(GLfloat) * vert_data.size(),
-		vert_data.data(),
-		GL_DYNAMIC_DRAW
-	);
-	LogGLErrorsIfExists("Buffer Data Copy");
-
-	int vertex_size = 8;
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, vertex_size * sizeof(float), (void*)0);
-	glEnableVertexAttribArray(0);
-	LogGLErrorsIfExists("Position Attrib pointer");
-
-	GLintptr norm_stride = 3 * sizeof(float);
-	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, vertex_size * sizeof(float), (void*)norm_stride);
-	glEnableVertexAttribArray(1);
-	LogGLErrorsIfExists("Normals Attrib pointer");
-
-	GLintptr uv_stride = 2 * sizeof(float);
-	glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, vertex_size * sizeof(float), (void*)uv_stride);
-	glEnableVertexAttribArray(1);
-	LogGLErrorsIfExists("UVs Attrib pointer");
-
-	glBindVertexArray(0);
-	LogGLErrorsIfExists("Clear VAO");
-	glBindBuffer(GL_ARRAY_BUFFER, 0);
-	LogGLErrorsIfExists("Clear VBO");
-
-	_loaded = true;
+	GraphicsSystem::SubmitMeshForUpload(this);
 
 	return true;
 }

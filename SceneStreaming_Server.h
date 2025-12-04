@@ -7,7 +7,7 @@
 #include <String.hpp>
 #include <Logger.hpp>
 
-#include <SceneStreamServer.h>
+#include <Networking/SceneStreamServer.h>
 
 void RunServer(String socket_address) {
 	SceneStreamServer service;

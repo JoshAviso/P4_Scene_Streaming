@@ -146,7 +146,7 @@ void SceneManager::PopulateRandomScene(String name)
     Shared<Shader> basicShader = ShaderList::GetShader("Basic Shader");
 
     // List of mesh names, files, and scaling ranges
-    static struct mesh_info_composite { String file; Vec2 scale; };
+    struct mesh_info_composite { String file; Vec2 scale; };
     static const List<mesh_info_composite> meshes = {
         {"armadillo.obj", {0.07f, 0.1f}},
         {"beast.obj", {0.003f, 0.007f}},

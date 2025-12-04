@@ -1,12 +1,20 @@
 #pragma once
 
 #include <Common.hpp>
+#include <String.hpp>
 
 class Window;
+class Mesh;
 
 class GraphicsSystem {
 public:
 	static void Render(Window* window);
+	static void SubmitMeshForUpload(Mesh* mesh);
+	static void UploadSubmittedMeshes();
+
+private:
+	List<Mesh*> _meshesToUpload;
+	static void LogGLErrorsIfExists(const String text);
 
 // SINGLETON
 public:
