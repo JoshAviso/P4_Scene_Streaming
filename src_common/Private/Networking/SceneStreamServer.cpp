@@ -2,25 +2,89 @@
 
 #include <Logger.hpp>
 #include <fstream>
+#include <../Public/Scenes/SceneManager.h>
+#include <../Public/Components/Renderers/MeshRenderer.h>
 
-grpc::Status SceneStreamServer::PingHello(grpc::ServerContext* context, const HelloReq* request, HelloReply* reply)
+grpc::Status SceneStreamServer::GetSceneObjectData(grpc::ServerContext* context, const SceneReq* request, grpc::ServerWriter<SceneObjectsReply>* writer)
 {
-	Logger::Log("Received Message from " + request->name());
+	Logger::Log("Sending scene data for " + request->name());
 
-	reply->set_status(true);
-	reply->set_msg("Hello " + request->name() + "!\n");
+	Shared<Scene> scene = SceneManager::GetScene(request->name());
+
+	int numObjects = scene->_objects.size();
+
+	SceneObjectsReply reply;
+
+	for (int i = 0; i < numObjects; i++)
+	{
+		Shared<Object> sceneObject = scene->_objects[i];
+		MeshRenderer* mesh = sceneObject->GetComponent<MeshRenderer>();
+		List<Vertex> vertexData = mesh->ActiveMesh->_vertex_data;
+
+		ObjectReply* object = reply.add_objects();
+
+		Vec3Reply* pos = object->mutable_position();
+		pos->set_x(sceneObject->transform.position.x);
+		pos->set_y(sceneObject->transform.position.y);
+		pos->set_z(sceneObject->transform.position.z);
+
+		QuaternionReply* rot = object->mutable_rotation();
+		rot->set_w(sceneObject->transform.rotation.w);
+		rot->set_x(sceneObject->transform.rotation.x);
+		rot->set_y(sceneObject->transform.rotation.y);
+		rot->set_z(sceneObject->transform.rotation.z);
+
+		Vec3Reply* scale = object->mutable_scale();
+		scale->set_x(sceneObject->transform.scale.x);
+		scale->set_y(sceneObject->transform.scale.y);
+		scale->set_z(sceneObject->transform.scale.z);
+
+		for (int j = 0; j < vertexData.size(); j++)
+		{
+			VertexReply* vertex = object->add_vertices();
+
+			Vec3Reply* vertexPos = vertex->mutable_position();
+			vertexPos->set_x(vertexData[j].position.x);
+			vertexPos->set_y(vertexData[j].position.y);
+			vertexPos->set_z(vertexData[j].position.z);
+
+			Vec3Reply* vertexNorm = vertex->mutable_normal();
+			vertexNorm->set_x(vertexData[j].normal.x);
+			vertexNorm->set_y(vertexData[j].normal.y);
+			vertexNorm->set_z(vertexData[j].normal.z);
+
+			Vec2Reply* vertexUv = vertex->mutable_uv();
+			vertexUv->set_x(vertexData[j].uv.x);
+			vertexUv->set_y(vertexData[j].uv.y);
+		}
+
+		writer->Write(reply);
+
+		reply.clear_objects();
+	}
 
 	return grpc::Status::OK;
 }
 
-grpc::Status SceneStreamServer::SendObject(grpc::ServerContext* context, const ObjectReq* request, ObjectReply* reply)
+grpc::Status SceneStreamServer::GetSceneList(grpc::ServerContext* context, const Empty* request, SceneListReply* reply)
 {
-	Logger::Log("Sending object data for " + request->name());
+	Logger::Log("Sending scene list");
 
-	if (fileExists(request->name()))
+	for (int i = 0; i < SceneManager::GetScenes().size(); i++)
 	{
-		std::cout << "Kill me, Emmanuel John 'EJ' R. Taylan." << std::endl;
+		reply->add_scenenames(SceneManager::GetScenes()[i]);
 	}
+
+	return grpc::Status::OK;
+}
+
+grpc::Status SceneStreamServer::AskSceneInfo(grpc::ServerContext* context, const SceneReq* request, SceneInfoReply* reply)
+{
+	Logger::Log("Sending scene info");
+
+	reply->set_status(true);
+	reply->set_totalobjects(SceneManager::GetScene(request->name())->_objects.size());
+
 	return grpc::Status::OK;
 }
 

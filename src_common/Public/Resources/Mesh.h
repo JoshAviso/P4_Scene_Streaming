@@ -6,9 +6,10 @@
 #include <Common.hpp>
 
 class Mesh : public IResource {
+public:
+	List<Vertex> _vertex_data;
 private:
 	GLuint _vao, _vbo;
-	List<Vertex> _vertex_data;
 	List<GLfloat> _gl_vert_data;
 	bool _loaded = false;
 

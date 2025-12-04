@@ -8,6 +8,7 @@ class Scene {
 public:
 	Scene(String name);
 	String GetName() { return SceneName;  };
+	List<Shared<Object>> _objects;
 	bool IsLoading = false;
 	bool IsFullyLoaded() const { return SceneProgress() >= 1.f; };
 	float SceneProgress() const { 
@@ -20,7 +21,6 @@ public:
 
 private:
 	String SceneName = "";
-	List<Shared<Object>> _objects;
 	int ScenePending = 0;
 	
 private:
