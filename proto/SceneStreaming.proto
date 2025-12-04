@@ -4,7 +4,7 @@ syntax = "proto3";
 service SceneStreamService {
 	rpc GetSceneList(Empty) returns (SceneListReply);
 	rpc AskSceneInfo(SceneReq) returns (SceneInfoReply);
-	rpc GetSceneObjectData(SceneReq) returns (stream SceneObjectsReply);
+	rpc GetSceneObjectData(SceneReq) returns (stream ObjectReply);
 }
 
 message Empty{}
@@ -22,7 +22,9 @@ message QuaternionReply {
 }
 
 message VertexReply {
-	Vec3Reply position = 1; Vec3Reply normal = 2; Vec2Reply uv = 3;
+	Vec3Reply position = 1; 
+	Vec3Reply normal = 2; 
+	Vec2Reply uv = 3;
 }
 
 message ObjectReply {
@@ -44,8 +46,4 @@ message SceneReq {
 message SceneInfoReply {
 	bool status = 1;							
 	int32 totalObjects = 2;				
-}
-
-message SceneObjectsReply {					
-	repeated ObjectReply objects = 1;			
 }

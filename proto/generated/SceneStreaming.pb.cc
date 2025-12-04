@@ -256,31 +256,6 @@ struct ObjectReplyDefaultTypeInternal {
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ObjectReplyDefaultTypeInternal _ObjectReply_default_instance_;
-
-inline constexpr SceneObjectsReply::Impl_::Impl_(
-    ::_pbi::ConstantInitialized) noexcept
-      : objects_{},
-        _cached_size_{0} {}
-
-template <typename>
-PROTOBUF_CONSTEXPR SceneObjectsReply::SceneObjectsReply(::_pbi::ConstantInitialized)
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(_class_data_.base()),
-#else   // PROTOBUF_CUSTOM_VTABLE
-    : ::google::protobuf::Message(),
-#endif  // PROTOBUF_CUSTOM_VTABLE
-      _impl_(::_pbi::ConstantInitialized()) {
-}
-struct SceneObjectsReplyDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR SceneObjectsReplyDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~SceneObjectsReplyDefaultTypeInternal() {}
-  union {
-    SceneObjectsReply _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SceneObjectsReplyDefaultTypeInternal _SceneObjectsReply_default_instance_;
 static constexpr const ::_pb::EnumDescriptor**
     file_level_enum_descriptors_SceneStreaming_2eproto = nullptr;
 static constexpr const ::_pb::ServiceDescriptor**
@@ -387,15 +362,6 @@ const ::uint32_t
         ~0u,  // no sizeof(Split)
         PROTOBUF_FIELD_OFFSET(::SceneInfoReply, _impl_.status_),
         PROTOBUF_FIELD_OFFSET(::SceneInfoReply, _impl_.totalobjects_),
-        ~0u,  // no _has_bits_
-        PROTOBUF_FIELD_OFFSET(::SceneObjectsReply, _internal_metadata_),
-        ~0u,  // no _extensions_
-        ~0u,  // no _oneof_case_
-        ~0u,  // no _weak_field_map_
-        ~0u,  // no _inlined_string_donated_
-        ~0u,  // no _split_
-        ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::SceneObjectsReply, _impl_.objects_),
 };
 
 static const ::_pbi::MigrationSchema
@@ -409,7 +375,6 @@ static const ::_pbi::MigrationSchema
         {71, -1, -1, sizeof(::SceneListReply)},
         {80, -1, -1, sizeof(::SceneReq)},
         {89, -1, -1, sizeof(::SceneInfoReply)},
-        {99, -1, -1, sizeof(::SceneObjectsReply)},
 };
 static const ::_pb::Message* const file_default_instances[] = {
     &::_Empty_default_instance_._instance,
@@ -421,7 +386,6 @@ static const ::_pb::Message* const file_default_instances[] = {
     &::_SceneListReply_default_instance_._instance,
     &::_SceneReq_default_instance_._instance,
     &::_SceneInfoReply_default_instance_._instance,
-    &::_SceneObjectsReply_default_instance_._instance,
 };
 const char descriptor_table_protodef_SceneStreaming_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
     protodesc_cold) = {
@@ -438,24 +402,23 @@ const char descriptor_table_protodef_SceneStreaming_2eproto[] ABSL_ATTRIBUTE_SEC
     "\014.VertexReply\"$\n\016SceneListReply\022\022\n\nscene"
     "Names\030\001 \003(\t\"\030\n\010SceneReq\022\014\n\004name\030\001 \001(\t\"6\n"
     "\016SceneInfoReply\022\016\n\006status\030\001 \001(\010\022\024\n\014total"
-    "Objects\030\002 \001(\005\"2\n\021SceneObjectsReply\022\035\n\007ob"
-    "jects\030\001 \003(\0132\014.ObjectReply2\240\001\n\022SceneStrea"
-    "mService\022\'\n\014GetSceneList\022\006.Empty\032\017.Scene"
-    "ListReply\022*\n\014AskSceneInfo\022\t.SceneReq\032\017.S"
-    "ceneInfoReply\0225\n\022GetSceneObjectData\022\t.Sc"
-    "eneReq\032\022.SceneObjectsReply0\001b\006proto3"
+    "Objects\030\002 \001(\0052\232\001\n\022SceneStreamService\022\'\n\014"
+    "GetSceneList\022\006.Empty\032\017.SceneListReply\022*\n"
+    "\014AskSceneInfo\022\t.SceneReq\032\017.SceneInfoRepl"
+    "y\022/\n\022GetSceneObjectData\022\t.SceneReq\032\014.Obj"
+    "ectReply0\001b\006proto3"
 };
 static ::absl::once_flag descriptor_table_SceneStreaming_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_SceneStreaming_2eproto = {
     false,
     false,
-    756,
+    698,
     descriptor_table_protodef_SceneStreaming_2eproto,
     "SceneStreaming.proto",
     &descriptor_table_SceneStreaming_2eproto_once,
     nullptr,
     0,
-    10,
+    9,
     schemas,
     file_default_instances,
     TableStruct_SceneStreaming_2eproto::offsets,
@@ -2775,248 +2738,6 @@ void SceneInfoReply::InternalSwap(SceneInfoReply* PROTOBUF_RESTRICT other) {
 }
 
 ::google::protobuf::Metadata SceneInfoReply::GetMetadata() const {
-  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
-}
-// ===================================================================
-
-class SceneObjectsReply::_Internal {
- public:
-};
-
-SceneObjectsReply::SceneObjectsReply(::google::protobuf::Arena* arena)
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(arena, _class_data_.base()) {
-#else   // PROTOBUF_CUSTOM_VTABLE
-    : ::google::protobuf::Message(arena) {
-#endif  // PROTOBUF_CUSTOM_VTABLE
-  SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:SceneObjectsReply)
-}
-inline PROTOBUF_NDEBUG_INLINE SceneObjectsReply::Impl_::Impl_(
-    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
-    const Impl_& from, const ::SceneObjectsReply& from_msg)
-      : objects_{visibility, arena, from.objects_},
-        _cached_size_{0} {}
-
-SceneObjectsReply::SceneObjectsReply(
-    ::google::protobuf::Arena* arena,
-    const SceneObjectsReply& from)
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(arena, _class_data_.base()) {
-#else   // PROTOBUF_CUSTOM_VTABLE
-    : ::google::protobuf::Message(arena) {
-#endif  // PROTOBUF_CUSTOM_VTABLE
-  SceneObjectsReply* const _this = this;
-  (void)_this;
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
-
-  // @@protoc_insertion_point(copy_constructor:SceneObjectsReply)
-}
-inline PROTOBUF_NDEBUG_INLINE SceneObjectsReply::Impl_::Impl_(
-    ::google::protobuf::internal::InternalVisibility visibility,
-    ::google::protobuf::Arena* arena)
-      : objects_{visibility, arena},
-        _cached_size_{0} {}
-
-inline void SceneObjectsReply::SharedCtor(::_pb::Arena* arena) {
-  new (&_impl_) Impl_(internal_visibility(), arena);
-}
-SceneObjectsReply::~SceneObjectsReply() {
-  // @@protoc_insertion_point(destructor:SceneObjectsReply)
-  SharedDtor(*this);
-}
-inline void SceneObjectsReply::SharedDtor(MessageLite& self) {
-  SceneObjectsReply& this_ = static_cast<SceneObjectsReply&>(self);
-  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
-  ABSL_DCHECK(this_.GetArena() == nullptr);
-  this_._impl_.~Impl_();
-}
-
-inline void* SceneObjectsReply::PlacementNew_(const void*, void* mem,
-                                        ::google::protobuf::Arena* arena) {
-  return ::new (mem) SceneObjectsReply(arena);
-}
-constexpr auto SceneObjectsReply::InternalNewImpl_() {
-  constexpr auto arena_bits = ::google::protobuf::internal::EncodePlacementArenaOffsets({
-      PROTOBUF_FIELD_OFFSET(SceneObjectsReply, _impl_.objects_) +
-          decltype(SceneObjectsReply::_impl_.objects_)::
-              InternalGetArenaOffset(
-                  ::google::protobuf::Message::internal_visibility()),
-  });
-  if (arena_bits.has_value()) {
-    return ::google::protobuf::internal::MessageCreator::ZeroInit(
-        sizeof(SceneObjectsReply), alignof(SceneObjectsReply), *arena_bits);
-  } else {
-    return ::google::protobuf::internal::MessageCreator(&SceneObjectsReply::PlacementNew_,
-                                 sizeof(SceneObjectsReply),
-                                 alignof(SceneObjectsReply));
-  }
-}
-PROTOBUF_CONSTINIT
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::google::protobuf::internal::ClassDataFull SceneObjectsReply::_class_data_ = {
-    ::google::protobuf::internal::ClassData{
-        &_SceneObjectsReply_default_instance_._instance,
-        &_table_.header,
-        nullptr,  // OnDemandRegisterArenaDtor
-        nullptr,  // IsInitialized
-        &SceneObjectsReply::MergeImpl,
-        ::google::protobuf::Message::GetNewImpl<SceneObjectsReply>(),
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-        &SceneObjectsReply::SharedDtor,
-        ::google::protobuf::Message::GetClearImpl<SceneObjectsReply>(), &SceneObjectsReply::ByteSizeLong,
-            &SceneObjectsReply::_InternalSerialize,
-#endif  // PROTOBUF_CUSTOM_VTABLE
-        PROTOBUF_FIELD_OFFSET(SceneObjectsReply, _impl_._cached_size_),
-        false,
-    },
-    &SceneObjectsReply::kDescriptorMethods,
-    &descriptor_table_SceneStreaming_2eproto,
-    nullptr,  // tracker
-};
-const ::google::protobuf::internal::ClassData* SceneObjectsReply::GetClassData() const {
-  ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
-  ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
-  return _class_data_.base();
-}
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 1, 1, 0, 2> SceneObjectsReply::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    1, 0,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967294,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    1,  // num_field_entries
-    1,  // num_aux_entries
-    offsetof(decltype(_table_), aux_entries),
-    _class_data_.base(),
-    nullptr,  // post_loop_handler
-    ::_pbi::TcParser::GenericFallback,  // fallback
-    #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::SceneObjectsReply>(),  // to_prefetch
-    #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
-  }, {{
-    // repeated .ObjectReply objects = 1;
-    {::_pbi::TcParser::FastMtR1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(SceneObjectsReply, _impl_.objects_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // repeated .ObjectReply objects = 1;
-    {PROTOBUF_FIELD_OFFSET(SceneObjectsReply, _impl_.objects_), 0, 0,
-    (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
-  }}, {{
-    {::_pbi::TcParser::GetTable<::ObjectReply>()},
-  }}, {{
-  }},
-};
-
-PROTOBUF_NOINLINE void SceneObjectsReply::Clear() {
-// @@protoc_insertion_point(message_clear_start:SceneObjectsReply)
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  ::uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _impl_.objects_.Clear();
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
-}
-
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::uint8_t* SceneObjectsReply::_InternalSerialize(
-            const MessageLite& base, ::uint8_t* target,
-            ::google::protobuf::io::EpsCopyOutputStream* stream) {
-          const SceneObjectsReply& this_ = static_cast<const SceneObjectsReply&>(base);
-#else   // PROTOBUF_CUSTOM_VTABLE
-        ::uint8_t* SceneObjectsReply::_InternalSerialize(
-            ::uint8_t* target,
-            ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-          const SceneObjectsReply& this_ = *this;
-#endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(serialize_to_array_start:SceneObjectsReply)
-          ::uint32_t cached_has_bits = 0;
-          (void)cached_has_bits;
-
-          // repeated .ObjectReply objects = 1;
-          for (unsigned i = 0, n = static_cast<unsigned>(
-                                   this_._internal_objects_size());
-               i < n; i++) {
-            const auto& repfield = this_._internal_objects().Get(i);
-            target =
-                ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
-                    1, repfield, repfield.GetCachedSize(),
-                    target, stream);
-          }
-
-          if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
-            target =
-                ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-                    this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
-          }
-          // @@protoc_insertion_point(serialize_to_array_end:SceneObjectsReply)
-          return target;
-        }
-
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::size_t SceneObjectsReply::ByteSizeLong(const MessageLite& base) {
-          const SceneObjectsReply& this_ = static_cast<const SceneObjectsReply&>(base);
-#else   // PROTOBUF_CUSTOM_VTABLE
-        ::size_t SceneObjectsReply::ByteSizeLong() const {
-          const SceneObjectsReply& this_ = *this;
-#endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(message_byte_size_start:SceneObjectsReply)
-          ::size_t total_size = 0;
-
-          ::uint32_t cached_has_bits = 0;
-          // Prevent compiler warnings about cached_has_bits being unused
-          (void)cached_has_bits;
-
-          ::_pbi::Prefetch5LinesFrom7Lines(&this_);
-           {
-            // repeated .ObjectReply objects = 1;
-            {
-              total_size += 1UL * this_._internal_objects_size();
-              for (const auto& msg : this_._internal_objects()) {
-                total_size += ::google::protobuf::internal::WireFormatLite::MessageSize(msg);
-              }
-            }
-          }
-          return this_.MaybeComputeUnknownFieldsSize(total_size,
-                                                     &this_._impl_._cached_size_);
-        }
-
-void SceneObjectsReply::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<SceneObjectsReply*>(&to_msg);
-  auto& from = static_cast<const SceneObjectsReply&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:SceneObjectsReply)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_mutable_objects()->MergeFrom(
-      from._internal_objects());
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
-}
-
-void SceneObjectsReply::CopyFrom(const SceneObjectsReply& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:SceneObjectsReply)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-
-void SceneObjectsReply::InternalSwap(SceneObjectsReply* PROTOBUF_RESTRICT other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.objects_.InternalSwap(&other->_impl_.objects_);
-}
-
-::google::protobuf::Metadata SceneObjectsReply::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // @@protoc_insertion_point(namespace_scope)

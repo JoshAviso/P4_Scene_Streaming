@@ -5,7 +5,7 @@
 #include <../Public/Scenes/SceneManager.h>
 #include <../Public/Components/Renderers/MeshRenderer.h>
 
-grpc::Status SceneStreamServer::GetSceneObjectData(grpc::ServerContext* context, const SceneReq* request, grpc::ServerWriter<SceneObjectsReply>* writer)
+grpc::Status SceneStreamServer::GetSceneObjectData(grpc::ServerContext* context, const SceneReq* request, grpc::ServerWriter<ObjectReply>* writer)
 {
 	Logger::Log("Sending scene data for " + request->name());
 
@@ -13,35 +13,36 @@ grpc::Status SceneStreamServer::GetSceneObjectData(grpc::ServerContext* context,
 
 	int numObjects = scene->_objects.size();
 
-	SceneObjectsReply reply;
 
 	for (int i = 0; i < numObjects; i++)
 	{
+		ObjectReply object;
+
 		Shared<Object> sceneObject = scene->_objects[i];
-		MeshRenderer* mesh = sceneObject->GetComponent<MeshRenderer>();
-		List<Vertex> vertexData = mesh->ActiveMesh->_vertex_data;
 
-		ObjectReply* object = reply.add_objects();
-
-		Vec3Reply* pos = object->mutable_position();
+		Vec3Reply* pos = object.mutable_position();
 		pos->set_x(sceneObject->transform.position.x);
 		pos->set_y(sceneObject->transform.position.y);
 		pos->set_z(sceneObject->transform.position.z);
 
-		QuaternionReply* rot = object->mutable_rotation();
+		QuaternionReply* rot = object.mutable_rotation();
 		rot->set_w(sceneObject->transform.rotation.w);
 		rot->set_x(sceneObject->transform.rotation.x);
 		rot->set_y(sceneObject->transform.rotation.y);
 		rot->set_z(sceneObject->transform.rotation.z);
 
-		Vec3Reply* scale = object->mutable_scale();
+		Vec3Reply* scale = object.mutable_scale();
 		scale->set_x(sceneObject->transform.scale.x);
 		scale->set_y(sceneObject->transform.scale.y);
 		scale->set_z(sceneObject->transform.scale.z);
 
+		MeshRenderer* mesh = sceneObject->GetComponent<MeshRenderer>();
+		if (mesh == nullptr) continue;
+		if (mesh->ActiveMesh == nullptr) continue;
+		List<Vertex> vertexData = mesh->ActiveMesh->_vertex_data;
 		for (int j = 0; j < vertexData.size(); j++)
 		{
-			VertexReply* vertex = object->add_vertices();
+			VertexReply* vertex = object.add_vertices();
 
 			Vec3Reply* vertexPos = vertex->mutable_position();
 			vertexPos->set_x(vertexData[j].position.x);
@@ -58,9 +59,7 @@ grpc::Status SceneStreamServer::GetSceneObjectData(grpc::ServerContext* context,
 			vertexUv->set_y(vertexData[j].uv.y);
 		}
 
-		writer->Write(reply);
-
-		reply.clear_objects();
+		writer->Write(object);
 	}
 
 	return grpc::Status::OK;

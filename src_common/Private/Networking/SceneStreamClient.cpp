@@ -59,8 +59,8 @@ void SceneStreamClient::AskSceneInfo(bool* exists, int* totalObjects, std::strin
 		Logger::LogWarning("Server call to AskSceneInfo failed");
 	}
 }
-
-SceneObjectsReply SceneStreamClient::GetSceneObjectData(std::string sceneName)
+/*
+ObjectReply SceneStreamClient::GetSceneObjectData(std::string sceneName)
 {
 	std::vector<TempObject> loadedObjects;
 
@@ -114,3 +114,6 @@ SceneObjectsReply SceneStreamClient::GetSceneObjectData(std::string sceneName)
 	if (status.ok()) Logger::Log("Object Streaming succeeded.");
 	else Logger::LogWarning("Object streaming failed.");
 }
+*/
+
+SceneStreamClient* SceneStreamClient::instance = nullptr;

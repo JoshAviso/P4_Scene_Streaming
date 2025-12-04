@@ -18,6 +18,8 @@
 #include <Threading/ThreadPoolManager.h>
 #include <Threading/WorkerTasks/LoadObjectsFromServerTask.h>
 
+#include <Networking/SceneStreamClient.h>
+
 void SceneManager::LoadScene(const String sceneName)
 {
     _instance->scenesMtx.lock();
@@ -255,7 +257,7 @@ void SceneManager::PopulateRandomScene(String name)
 void SceneManager::RequestScenes()
 {
     // Any processing of the client request into a list of string names
-    List<String> scenelist; // = Client->RequestSceneList();
+    List<String> scenelist = SceneStreamClient::Instance()->GetSceneList();
     
     _scenes.clear();
     for (int i = 0; i < scenelist.size(); i++) {
@@ -274,18 +276,9 @@ void SceneManager::RequestScenes()
 /// </summary>
 void SceneManager::ProcessStreamedScene(const String name)
 {
-    // Request the server to get scene meta info
-    // Process result to variables
-    bool exists;
-    int objCount;
-
-    if (!exists) {
-        Logger::LogWarning("Tried to load a scene that does not exist on the server");
-        return;
-    }
-
-    // Create a worker task to get streamed data
-    ThreadPoolManager::GetThreadPool("Main")->ScheduleTask(new LoadObjectsFromServerTask(name, objCount));
+    // Create a worker task to get scene data
+    ThreadPoolManager::GetThreadPool("Main")->
+        ScheduleTask(new LoadObjectsFromServerTask(name));
 }
 
 // SINGLETON

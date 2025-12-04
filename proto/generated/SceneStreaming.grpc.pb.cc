@@ -84,20 +84,20 @@ void SceneStreamService::Stub::async::AskSceneInfo(::grpc::ClientContext* contex
   return result;
 }
 
-::grpc::ClientReader< ::SceneObjectsReply>* SceneStreamService::Stub::GetSceneObjectDataRaw(::grpc::ClientContext* context, const ::SceneReq& request) {
-  return ::grpc::internal::ClientReaderFactory< ::SceneObjectsReply>::Create(channel_.get(), rpcmethod_GetSceneObjectData_, context, request);
+::grpc::ClientReader< ::ObjectReply>* SceneStreamService::Stub::GetSceneObjectDataRaw(::grpc::ClientContext* context, const ::SceneReq& request) {
+  return ::grpc::internal::ClientReaderFactory< ::ObjectReply>::Create(channel_.get(), rpcmethod_GetSceneObjectData_, context, request);
 }
 
-void SceneStreamService::Stub::async::GetSceneObjectData(::grpc::ClientContext* context, const ::SceneReq* request, ::grpc::ClientReadReactor< ::SceneObjectsReply>* reactor) {
-  ::grpc::internal::ClientCallbackReaderFactory< ::SceneObjectsReply>::Create(stub_->channel_.get(), stub_->rpcmethod_GetSceneObjectData_, context, request, reactor);
+void SceneStreamService::Stub::async::GetSceneObjectData(::grpc::ClientContext* context, const ::SceneReq* request, ::grpc::ClientReadReactor< ::ObjectReply>* reactor) {
+  ::grpc::internal::ClientCallbackReaderFactory< ::ObjectReply>::Create(stub_->channel_.get(), stub_->rpcmethod_GetSceneObjectData_, context, request, reactor);
 }
 
-::grpc::ClientAsyncReader< ::SceneObjectsReply>* SceneStreamService::Stub::AsyncGetSceneObjectDataRaw(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq, void* tag) {
-  return ::grpc::internal::ClientAsyncReaderFactory< ::SceneObjectsReply>::Create(channel_.get(), cq, rpcmethod_GetSceneObjectData_, context, request, true, tag);
+::grpc::ClientAsyncReader< ::ObjectReply>* SceneStreamService::Stub::AsyncGetSceneObjectDataRaw(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq, void* tag) {
+  return ::grpc::internal::ClientAsyncReaderFactory< ::ObjectReply>::Create(channel_.get(), cq, rpcmethod_GetSceneObjectData_, context, request, true, tag);
 }
 
-::grpc::ClientAsyncReader< ::SceneObjectsReply>* SceneStreamService::Stub::PrepareAsyncGetSceneObjectDataRaw(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncReaderFactory< ::SceneObjectsReply>::Create(channel_.get(), cq, rpcmethod_GetSceneObjectData_, context, request, false, nullptr);
+::grpc::ClientAsyncReader< ::ObjectReply>* SceneStreamService::Stub::PrepareAsyncGetSceneObjectDataRaw(::grpc::ClientContext* context, const ::SceneReq& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncReaderFactory< ::ObjectReply>::Create(channel_.get(), cq, rpcmethod_GetSceneObjectData_, context, request, false, nullptr);
 }
 
 SceneStreamService::Service::Service() {
@@ -124,11 +124,11 @@ SceneStreamService::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SceneStreamService_method_names[2],
       ::grpc::internal::RpcMethod::SERVER_STREAMING,
-      new ::grpc::internal::ServerStreamingHandler< SceneStreamService::Service, ::SceneReq, ::SceneObjectsReply>(
+      new ::grpc::internal::ServerStreamingHandler< SceneStreamService::Service, ::SceneReq, ::ObjectReply>(
           [](SceneStreamService::Service* service,
              ::grpc::ServerContext* ctx,
              const ::SceneReq* req,
-             ::grpc::ServerWriter<::SceneObjectsReply>* writer) {
+             ::grpc::ServerWriter<::ObjectReply>* writer) {
                return service->GetSceneObjectData(ctx, req, writer);
              }, this)));
 }
@@ -150,7 +150,7 @@ SceneStreamService::Service::~Service() {
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status SceneStreamService::Service::GetSceneObjectData(::grpc::ServerContext* context, const ::SceneReq* request, ::grpc::ServerWriter< ::SceneObjectsReply>* writer) {
+::grpc::Status SceneStreamService::Service::GetSceneObjectData(::grpc::ServerContext* context, const ::SceneReq* request, ::grpc::ServerWriter< ::ObjectReply>* writer) {
   (void) context;
   (void) request;
   (void) writer;

@@ -8,7 +8,7 @@
 #include <SceneStreaming.grpc.pb.h>
 
 class SceneStreamClient {
-private:
+public:
 	Unique<SceneStreamService::Stub> _stub;
 
 public:
@@ -17,12 +17,15 @@ public:
 
 	std::vector<std::string> GetSceneList();
 	void AskSceneInfo(bool* exists, int* totalObjects, std::string sceneName);
-	SceneObjectsReply GetSceneObjectData(std::string sceneName);
+	//SceneObjectsReply GetSceneObjectData(std::string sceneName);
 
 //Singleton
 public:
-	static SceneStreamClient& Instance() {
-		static SceneStreamClient instance;
+	static SceneStreamClient* instance;
+	static SceneStreamClient* Instance() {
+		if (instance == nullptr) {
+			instance = new SceneStreamClient();
+		}
 		return instance;
 	};
 
